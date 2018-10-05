@@ -1290,6 +1290,26 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="SMD-RES-20K-1%-1/10W(0603)" prefix="R" uservalue="yes">
+<description>301010288</description>
+<gates>
+<gate name="G$1" symbol="RES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="RC0603FR-0720KL" constant="no"/>
+<attribute name="VALUE" value="20K"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="SMD-RES-10K-1%-1/10W(0603)" prefix="R" uservalue="yes">
 <description>301010299</description>
 <gates>
@@ -2082,7 +2102,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="R15" library="Seeed-Resistor" deviceset="SMD-RES-1K-1%-1/10W(0603)" device="" value="1K"/>
 <part name="R16" library="Seeed-Resistor" deviceset="SMD-RES-1K-1%-1/10W(0603)" device="" value="1K"/>
 <part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="R7" library="Seeed-Resistor" deviceset="SMD-RES-10K-1%-1/10W(0603)" device="" value="10K"/>
+<part name="R7" library="Seeed-Resistor" deviceset="SMD-RES-20K-1%-1/10W(0603)" device="" value="20K"/>
 <part name="R8" library="Seeed-Resistor" deviceset="SMD-RES-1K-1%-1/10W(0603)" device="" value="1K"/>
 <part name="R9" library="Seeed-Resistor" deviceset="SMD-RES-1K-1%-1/10W(0603)" device="" value="1K"/>
 <part name="R12" library="Seeed-Resistor" deviceset="SMD-RES-1K-1%-1/10W(0603)" device="" value="1K"/>
