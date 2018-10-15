@@ -220,7 +220,6 @@
 <text x="23.241" y="4.064" size="1.016" layer="136" font="vector" ratio="12">VIN</text>
 <text x="18.0086" y="4.064" size="1.016" layer="136" font="vector" ratio="12">-GND-</text>
 <wire x1="13.97" y1="4.064" x2="13.97" y2="4.1148" width="0.1524" layer="136"/>
-<rectangle x1="38.862" y1="6.096" x2="46.99" y2="24.384" layer="41"/>
 <rectangle x1="38.862" y1="6.096" x2="46.99" y2="24.384" layer="42"/>
 <text x="4.064" y="31.877" size="0.8128" layer="136" font="vector" ratio="12" rot="SR270">PWR ACT D13 ESP</text>
 <text x="37.592" y="27.051" size="0.889" layer="125" ratio="11" rot="R180">C3</text>
@@ -369,6 +368,7 @@ NEOautus</text>
 <text x="44.704" y="35.56" size="2.1844" layer="137" font="vector" rot="MR0">Adelino X1
 www.neoautus.com
 Prototype only</text>
+<rectangle x1="39.116" y1="6.096" x2="46.99" y2="24.384" layer="41"/>
 </plain>
 <libraries>
 <library name="Seeed-Capacitor">
@@ -1182,8 +1182,8 @@ design rules under a new name.</description>
 <elements>
 <element name="C10" library="Seeed-Capacitor" package="C0402" value="22pf" x="34.036" y="45.9835" rot="R90">
 <attribute name="MPN" value="CC0402JRNPO9BN220" x="34.036" y="45.9835" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="32.766" y="46.8725" size="0.889" layer="25" ratio="11"/>
 <attribute name="NAME" x="32.766" y="45.7295" size="0.635" layer="33" ratio="10"/>
+<attribute name="NAME" x="32.766" y="46.8725" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="32.766" y="44.396" size="0.635" layer="27" ratio="10"/>
 </element>
 <element name="C11" library="Seeed-Capacitor" package="C0402" value="100nf" x="12.827" y="17.272" rot="R270">
@@ -1263,8 +1263,8 @@ design rules under a new name.</description>
 </element>
 <element name="C8" library="Seeed-Capacitor" package="C0402" value="22pf" x="31.496" y="46.0195" rot="R270">
 <attribute name="MPN" value="CC0402JRNPO9BN220" x="31.496" y="46.0195" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="32.766" y="45.1305" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="NAME" x="32.766" y="46.2735" size="0.635" layer="33" ratio="10" rot="R180"/>
+<attribute name="NAME" x="32.766" y="45.1305" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="32.766" y="47.607" size="0.635" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="C9" library="Seeed-Capacitor" package="C0805" value="1uf" x="40.386" y="34.29" rot="R180">
@@ -1325,32 +1325,32 @@ design rules under a new name.</description>
 </element>
 <element name="J1" library="Seeed-Connector" package="DCJ3P-11.6X9.6X7.0MM" value="DC-044-A" x="0" y="9.906" rot="R270">
 <attribute name="MPN" value="JACK-DC-044-A" x="0" y="9.906" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="8.1915" y="15.621" size="0.889" layer="25" ratio="11"/>
 <attribute name="NAME" x="6.985" y="13.1445" size="1.27" layer="33" ratio="10" rot="R270"/>
+<attribute name="NAME" x="8.1915" y="15.621" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="4.3815" y="3.556" size="0.889" layer="27" ratio="11"/>
 </element>
 <element name="J2" library="Seeed-Connector" package="H6-2.54" value="YELLOW-6P-2.54" x="35.56" y="2.54" rot="R90">
 <attribute name="MPN" value="F185-1106A1BSYA3" x="35.56" y="2.54" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="37.465" y="0.635" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="NAME" x="38.1" y="3.175" size="0.635" layer="33" ratio="10" rot="R180"/>
+<attribute name="NAME" x="37.465" y="0.635" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="37.465" y="5.08" size="0.889" layer="27" ratio="11" rot="R180"/>
 </element>
 <element name="J3" library="Seeed-Connector" package="H8-2.54" value="YELLOW-8P-2.54" x="15.24" y="2.54" rot="R90">
 <attribute name="MPN" value="F185-1108A1BSYC1" x="15.24" y="2.54" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="16.51" y="0.635" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="NAME" x="15.875" y="2.54" size="0.3048" layer="33" ratio="10" rot="R180"/>
+<attribute name="NAME" x="16.51" y="0.635" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="16.51" y="5.08" size="0.889" layer="27" ratio="11" rot="R180"/>
 </element>
 <element name="J4" library="Seeed-Connector" package="H8-2.54" value="YELLOW-8P-2.54" x="33.02" y="50.8" rot="R270">
 <attribute name="MPN" value="F185-1108A1BSYC1" x="33.02" y="50.8" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="31.75" y="52.705" size="0.889" layer="25" ratio="11"/>
 <attribute name="NAME" x="32.385" y="50.8" size="0.3048" layer="33" ratio="10"/>
+<attribute name="NAME" x="31.75" y="52.705" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="31.75" y="48.26" size="0.889" layer="27" ratio="11"/>
 </element>
 <element name="J5" library="Seeed-Connector" package="H8-2.54" value="YELLOW-8P-2.54" x="11.43" y="50.8" rot="R270">
 <attribute name="MPN" value="F185-1108A1BSYC1" x="11.43" y="50.8" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="10.16" y="52.705" size="0.889" layer="25" ratio="11"/>
 <attribute name="NAME" x="10.795" y="50.8" size="0.3048" layer="33" ratio="10"/>
+<attribute name="NAME" x="10.16" y="52.705" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="10.16" y="48.26" size="0.889" layer="27" ratio="11"/>
 </element>
 <element name="L1" library="Seeed-Inductor" package="L0805" value="330R-1500MA" x="6.604" y="30.861" rot="R90">
@@ -1383,10 +1383,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="0.508" y="30.734" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="0.808" y="28.283" size="0.635" layer="27" ratio="10"/>
 </element>
-<element name="R13" library="Seeed-Resistor" package="R0402" value="4.7K" x="38.354" y="25.019" rot="R270">
-<attribute name="MPN" value="RC0402JR-074K7L" x="38.354" y="25.019" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="36.449" y="26.035" size="0.889" layer="25" ratio="11"/>
-<attribute name="VALUE" value="4.7K" x="36.749" y="23.584" size="0.635" layer="27" ratio="10"/>
+<element name="R13" library="Seeed-Resistor" package="R0402" value="4.7K" x="38.354" y="26.035" rot="R270">
+<attribute name="MPN" value="RC0402JR-074K7L" x="38.354" y="26.035" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="36.449" y="27.051" size="0.889" layer="25" ratio="11"/>
+<attribute name="VALUE" value="4.7K" x="36.749" y="24.6" size="0.635" layer="27" ratio="10"/>
 </element>
 <element name="R14" library="Seeed-Resistor" package="R0402" value="4.7K" x="35.56" y="5.588" rot="R270">
 <attribute name="MPN" value="RC0402JR-074K7L" x="35.56" y="5.588" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1662,7 +1662,6 @@ design rules under a new name.</description>
 <wire x1="23.897" y1="6.1205" x2="24.4295" y2="5.588" width="0.381" layer="1"/>
 <wire x1="4.399" y1="39.468" x2="4.2248" y2="39.2938" width="0.381" layer="1"/>
 <wire x1="4.2248" y1="39.2938" x2="2.159" y2="39.2938" width="0.381" layer="1"/>
-<wire x1="6.604" y1="39.497" x2="4.9022625" y2="39.497" width="0.381" layer="1"/>
 <wire x1="29.312" y1="28.998" x2="29.312" y2="29.79173125" width="0.3048" layer="1"/>
 <wire x1="35.179" y1="30.5816" x2="30.10186875" y2="30.5816" width="0.3048" layer="1"/>
 <wire x1="30.10186875" y1="30.5816" x2="29.312" y2="29.79173125" width="0.3048" layer="1"/>
@@ -1724,6 +1723,8 @@ design rules under a new name.</description>
 <wire x1="5.08" y1="25.4" x2="5.08" y2="22.606" width="0.508" layer="16"/>
 <wire x1="5.969" y1="21.717" x2="5.08" y2="22.606" width="0.508" layer="16"/>
 <wire x1="5.969" y1="21.717" x2="16.256" y2="21.717" width="0.508" layer="16"/>
+<wire x1="4.399" y1="39.468" x2="6.575" y2="39.468" width="0.381" layer="1"/>
+<wire x1="6.575" y1="39.468" x2="6.604" y2="39.497" width="0.381" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="USB1" pad="2"/>
@@ -2035,7 +2036,6 @@ design rules under a new name.</description>
 <wire x1="9.2255" y1="29.4938125" x2="9.4625" y2="29.2568125" width="0.254" layer="1"/>
 <wire x1="9.4625" y1="29.2568125" x2="9.4625" y2="27.6711875" width="0.254" layer="1"/>
 <wire x1="9.4625" y1="27.6711875" x2="8.6043125" y2="26.813" width="0.254" layer="1"/>
-<wire x1="8.128" y1="25.654" x2="7.874" y2="25.908" width="0.254" layer="1"/>
 <wire x1="8.51" y1="26.813" x2="7.24" y2="26.813" width="0.254" layer="1"/>
 <wire x1="7.24" y1="26.813" x2="4.335" y2="29.718" width="0.254" layer="1"/>
 <wire x1="4.335" y1="29.718" x2="2.8755" y2="29.718" width="0.254" layer="1"/>
@@ -2652,8 +2652,8 @@ design rules under a new name.</description>
 <wire x1="40.894" y1="32.004" x2="40.386" y2="31.496" width="0.254" layer="1"/>
 <wire x1="40.386" y1="31.496" x2="40.386" y2="29.464" width="0.254" layer="1"/>
 <wire x1="40.386" y1="29.464" x2="41.91" y2="27.94" width="0.254" layer="1"/>
-<wire x1="41.91" y1="27.94" x2="38.989" y2="25.019" width="0.254" layer="1"/>
-<wire x1="38.989" y1="25.019" x2="38.8165" y2="25.019" width="0.254" layer="1"/>
+<wire x1="41.91" y1="27.94" x2="40.005" y2="26.035" width="0.254" layer="1"/>
+<wire x1="40.005" y1="26.035" x2="38.8165" y2="26.035" width="0.254" layer="1"/>
 </signal>
 <signal name="MOSI">
 <contactref element="U1" pad="10"/>
@@ -2665,7 +2665,18 @@ design rules under a new name.</description>
 <wire x1="38.481" y1="37.829" x2="40.84376875" y2="37.829" width="0.254" layer="1"/>
 <wire x1="40.84376875" y1="37.829" x2="43.2435" y2="35.42926875" width="0.254" layer="1"/>
 <wire x1="43.2435" y1="35.42926875" x2="43.2435" y2="29.98025" width="0.254" layer="1"/>
-<wire x1="32.4665" y1="5.588" x2="44.45" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="44.45" y1="27.94" x2="43.7515" y2="27.2415" width="0.254" layer="1"/>
+<wire x1="43.7515" y1="27.2415" x2="43.033075" y2="27.2415" width="0.254" layer="1"/>
+<wire x1="42.398075" y1="26.6065" x2="41.41025" y2="26.6065" width="0.254" layer="1"/>
+<wire x1="43.033075" y1="27.2415" x2="42.398075" y2="26.6065" width="0.254" layer="1"/>
+<wire x1="38.878" y1="5.44590625" x2="38.38909375" y2="4.957" width="0.254" layer="1"/>
+<wire x1="38.38909375" y1="4.957" x2="34.0411875" y2="4.957" width="0.254" layer="1"/>
+<wire x1="34.0411875" y1="4.957" x2="33.4101875" y2="5.588" width="0.254" layer="1"/>
+<wire x1="33.4101875" y1="5.588" x2="32.4665" y2="5.588" width="0.254" layer="1"/>
+<wire x1="41.41025" y1="26.6065" x2="40.20375" y2="25.4" width="0.254" layer="1"/>
+<wire x1="40.20375" y1="25.4" x2="39.37" y2="25.4" width="0.254" layer="1"/>
+<wire x1="39.37" y1="25.4" x2="38.878" y2="24.908" width="0.254" layer="1"/>
+<wire x1="38.878" y1="24.908" x2="38.878" y2="5.44590625" width="0.254" layer="1"/>
 </signal>
 <signal name="MISO">
 <contactref element="U1" pad="11"/>
@@ -2715,7 +2726,7 @@ design rules under a new name.</description>
 <signal name="N$14">
 <contactref element="R13" pad="2"/>
 <contactref element="U3" pad="1"/>
-<wire x1="37.8915" y1="25.019" x2="37.8915" y2="23.2455" width="0.254" layer="1"/>
+<wire x1="37.8915" y1="26.035" x2="37.8915" y2="23.2455" width="0.254" layer="1"/>
 <wire x1="37.8915" y1="23.2455" x2="37.897" y2="23.24" width="0.254" layer="1"/>
 </signal>
 <signal name="N$17">
@@ -2893,6 +2904,8 @@ design rules under a new name.</description>
 <approved hash="4,1,5329c6e2587bd177"/>
 <approved hash="4,1,bee9d5398fcaa513"/>
 <approved hash="4,1,35d1d6908551dbc9"/>
+<approved hash="21,19,c2fdc0ffc0ffc2fd"/>
+<approved hash="4,1,5eb8be80c14597ef"/>
 </errors>
 </board>
 </drawing>
