@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -3022,11 +3022,11 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="U3" gate="G$1" pin="VCC"/>
 <pinref part="+3V32" gate="G$1" pin="+3V3"/>
 <wire x1="93.98" y1="-78.74" x2="81.28" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="-78.74" x2="81.28" y2="-73.66" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="-73.66" x2="81.28" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="85.09" y1="-73.66" x2="81.28" y2="-73.66" width="0.1524" layer="91"/>
-<junction x="81.28" y="-73.66"/>
-<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="-78.74" x2="81.28" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="-71.12" x2="81.28" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="85.09" y1="-71.12" x2="81.28" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="81.28" y="-71.12"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
@@ -3412,9 +3412,9 @@ DIN A4, landscape with location and doc. field</description>
 <label x="-95.25" y="-68.58" size="1.4224" layer="95"/>
 </segment>
 <segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="85.09" y1="-71.12" x2="72.39" y2="-71.12" width="0.1524" layer="91"/>
-<label x="72.39" y="-71.12" size="1.4224" layer="95"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="85.09" y1="-73.66" x2="72.39" y2="-73.66" width="0.1524" layer="91"/>
+<label x="72.39" y="-73.66" size="1.4224" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
