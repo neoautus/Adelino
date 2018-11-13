@@ -679,12 +679,12 @@
 <wire x1="2.54" y1="3.81" x2="2.54" y2="-3.81" width="0" layer="39"/>
 <wire x1="2.54" y1="-3.81" x2="-2.54" y2="-3.81" width="0" layer="39"/>
 <wire x1="-2.54" y1="-3.81" x2="-2.54" y2="3.81" width="0" layer="39"/>
-<pad name="1" x="-1.27" y="2.54" drill="0.889" diameter="1.651" shape="square"/>
-<pad name="2" x="-1.27" y="0" drill="0.889" diameter="1.651"/>
-<pad name="3" x="-1.27" y="-2.54" drill="0.889" diameter="1.651"/>
-<pad name="4" x="1.27" y="-2.54" drill="0.889" diameter="1.651"/>
-<pad name="5" x="1.27" y="0" drill="0.889" diameter="1.651"/>
-<pad name="6" x="1.27" y="2.54" drill="0.889" diameter="1.651"/>
+<pad name="1" x="-1.27" y="2.54" drill="1.0414" diameter="1.651" shape="square"/>
+<pad name="2" x="-1.27" y="0" drill="1.0414" diameter="1.651"/>
+<pad name="3" x="-1.27" y="-2.54" drill="1.0414" diameter="1.651"/>
+<pad name="4" x="1.27" y="-2.54" drill="1.0414" diameter="1.651"/>
+<pad name="5" x="1.27" y="0" drill="1.0414" diameter="1.651"/>
+<pad name="6" x="1.27" y="2.54" drill="1.0414" diameter="1.651"/>
 <text x="-3.175" y="-2.54" size="0.889" layer="25" ratio="11" rot="R90">&gt;name</text>
 <text x="3.81" y="-2.54" size="0.889" layer="27" ratio="11" rot="R90">&gt;value</text>
 <rectangle x1="-2.54" y1="-3.81" x2="2.54" y2="3.81" layer="39"/>
