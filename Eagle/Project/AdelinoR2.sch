@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -982,30 +982,6 @@
 <wire x1="4.7065" y1="0" x2="4.7" y2="0" width="0.127" layer="21"/>
 <wire x1="4.7" y1="0" x2="-4.7935" y2="0" width="0.127" layer="21"/>
 <wire x1="-4.7935" y1="0" x2="-4.7935" y2="11.5" width="0.127" layer="51"/>
-<wire x1="1.5875" y1="14.351" x2="1.5875" y2="12.319" width="0.127" layer="22" curve="270"/>
-<wire x1="1.3335" y1="13.335" x2="3.3655" y2="13.335" width="0.127" layer="22"/>
-<wire x1="1.3335" y1="13.335" x2="1.7145" y2="13.589" width="0.127" layer="22"/>
-<wire x1="1.3335" y1="13.335" x2="1.7145" y2="13.081" width="0.127" layer="22"/>
-<wire x1="0.6985" y1="13.335" x2="0.4445" y2="13.335" width="0.127" layer="22"/>
-<wire x1="0.4445" y1="13.335" x2="0.5715" y2="13.208" width="0.127" layer="22"/>
-<wire x1="0.5715" y1="13.208" x2="0.6985" y2="13.335" width="0.127" layer="22"/>
-<wire x1="0.6985" y1="13.335" x2="0.5715" y2="13.462" width="0.127" layer="22"/>
-<wire x1="0.5715" y1="13.462" x2="0.4445" y2="13.335" width="0.127" layer="22"/>
-<wire x1="1.5875" y1="14.351" x2="1.5875" y2="12.319" width="0.127" layer="22" curve="270"/>
-<wire x1="-0.9525" y1="13.335" x2="-3.2385" y2="13.335" width="0.127" layer="22"/>
-<wire x1="-0.9525" y1="13.335" x2="-1.3335" y2="13.589" width="0.127" layer="22"/>
-<wire x1="-0.9525" y1="13.335" x2="-1.3335" y2="13.081" width="0.127" layer="22"/>
-<wire x1="4.6355" y1="13.335" x2="3.6195" y2="13.335" width="0.127" layer="22"/>
-<wire x1="4.1275" y1="12.827" x2="4.1275" y2="13.843" width="0.127" layer="22"/>
-<wire x1="-3.4925" y1="13.335" x2="-4.5085" y2="13.335" width="0.127" layer="22"/>
-<circle x="0.5715" y="13.335" radius="0.6839" width="0.127" layer="22"/>
-<circle x="0.5715" y="13.335" radius="0.1796" width="0.127" layer="22"/>
-<circle x="4.1275" y="13.335" radius="0.7405" width="0.127" layer="22"/>
-<circle x="-4.0005" y="13.335" radius="0.7405" width="0.127" layer="22"/>
-<circle x="0.5715" y="13.335" radius="0.6839" width="0.127" layer="22"/>
-<circle x="0.5715" y="13.335" radius="0.1796" width="0.127" layer="22"/>
-<circle x="4.1275" y="13.335" radius="0.7405" width="0.127" layer="22"/>
-<circle x="-4.0005" y="13.335" radius="0.7405" width="0.127" layer="22"/>
 <text x="-5.715" y="8.1915" size="0.889" layer="25" ratio="11" rot="R90">&gt;name</text>
 <text x="6.35" y="4.3815" size="0.889" layer="27" ratio="11" rot="R90">&gt;value</text>
 <text x="-3.2385" y="6.985" size="1.27" layer="33" ratio="10">&gt;name</text>
@@ -1739,8 +1715,8 @@ Source: RS Component / BUORNS</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMD-RES-68K-1%-1/10W(0603)" prefix="R" uservalue="yes">
-<description>301010169</description>
+<deviceset name="SMD-RES-2.7K-1%-1/10W(0603)" prefix="R" uservalue="yes">
+<description>301010193</description>
 <gates>
 <gate name="G$1" symbol="RES" x="0" y="0"/>
 </gates>
@@ -1751,16 +1727,33 @@ Source: RS Component / BUORNS</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD-RES-3.3K-5%-1/16W(0402)" prefix="R" uservalue="yes">
+<description>301010035</description>
+<gates>
+<gate name="G$1" symbol="RES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
 <technology name="">
-<attribute name="MPN" value="RC0603FR-0768KL" constant="no"/>
-<attribute name="VALUE" value="68K"/>
+<attribute name="MPN" value="RC0402JR-073K3L" constant="no"/>
+<attribute name="VALUE" value="3.3K"/>
 </technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMD-RES-10K-1%-1/10W(0603)" prefix="R" uservalue="yes">
-<description>301010299</description>
+<deviceset name="SMD-RES-510R-1%-1/10W(0603)" prefix="R" uservalue="yes">
+<description>301010215</description>
 <gates>
 <gate name="G$1" symbol="RES" x="0" y="0"/>
 </gates>
@@ -1771,50 +1764,7 @@ Source: RS Component / BUORNS</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="MPN" value="RC0603FR-0710KL" constant="no"/>
-<attribute name="VALUE" value="10K"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SMD-RES-30K-1%-1/10W(0603)" prefix="R" uservalue="yes">
-<description>301010202</description>
-<gates>
-<gate name="G$1" symbol="RES" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="R0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MPN" value="RC0603FR-0730KL" constant="no"/>
-<attribute name="VALUE" value="30K"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SMD-RES-3K-1%-1/10W(0603)" prefix="R" uservalue="yes">
-<description>301010170</description>
-<gates>
-<gate name="G$1" symbol="RES" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="R0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MPN" value="RC0603FR-073KL" constant="no"/>
-<attribute name="VALUE" value="3K"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -2076,21 +2026,20 @@ Source: RS Component / BUORNS</description>
 <text x="-1.905" y="-2.032" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
 <rectangle x1="-1.4605" y1="-0.762" x2="1.4605" y2="0.762" layer="39"/>
 </package>
-<package name="L0806">
-<description>&lt;b&gt;datasheet:&lt;br&gt;
-&lt;u&gt;http://search.murata.co.jp/Ceramy/image/img/PDF/ENG/L0075S0103LQH2MC_02.pdf</description>
-<wire x1="1.651" y1="1.016" x2="1.651" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="1.651" y1="-1.016" x2="-1.651" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="-1.651" y1="-1.016" x2="-1.651" y2="1.016" width="0.127" layer="21"/>
-<wire x1="-1.651" y1="1.016" x2="1.651" y2="1.016" width="0.127" layer="21"/>
-<wire x1="0.127" y1="-0.508" x2="0.127" y2="0" width="0.127" layer="21" curve="-180"/>
-<wire x1="0.127" y1="0" x2="0.127" y2="0.508" width="0.127" layer="21" curve="-180"/>
-<smd name="1" x="-0.889" y="0" dx="1.016" dy="1.524" layer="1" roundness="25"/>
-<smd name="2" x="0.889" y="0" dx="1.016" dy="1.524" layer="1" roundness="25"/>
-<text x="-1.905" y="1.27" size="0.889" layer="25" font="vector" ratio="11">&gt;NAME</text>
-<text x="-1.905" y="-2.2225" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
-<text x="-1.27" y="-0.635" size="0.635" layer="33" font="vector" ratio="10">&gt;NAME</text>
-<rectangle x1="-1.4605" y1="-0.762" x2="1.4605" y2="0.762" layer="39"/>
+<package name="L5040S">
+<smd name="1" x="0" y="2.175" dx="4.2" dy="1.7" layer="1"/>
+<smd name="2" x="0" y="-2.175" dx="4.2" dy="1.7" layer="1"/>
+<wire x1="-1.223609375" y1="-2.5" x2="1.285975" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="1.285975" y1="-2.5" x2="2.5" y2="-1.285975" width="0.127" layer="21"/>
+<wire x1="2.5" y1="-1.285975" x2="2.5" y2="1.246753125" width="0.127" layer="21"/>
+<wire x1="2.5" y1="1.246753125" x2="1.246753125" y2="2.5" width="0.127" layer="21"/>
+<wire x1="1.246753125" y1="2.5" x2="-1.285975" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-1.285975" y1="2.5" x2="-2.5" y2="1.285975" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="1.285975" x2="-2.5" y2="-1.223609375" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-1.223609375" x2="-1.223609375" y2="-2.5" width="0.127" layer="21"/>
+<text x="-1.905" y="2.921" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-1.905" y="0" size="0.635" layer="27" ratio="11">&gt;VALUE</text>
+<rectangle x1="-2.54" y1="-2.54" x2="2.54" y2="2.54" layer="39"/>
 </package>
 </packages>
 <symbols>
@@ -2104,7 +2053,7 @@ Source: RS Component / BUORNS</description>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
-<symbol name="SMD-INDUCTOR-10UH-225MA-10%(0806)">
+<symbol name="INDUCTOR/FERRITE-BEAD">
 <wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.254" layer="94" curve="-180"/>
 <wire x1="-1.27" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
 <wire x1="0" y1="0" x2="1.27" y2="0" width="0.254" layer="94" curve="-180"/>
@@ -2136,22 +2085,19 @@ Source: RS Component / BUORNS</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMD-INDUCTOR-10UH-225MA-10%(0806)" prefix="L" uservalue="yes">
-<description>303010042</description>
+<deviceset name="SMD-INDUCTOR-10UH-20%-2.35A(2P-5X5X4MM)" prefix="L" uservalue="yes">
+<description>303010147</description>
 <gates>
-<gate name="L" symbol="SMD-INDUCTOR-10UH-225MA-10%(0806)" x="0" y="0"/>
+<gate name="G$1" symbol="INDUCTOR/FERRITE-BEAD" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="L0806">
+<device name="" package="L5040S">
 <connects>
-<connect gate="L" pin="1" pad="1"/>
-<connect gate="L" pin="2" pad="2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="MPN" value="LQH2MCN100K02L" constant="no"/>
-<attribute name="VALUE" value="10UH-225MA"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -2553,54 +2499,6 @@ DIN A4, landscape with location and doc. field</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="Seeed-OPL-2017-01-Inductor-Akita">
-<packages>
-<package name="L2826">
-<description>SMD, 2826(inch)/7166(mm)</description>
-<smd name="P$1" x="-2.65" y="0" dx="2.3" dy="3.3" layer="1"/>
-<smd name="P$2" x="2.65" y="0" dx="2.3" dy="3.3" layer="1"/>
-<wire x1="-3.55" y1="2" x2="-3.55" y2="3.3" width="0.127" layer="21"/>
-<wire x1="-3.55" y1="3.3" x2="3.55" y2="3.3" width="0.127" layer="21"/>
-<wire x1="3.55" y1="3.3" x2="3.55" y2="2" width="0.127" layer="21"/>
-<wire x1="3.55" y1="-2" x2="3.55" y2="-3.3" width="0.127" layer="21"/>
-<wire x1="3.55" y1="-3.3" x2="-3.55" y2="-3.3" width="0.127" layer="21"/>
-<wire x1="-3.55" y1="-3.3" x2="-3.55" y2="-2" width="0.127" layer="21"/>
-<text x="-3" y="4" size="1.016" layer="25">&gt;NAME</text>
-<text x="-3" y="-5" size="1.016" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="INDUCTOR">
-<description>Inductor (general, 2 terminals)</description>
-<pin name="P$1" x="-8.89" y="0" visible="off" length="middle" direction="pas"/>
-<pin name="P$2" x="8.89" y="0" visible="off" length="middle" direction="pas" rot="R180"/>
-<wire x1="-3.81" y1="0" x2="-1.27" y2="0" width="0.254" layer="94" curve="-180"/>
-<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94" curve="-180"/>
-<wire x1="1.27" y1="0" x2="3.81" y2="0" width="0.254" layer="94" curve="-180"/>
-<text x="-5.08" y="2.54" size="1.778" layer="97">&gt;NAME</text>
-<text x="-5.08" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="303010525_22UH_7.1X6.6MM" prefix="L">
-<description>SHC0603-220M, SMD Inductor 22uH-20%-0.139R-2.2A;2P-L7.1*W6.6*H3.0mm, SKU: 303010525</description>
-<gates>
-<gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="L2826">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2608,7 +2506,7 @@ DIN A4, landscape with location and doc. field</description>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.254" drill="0.6096">
-<clearance class="0" value="0.254"/>
+<clearance class="0" value="0.2032"/>
 </class>
 </classes>
 <parts>
@@ -2709,20 +2607,21 @@ DIN A4, landscape with location and doc. field</description>
 <part name="C4" library="Seeed-Capacitor" deviceset="CERAMIC-10UF-25V-10%-X5R(0805)" device="" value="10uf"/>
 <part name="R6" library="Seeed-Resistor" deviceset="SMD-RES-10R-1%-1/16W(0402)" device="" value="10R 1/16W"/>
 <part name="C5" library="Seeed-Capacitor" deviceset="CERAMIC-100NF-25V-10%-X7R(0402)" device="" value="100nf"/>
-<part name="L2" library="Seeed-Inductor" deviceset="SMD-INDUCTOR-10UH-225MA-10%(0806)" device="" value="10UH-225MA"/>
+<part name="L2" library="Seeed-Inductor" deviceset="SMD-INDUCTOR-10UH-20%-2.35A(2P-5X5X4MM)" device="" value="10UH-225MA"/>
 <part name="R7" library="Seeed-Resistor" deviceset="SMD-RES-100K-1%-1/16W(0402)" device="" value="100K"/>
-<part name="R13" library="Seeed-Resistor" deviceset="SMD-RES-68K-1%-1/10W(0603)" device="" value="68K / 1%"/>
-<part name="R14" library="Seeed-Resistor" deviceset="SMD-RES-10K-1%-1/10W(0603)" device="" value="10K / 1%"/>
+<part name="R13" library="Seeed-Resistor" deviceset="SMD-RES-2.7K-1%-1/10W(0603)" device="" value="2K7 / 1%">
+<attribute name="R" value="2K7 / 1%"/>
+</part>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R16" library="Seeed-Resistor" deviceset="SMD-RES-30K-1%-1/10W(0603)" device="" value="30K / 1%"/>
 <part name="C19" library="Seeed-Capacitor" deviceset="CERAMIC-10UF-25V-10%-X5R(0805)" device="" value="10uf"/>
 <part name="C20" library="Seeed-Capacitor" deviceset="CERAMIC-10UF-25V-10%-X5R(0805)" device="" value="10uf"/>
-<part name="R15" library="Seeed-Resistor" deviceset="SMD-RES-3K-1%-1/10W(0603)" device="" value="3K / 1%"/>
-<part name="R18" library="Seeed-Resistor" deviceset="SMD-RES-3K-1%-1/10W(0603)" device="" value="3K / 1%"/>
+<part name="R15" library="Seeed-Resistor" deviceset="SMD-RES-510R-1%-1/10W(0603)" device="" value="3K / 1%">
+<attribute name="R" value="510R / 1%"/>
+</part>
+<part name="R18" library="Seeed-Resistor" deviceset="SMD-RES-3.3K-5%-1/16W(0402)" device="" value="3.3K"/>
 <part name="U6" library="Seeed-IC" deviceset="MCU-ATMEGA32U4-AU(TQFP44)" device="" value="ATMEGA32U4-TQFP44">
 <attribute name="DESC" value="SOCKET B - TQFP44"/>
 </part>
-<part name="L3" library="Seeed-OPL-2017-01-Inductor-Akita" deviceset="303010525_22UH_7.1X6.6MM" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
@@ -3077,9 +2976,8 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="-127" y="148.59" size="1.27" layer="95" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="-123.19" y="148.59" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
-<instance part="L2" gate="L" x="-113.03" y="143.51" smashed="yes">
+<instance part="L2" gate="G$1" x="-113.03" y="143.51" smashed="yes">
 <attribute name="NAME" x="-116.84" y="144.78" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="-116.84" y="140.97" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="R7" gate="G$1" x="-170.18" y="143.51" smashed="yes" rot="R180">
 <attribute name="NAME" x="-166.37" y="142.24" size="1.27" layer="95" ratio="10" rot="R180"/>
@@ -3087,18 +2985,10 @@ DIN A4, landscape with location and doc. field</description>
 </instance>
 <instance part="R13" gate="G$1" x="-113.03" y="137.16" smashed="yes">
 <attribute name="NAME" x="-116.84" y="138.43" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="-116.84" y="134.62" size="1.27" layer="96" ratio="10"/>
-</instance>
-<instance part="R14" gate="G$1" x="-134.62" y="128.27" smashed="yes">
-<attribute name="NAME" x="-138.43" y="129.54" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="-138.43" y="125.73" size="1.27" layer="96" ratio="10"/>
+<attribute name="R" x="-116.84" y="134.62" size="1.27" layer="96"/>
 </instance>
 <instance part="GND15" gate="1" x="-152.4" y="115.57" smashed="yes">
 <attribute name="VALUE" x="-154.94" y="113.03" size="1.778" layer="96"/>
-</instance>
-<instance part="R16" gate="G$1" x="-125.73" y="137.16" smashed="yes">
-<attribute name="NAME" x="-129.54" y="138.43" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="-129.54" y="134.62" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="C19" gate="G$1" x="-99.06" y="137.16" smashed="yes" rot="R90">
 <attribute name="NAME" x="-97.79" y="138.43" size="1.27" layer="95" ratio="10"/>
@@ -3108,9 +2998,9 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="-91.44" y="138.43" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="-91.44" y="134.62" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="R15" gate="G$1" x="-144.78" y="128.27" smashed="yes">
-<attribute name="NAME" x="-148.59" y="129.54" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="-148.59" y="125.73" size="1.27" layer="96" ratio="10"/>
+<instance part="R15" gate="G$1" x="-134.62" y="128.27" smashed="yes">
+<attribute name="NAME" x="-138.43" y="129.54" size="1.27" layer="95" ratio="10"/>
+<attribute name="R" x="-138.43" y="125.73" size="1.27" layer="96"/>
 </instance>
 <instance part="R18" gate="G$1" x="-134.62" y="137.16" smashed="yes">
 <attribute name="NAME" x="-138.43" y="138.43" size="1.27" layer="95" ratio="10"/>
@@ -3120,10 +3010,6 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="170.18" y="133.35" size="1.778" layer="95"/>
 <attribute name="VALUE" x="201.93" y="135.89" size="1.778" layer="96"/>
 <attribute name="DESC" x="201.93" y="133.35" size="1.778" layer="96"/>
-</instance>
-<instance part="L3" gate="G$1" x="-137.16" y="165.1" smashed="yes">
-<attribute name="NAME" x="-142.24" y="167.64" size="1.778" layer="97"/>
-<attribute name="VALUE" x="-142.24" y="162.56" size="1.778" layer="96"/>
 </instance>
 <instance part="GND2" gate="1" x="163.83" y="50.8" smashed="yes">
 <attribute name="VALUE" x="161.29" y="48.26" size="1.778" layer="96"/>
@@ -3354,7 +3240,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-92.71" y1="121.92" x2="-99.06" y2="121.92" width="0.1524" layer="91"/>
 <junction x="-99.06" y="121.92"/>
 <pinref part="R15" gate="G$1" pin="1"/>
-<wire x1="-148.59" y1="128.27" x2="-152.4" y2="128.27" width="0.1524" layer="91"/>
+<wire x1="-138.43" y1="128.27" x2="-152.4" y2="128.27" width="0.1524" layer="91"/>
 <junction x="-152.4" y="128.27"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="-170.18" y1="124.46" x2="-170.18" y2="121.92" width="0.1524" layer="91"/>
@@ -3585,7 +3471,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-92.71" y1="140.97" x2="-92.71" y2="143.51" width="0.1524" layer="91"/>
 <wire x1="-92.71" y1="143.51" x2="-86.36" y2="143.51" width="0.1524" layer="91"/>
 <junction x="-86.36" y="143.51"/>
-<pinref part="L2" gate="L" pin="2"/>
+<pinref part="L2" gate="G$1" pin="2"/>
 <wire x1="-107.95" y1="143.51" x2="-105.41" y2="143.51" width="0.1524" layer="91"/>
 <wire x1="-105.41" y1="143.51" x2="-99.06" y2="143.51" width="0.1524" layer="91"/>
 <wire x1="-105.41" y1="137.16" x2="-105.41" y2="143.51" width="0.1524" layer="91"/>
@@ -4523,7 +4409,7 @@ DIN A4, landscape with location and doc. field</description>
 <label x="-101.6" y="-66.04" size="1.4224" layer="95"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="SW_VCC_IN" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="S"/>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -4541,7 +4427,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-184.15" y1="143.51" x2="-173.99" y2="143.51" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="SW_VCAP" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -4549,7 +4435,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-176.53" y1="139.7" x2="-176.53" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="SW_BS" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="BS"/>
 <pinref part="R6" gate="G$1" pin="1"/>
@@ -4563,19 +4449,20 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-130.81" y1="147.32" x2="-129.54" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="SW_VCC_OUT" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="SW"/>
-<pinref part="L2" gate="L" pin="1"/>
+<pinref part="L2" gate="G$1" pin="1"/>
 <wire x1="-140.97" y1="143.51" x2="-119.38" y2="143.51" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="-119.38" y1="143.51" x2="-118.11" y2="143.51" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="147.32" x2="-119.38" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="147.32" x2="-119.38" y2="143.51" width="0.1524" layer="91"/>
 <junction x="-119.38" y="143.51"/>
+<label x="-128.27" y="143.51" size="0.8128" layer="95"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="SW_EN" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="EN/SYNC"/>
 <pinref part="R7" gate="G$1" pin="1"/>
@@ -4584,24 +4471,17 @@ DIN A4, landscape with location and doc. field</description>
 </net>
 <net name="N$23" class="0">
 <segment>
-<pinref part="R16" gate="G$1" pin="2"/>
 <pinref part="R13" gate="G$1" pin="1"/>
-<wire x1="-116.84" y1="137.16" x2="-119.38" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="R14" gate="G$1" pin="2"/>
-<wire x1="-119.38" y1="137.16" x2="-121.92" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="-130.81" y1="137.16" x2="-119.38" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="-119.38" y1="137.16" x2="-116.84" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="-130.81" y1="128.27" x2="-119.38" y2="128.27" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="128.27" x2="-119.38" y2="137.16" width="0.1524" layer="91"/>
 <junction x="-119.38" y="137.16"/>
 </segment>
 </net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="R14" gate="G$1" pin="1"/>
-<pinref part="R15" gate="G$1" pin="2"/>
-<wire x1="-138.43" y1="128.27" x2="-140.97" y2="128.27" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
+<net name="SW_SS" class="0">
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="U1" gate="G$1" pin="SS"/>
@@ -4609,14 +4489,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-170.18" y1="134.62" x2="-163.83" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="R16" gate="G$1" pin="1"/>
-<pinref part="R18" gate="G$1" pin="2"/>
-<wire x1="-129.54" y1="137.16" x2="-130.81" y2="137.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$24" class="0">
+<net name="SW_FB" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
 <pinref part="U1" gate="G$1" pin="FB"/>
