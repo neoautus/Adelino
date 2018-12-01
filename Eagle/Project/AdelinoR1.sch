@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.1">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2788,26 +2788,26 @@ DIN A4, landscape with location and doc. field</description>
 </net>
 <net name="D+" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="-166.37" y1="142.24" x2="-160.02" y2="142.24" width="0.1524" layer="91"/>
-<label x="-162.56" y="142.24" size="1.4224" layer="95"/>
-</segment>
-<segment>
 <pinref part="U4" gate="G$1" pin="D+"/>
 <wire x1="85.09" y1="100.33" x2="72.39" y2="100.33" width="0.1524" layer="91"/>
 <label x="72.39" y="100.33" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="D-" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="-166.37" y1="139.7" x2="-160.02" y2="139.7" width="0.1524" layer="91"/>
-<label x="-162.56" y="139.7" size="1.4224" layer="95"/>
+<label x="-160.02" y="139.7" size="1.4224" layer="95" rot="R180"/>
 </segment>
+</net>
+<net name="D-" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="D-"/>
 <wire x1="85.09" y1="97.79" x2="72.39" y2="97.79" width="0.1524" layer="91"/>
 <label x="72.39" y="97.79" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="-166.37" y1="142.24" x2="-160.02" y2="142.24" width="0.1524" layer="91"/>
+<label x="-160.02" y="142.24" size="1.4224" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="UGND" class="0">
@@ -2846,7 +2846,7 @@ DIN A4, landscape with location and doc. field</description>
 <segment>
 <pinref part="F1" gate="G$1" pin="2"/>
 <wire x1="-177.8" y1="144.78" x2="-160.02" y2="144.78" width="0.1524" layer="91"/>
-<label x="-165.1" y="144.78" size="1.4224" layer="95"/>
+<label x="-160.02" y="144.78" size="1.4224" layer="95" rot="R180"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="D"/>
