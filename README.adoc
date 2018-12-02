@@ -7,7 +7,7 @@ It's inspired by Arduino Leonardo and Arduino Yún, with changes regarding integ
 
 == Adelino X1
 
-Adelino X1 is the first version of the board, aimed to test integration, assemblying process, firmware and the overall concept. This PCB was assembled by SeeedStudio.
+Adelino X1 is the first version of the board, aimed to test integration, assembling process, firmware and the overall concept. This PCB was assembled by SeeedStudio.
 
 image::Adelino_X1.jpg[Adelino X1]
 
