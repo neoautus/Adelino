@@ -1500,6 +1500,11 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-5.207" y="-28.067" size="0.381" layer="33" ratio="10"/>
 <attribute name="VALUE" x="-6.223" y="-29.464" size="0.889" layer="27" font="vector" ratio="11"/>
 </element>
+<element name="R23" library="Seeed-Resistor" package="R0402" value="1K" x="-8.89" y="-26.416" smashed="yes">
+<attribute name="MPN" value="RC0402JR-071KL" x="-8.89" y="-26.416" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-8.255" y="-25.146" size="0.889" layer="25" ratio="11" rot="R270"/>
+<attribute name="VALUE" x="-10.414" y="-25.146" size="0.889" layer="27" font="vector" ratio="11" rot="R270"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2695,7 +2700,6 @@ design rules under a new name.</description>
 <signal name="MOSI">
 <contactref element="U4" pad="10"/>
 <contactref element="J7" pad="5"/>
-<contactref element="R11" pad="2"/>
 <wire x1="44.45" y1="27.94" x2="43.7515" y2="27.2415" width="0.254" layer="1"/>
 <wire x1="43.7515" y1="27.2415" x2="43.033075" y2="27.2415" width="0.254" layer="1"/>
 <wire x1="42.398075" y1="26.6065" x2="41.41025" y2="26.6065" width="0.254" layer="1"/>
@@ -2703,7 +2707,6 @@ design rules under a new name.</description>
 <wire x1="38.878" y1="5.44590625" x2="38.38909375" y2="4.957" width="0.254" layer="1"/>
 <wire x1="38.38909375" y1="4.957" x2="34.0411875" y2="4.957" width="0.254" layer="1"/>
 <wire x1="34.0411875" y1="4.957" x2="33.4101875" y2="5.588" width="0.254" layer="1"/>
-<wire x1="33.4101875" y1="5.588" x2="32.4665" y2="5.588" width="0.254" layer="1"/>
 <wire x1="41.41025" y1="26.6065" x2="40.20375" y2="25.4" width="0.254" layer="1"/>
 <wire x1="40.20375" y1="25.4" x2="39.37" y2="25.4" width="0.254" layer="1"/>
 <wire x1="39.37" y1="25.4" x2="38.878" y2="24.908" width="0.254" layer="1"/>
@@ -2972,12 +2975,19 @@ design rules under a new name.</description>
 <signal name="PB0_RX_LED">
 <contactref element="U4" pad="8"/>
 <contactref element="R18" pad="1"/>
+<contactref element="R23" pad="1"/>
 <wire x1="1.9505" y1="27.178" x2="38.312" y2="36.398" width="0" layer="19" extent="1-1"/>
+<wire x1="-8.89" y1="-25.9535" x2="1.9505" y2="27.178" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PD5_TX_LED">
 <contactref element="U4" pad="22"/>
 <contactref element="R22" pad="1"/>
 <wire x1="-4.826" y1="-20.8735" x2="28.512" y2="40.598" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="ESP_PROG">
+<contactref element="R23" pad="2"/>
+<contactref element="R11" pad="2"/>
+<wire x1="-8.89" y1="-26.8785" x2="32.4665" y2="5.588" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
