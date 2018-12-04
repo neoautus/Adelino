@@ -12,6 +12,11 @@ const int the_led = 10;
 void setup() {
   pinMode (7, INPUT_PULLUP);
   pinMode(the_led, OUTPUT);
+  pinMode (3, OUTPUT);
+  digitalWrite (3, LOW);
+
+  digitalWrite (PIN_SPI_SCK, HIGH); 
+  pinMode (PIN_SPI_SCK, OUTPUT);
 
   for (int i = 0; i < 3; i++)
   {
@@ -31,6 +36,19 @@ void setup() {
   digitalWrite (the_led, !status);
   delay (100);
   digitalWrite (the_led, status);
+
+  digitalWrite (3, status);
+
+//  if (status)
+//  {
+    // Reset ESP
+    digitalWrite (PIN_SPI_SCK, LOW);
+    delay (10);
+    digitalWrite (PIN_SPI_SCK, HIGH);
+    delay (50);
+//  }
+  
+  digitalWrite (3, status);
 }
 
 void loop() 
