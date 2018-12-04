@@ -2175,7 +2175,6 @@ DIN A4, landscape with location and doc. field</description>
 </part>
 <part name="R22" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" value="1K"/>
 <part name="D9" library="Seeed-Diode" deviceset="SMD-DIODE-SCHOTTKY-20V-500MA(SOD-123)P" device="" value="20V-500MA"/>
-<part name="R23" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" value="1K"/>
 </parts>
 <sheets>
 <sheet>
@@ -2571,10 +2570,6 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="D9" gate="G$1" x="214.63" y="59.69" smashed="yes">
 <attribute name="NAME" x="212.852" y="61.468" size="1.27" layer="95" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="212.852" y="58.928" size="1.27" layer="96" ratio="10" rot="R180"/>
-</instance>
-<instance part="R23" gate="G$1" x="214.63" y="80.01" smashed="yes">
-<attribute name="NAME" x="212.852" y="81.788" size="1.27" layer="95" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="212.852" y="79.502" size="1.27" layer="96" ratio="10" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -3686,13 +3681,6 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="208.28" y1="99.06" x2="210.82" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="R18" gate="G$1" pin="2"/>
-<pinref part="D5" gate="G$1" pin="+"/>
-<wire x1="208.28" y1="88.9" x2="210.82" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="R22" gate="G$1" pin="2"/>
@@ -3720,13 +3708,8 @@ DIN A4, landscape with location and doc. field</description>
 </segment>
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="200.66" y1="88.9" x2="198.12" y2="88.9" width="0.1524" layer="91"/>
 <label x="184.15" y="88.9" size="1.4224" layer="95"/>
-<pinref part="R23" gate="G$1" pin="1"/>
-<wire x1="198.12" y1="88.9" x2="184.15" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="80.01" x2="198.12" y2="80.01" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="80.01" x2="198.12" y2="88.9" width="0.1524" layer="91"/>
-<junction x="198.12" y="88.9"/>
+<wire x1="200.66" y1="88.9" x2="184.15" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PD5_TX_LED" class="0">
@@ -3743,9 +3726,14 @@ DIN A4, landscape with location and doc. field</description>
 </net>
 <net name="ESP_PROG" class="0">
 <segment>
-<pinref part="R23" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="80.01" x2="238.76" y2="80.01" width="0.1524" layer="91"/>
+<wire x1="209.55" y1="80.01" x2="238.76" y2="80.01" width="0.1524" layer="91"/>
 <label x="238.76" y="80.01" size="1.4224" layer="95" rot="R180"/>
+<pinref part="R18" gate="G$1" pin="2"/>
+<pinref part="D5" gate="G$1" pin="+"/>
+<wire x1="208.28" y1="88.9" x2="209.55" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="209.55" y1="88.9" x2="210.82" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="209.55" y1="80.01" x2="209.55" y2="88.9" width="0.1524" layer="91"/>
+<junction x="209.55" y="88.9"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
