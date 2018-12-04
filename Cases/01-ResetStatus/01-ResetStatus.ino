@@ -7,22 +7,37 @@
 // the D13 led. If the reset switch is kept pressed, the
 // reset switch status will be high.
 
+const int the_led = 10;
+
 void setup() {
-  pinMode (7, INPUT);
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode (7, INPUT_PULLUP);
+  pinMode(the_led, OUTPUT);
 
   for (int i = 0; i < 3; i++)
   {
-    digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(the_led, HIGH);
     delay(500);
-    digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(the_led, LOW);
     delay(500);
   }
-  
-  digitalWrite (LED_BUILTIN, !digitalRead (7));
+
+  int status = !digitalRead (7);
+  digitalWrite (the_led, status);
+
+  delay (5000);
+
+  pinMode (7, OUTPUT);
+
+  digitalWrite (the_led, !status);
+  delay (100);
+  digitalWrite (the_led, status);
 }
 
-void loop() {
+void loop() 
+{
   // put your main code here, to run repeatedly:
-
+  digitalWrite (7, HIGH);
+  //delay (50);
+  digitalWrite (7, LOW);
+  //delay (50);
 }
