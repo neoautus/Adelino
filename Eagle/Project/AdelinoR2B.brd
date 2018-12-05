@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.1">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -730,50 +730,50 @@ Prototype only</text>
 <wire x1="4.8" y1="-4.8" x2="-4.8" y2="-4.8" width="0.2032" layer="21"/>
 <wire x1="-4.8" y1="-4.8" x2="-4.8" y2="4.4" width="0.2032" layer="21"/>
 <circle x="-5.715" y="5.08" radius="0.381" width="0" layer="21"/>
-<smd name="1" x="-5.8" y="4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="2" x="-5.8" y="3.2" dx="1.5" dy="0.5" layer="1"/>
-<smd name="3" x="-5.8" y="2.4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="4" x="-5.8" y="1.6" dx="1.5" dy="0.5" layer="1"/>
-<smd name="5" x="-5.8" y="0.8" dx="1.5" dy="0.5" layer="1"/>
-<smd name="6" x="-5.8" y="0" dx="1.5" dy="0.5" layer="1"/>
-<smd name="7" x="-5.8" y="-0.8" dx="1.5" dy="0.5" layer="1"/>
-<smd name="8" x="-5.8" y="-1.6" dx="1.5" dy="0.5" layer="1"/>
-<smd name="9" x="-5.8" y="-2.4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="10" x="-5.8" y="-3.2" dx="1.5" dy="0.5" layer="1"/>
-<smd name="11" x="-5.8" y="-4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="12" x="-4" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="13" x="-3.2" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="14" x="-2.4" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="15" x="-1.6" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="16" x="-0.8" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="17" x="0" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="18" x="0.8" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="19" x="1.6" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="20" x="2.4" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="21" x="3.2" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="22" x="4" y="-5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="23" x="5.8" y="-4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="24" x="5.8" y="-3.2" dx="1.5" dy="0.5" layer="1"/>
-<smd name="25" x="5.8" y="-2.4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="26" x="5.8" y="-1.6" dx="1.5" dy="0.5" layer="1"/>
-<smd name="27" x="5.8" y="-0.8" dx="1.5" dy="0.5" layer="1"/>
-<smd name="28" x="5.8" y="0" dx="1.5" dy="0.5" layer="1"/>
-<smd name="29" x="5.8" y="0.8" dx="1.5" dy="0.5" layer="1"/>
-<smd name="30" x="5.8" y="1.6" dx="1.5" dy="0.5" layer="1"/>
-<smd name="31" x="5.8" y="2.4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="32" x="5.8" y="3.2" dx="1.5" dy="0.5" layer="1"/>
-<smd name="33" x="5.8" y="4" dx="1.5" dy="0.5" layer="1"/>
-<smd name="34" x="4" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="35" x="3.2" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="36" x="2.4" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="37" x="1.6" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="38" x="0.8" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="39" x="0" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="40" x="-0.8" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="41" x="-1.6" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="42" x="-2.4" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="43" x="-3.2" y="5.8" dx="0.5" dy="1.5" layer="1"/>
-<smd name="44" x="-4" y="5.8" dx="0.5" dy="1.5" layer="1"/>
+<smd name="1" x="-5.8" y="4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="2" x="-5.8" y="3.2" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="3" x="-5.8" y="2.4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="4" x="-5.8" y="1.6" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="5" x="-5.8" y="0.8" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="6" x="-5.8" y="0" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="7" x="-5.8" y="-0.8" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="8" x="-5.8" y="-1.6" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="9" x="-5.8" y="-2.4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="10" x="-5.8" y="-3.2" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="11" x="-5.8" y="-4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="12" x="-4" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="13" x="-3.2" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="14" x="-2.4" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="15" x="-1.6" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="16" x="-0.8" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="17" x="0" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="18" x="0.8" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="19" x="1.6" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="20" x="2.4" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="21" x="3.2" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="22" x="4" y="-5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="23" x="5.8" y="-4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="24" x="5.8" y="-3.2" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="25" x="5.8" y="-2.4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="26" x="5.8" y="-1.6" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="27" x="5.8" y="-0.8" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="28" x="5.8" y="0" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="29" x="5.8" y="0.8" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="30" x="5.8" y="1.6" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="31" x="5.8" y="2.4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="32" x="5.8" y="3.2" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="33" x="5.8" y="4" dx="1.5" dy="0.5" layer="1" roundness="75"/>
+<smd name="34" x="4" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="35" x="3.2" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="36" x="2.4" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="37" x="1.6" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="38" x="0.8" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="39" x="0" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="40" x="-0.8" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="41" x="-1.6" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="42" x="-2.4" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="43" x="-3.2" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
+<smd name="44" x="-4" y="5.8" dx="0.5" dy="1.5" layer="1" roundness="75"/>
 <text x="-1.905" y="6.985" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.905" y="-0.6271" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
 <rectangle x1="-6.1001" y1="3.8001" x2="-4.95" y2="4.1999" layer="51"/>
@@ -1143,8 +1143,8 @@ design rules under a new name.</description>
 <elements>
 <element name="C10" library="Seeed-Capacitor" package="C0402" value="22pf" x="34.036" y="45.9835" smashed="yes" rot="R90">
 <attribute name="MPN" value="CC0402JRNPO9BN220" x="34.036" y="45.9835" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="33.528" y="45.8565" size="0.4064" layer="25" ratio="11"/>
 <attribute name="NAME" x="32.766" y="45.7295" size="0.635" layer="33" ratio="10"/>
+<attribute name="NAME" x="33.528" y="45.8565" size="0.4064" layer="25" ratio="11"/>
 <attribute name="VALUE" x="32.766" y="44.396" size="0.635" layer="27" ratio="10"/>
 </element>
 <element name="C2" library="Seeed-Capacitor" package="C0402" value="100nf" x="12.827" y="17.272" smashed="yes" rot="R270">
@@ -1224,8 +1224,8 @@ design rules under a new name.</description>
 </element>
 <element name="C9" library="Seeed-Capacitor" package="C0402" value="22pf" x="31.496" y="46.0195" smashed="yes" rot="R270">
 <attribute name="MPN" value="CC0402JRNPO9BN220" x="31.496" y="46.0195" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="31.877" y="46.2735" size="0.4064" layer="25" ratio="11" rot="R180"/>
 <attribute name="NAME" x="32.766" y="46.2735" size="0.635" layer="33" ratio="10" rot="R180"/>
+<attribute name="NAME" x="31.877" y="46.2735" size="0.4064" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="32.766" y="47.607" size="0.635" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="C16" library="Seeed-Capacitor" package="C0805" value="1uf" x="41.402" y="34.798" smashed="yes" rot="R270">
@@ -1248,12 +1248,6 @@ design rules under a new name.</description>
 <attribute name="MPN" value="19-217-G7C-AN1P2-3T" x="2.286" y="30.988" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="1.143" y="30.988" size="0.4064" layer="25" ratio="11"/>
 <attribute name="VALUE" x="1.143" y="29.4005" size="0.635" layer="27" ratio="10"/>
-</element>
-<element name="D5" library="Seeed-LED" package="LED-0603" value="YEL-0603" x="2.286" y="28.448" smashed="yes">
-<attribute name="LABEL" value="RX" x="2.286" y="28.448" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="19-217-Y5C-AM1N1VY-3T" x="2.286" y="28.448" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="1.143" y="28.448" size="0.4064" layer="25" ratio="11"/>
-<attribute name="VALUE" x="1.143" y="26.8605" size="0.635" layer="27" ratio="10"/>
 </element>
 <element name="D7" library="Seeed-Diode" package="SOD-123" value="20V-500MA" x="37.846" y="43.434" smashed="yes" rot="R180">
 <attribute name="MPN" value="MBR0520LT1G" x="37.846" y="43.434" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1280,32 +1274,32 @@ design rules under a new name.</description>
 </element>
 <element name="J1" library="Seeed-Connector" package="DCJ3P-11.6X9.6X7.0MM" value="DC-044-A" x="0" y="9.906" smashed="yes" rot="R270">
 <attribute name="MPN" value="JACK-DC-044-A" x="0" y="9.906" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="3.3655" y="11.811" size="0.889" layer="25" ratio="11"/>
 <attribute name="NAME" x="6.985" y="13.1445" size="1.27" layer="33" ratio="10" rot="R270"/>
+<attribute name="NAME" x="3.3655" y="11.811" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="4.3815" y="3.556" size="0.889" layer="27" ratio="11"/>
 </element>
 <element name="J3" library="Seeed-Connector" package="H6-2.54" value="YELLOW-6P-2.54" x="35.56" y="2.54" smashed="yes" rot="R90">
 <attribute name="MPN" value="F185-1106A1BSYA3" x="35.56" y="2.54" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="36.195" y="2.921" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="NAME" x="38.1" y="3.175" size="0.635" layer="33" ratio="10" rot="R180"/>
+<attribute name="NAME" x="36.195" y="2.921" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="37.465" y="5.08" size="0.889" layer="27" ratio="11" rot="R180"/>
 </element>
 <element name="J2" library="Seeed-Connector" package="H8-2.54" value="YELLOW-8P-2.54" x="15.24" y="2.54" smashed="yes" rot="R90">
 <attribute name="MPN" value="F185-1108A1BSYC1" x="15.24" y="2.54" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="15.748" y="2.921" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="NAME" x="15.875" y="2.54" size="0.3048" layer="33" ratio="10" rot="R180"/>
+<attribute name="NAME" x="15.748" y="2.921" size="0.889" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="16.51" y="5.08" size="0.889" layer="27" ratio="11" rot="R180"/>
 </element>
 <element name="J5" library="Seeed-Connector" package="H8-2.54" value="YELLOW-8P-2.54" x="33.02" y="50.8" smashed="yes" rot="R270">
 <attribute name="MPN" value="F185-1108A1BSYC1" x="33.02" y="50.8" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="32.512" y="50.419" size="0.889" layer="25" ratio="11"/>
 <attribute name="NAME" x="32.385" y="50.8" size="0.3048" layer="33" ratio="10"/>
+<attribute name="NAME" x="32.512" y="50.419" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="31.75" y="48.26" size="0.889" layer="27" ratio="11"/>
 </element>
 <element name="J4" library="Seeed-Connector" package="H8-2.54" value="YELLOW-8P-2.54" x="11.43" y="50.8" smashed="yes" rot="R270">
 <attribute name="MPN" value="F185-1108A1BSYC1" x="11.43" y="50.8" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="10.668" y="50.419" size="0.889" layer="25" ratio="11"/>
 <attribute name="NAME" x="10.795" y="50.8" size="0.3048" layer="33" ratio="10"/>
+<attribute name="NAME" x="10.668" y="50.419" size="0.889" layer="25" ratio="11"/>
 <attribute name="VALUE" x="10.16" y="48.26" size="0.889" layer="27" ratio="11"/>
 </element>
 <element name="L1" library="Seeed-Inductor" package="L0805" value="330R-1500MA" x="6.604" y="30.861" smashed="yes" rot="R90">
@@ -1353,7 +1347,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="37.211" y="5.461" size="0.4064" layer="25" ratio="11"/>
 <attribute name="VALUE" value="1K" x="35.987" y="4.153" size="0.635" layer="27" ratio="10"/>
 </element>
-<element name="R14" library="Seeed-Resistor" package="R0402" value="10K 1/16W" x="27.94" y="5.588" smashed="yes" rot="R90">
+<element name="R14" library="Seeed-Resistor" package="R0402" value="10K" x="27.94" y="5.588" smashed="yes" rot="R90">
 <attribute name="MPN" value="RC0402FR-0710KL" x="27.94" y="5.588" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="28.448" y="5.842" size="0.4064" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" value="10K 1/16W" x="29.545" y="7.023" size="0.635" layer="27" ratio="10" rot="R180"/>
@@ -1397,11 +1391,6 @@ design rules under a new name.</description>
 <attribute name="MPN" value="RC0402JR-071KL" x="2.413" y="24.638" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="2.794" y="24.892" size="0.4064" layer="25" ratio="11" rot="R180"/>
 <attribute name="VALUE" x="4.018" y="26.073" size="0.635" layer="27" ratio="10" rot="R180"/>
-</element>
-<element name="R18" library="Seeed-Resistor" package="R0402" value="1K" x="2.413" y="27.178" smashed="yes" rot="R90">
-<attribute name="MPN" value="RC0402JR-071KL" x="2.413" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="2.794" y="27.432" size="0.4064" layer="25" ratio="11" rot="R180"/>
-<attribute name="VALUE" x="4.018" y="28.613" size="0.635" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="SW1" library="Seeed-Switch" package="SW2-5.0-6.0X3.0X4.3MM" value="TS-1101F" x="2.3495" y="18.288" smashed="yes" rot="R90">
 <attribute name="MPN" value="TS-1101F" x="2.3495" y="18.288" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1476,8 +1465,8 @@ design rules under a new name.</description>
 </element>
 <element name="D9" library="Seeed-Diode" package="SOD-123" value="20V-500MA" x="-4.318" y="-27.432" smashed="yes">
 <attribute name="MPN" value="MBR0520LT1G" x="-4.318" y="-27.432" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="-5.207" y="-28.067" size="0.381" layer="33" ratio="10"/>
 <attribute name="NAME" x="-6.223" y="-26.289" size="0.889" layer="25" ratio="11"/>
+<attribute name="NAME" x="-5.207" y="-28.067" size="0.381" layer="33" ratio="10"/>
 <attribute name="VALUE" x="-6.223" y="-29.464" size="0.889" layer="27" font="vector" ratio="11"/>
 </element>
 <element name="R23" library="Seeed-Resistor" package="R0402" value="1K" x="-8.89" y="-26.416" smashed="yes">
@@ -1736,15 +1725,11 @@ design rules under a new name.</description>
 <wire x1="10.922" y1="14.0335" x2="10.922" y2="14.732" width="0.508" layer="1"/>
 <wire x1="10.922" y1="14.732" x2="11.557" y2="15.367" width="0.508" layer="1"/>
 <contactref element="D6" pad="-"/>
-<contactref element="D5" pad="-"/>
 <contactref element="D8" pad="-"/>
-<contactref element="D4" pad="-"/>
 <contactref element="R7" pad="1"/>
 <wire x1="3.175" y1="31.115" x2="3.048" y2="30.988" width="0" layer="19" extent="1-1"/>
 <wire x1="24.4295" y1="5.588" x2="23.897" y2="6.1205" width="0" layer="19" extent="1-1"/>
-<wire x1="3.048" y1="28.448" x2="3.429" y2="27.051" width="0" layer="19" extent="1-16"/>
 <wire x1="0.508" y1="-18.542" x2="19.05" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="0.508" y1="-22.86" x2="0.508" y2="-18.542" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="USB1" pad="2"/>
@@ -2061,7 +2046,9 @@ design rules under a new name.</description>
 <wire x1="13.5255" y1="39.098725" x2="10.668" y2="41.956225" width="0.381" layer="1"/>
 <wire x1="10.668" y1="41.956225" x2="10.668" y2="43.0975" width="0.381" layer="1"/>
 <contactref element="R21" pad="1"/>
+<contactref element="R16" pad="1"/>
 <wire x1="4.589" y1="29.718" x2="2.8755" y2="29.718" width="0" layer="19" extent="1-1"/>
+<wire x1="1.9505" y1="24.638" x2="2.8755" y2="29.718" width="0" layer="19" extent="1-1"/>
 <wire x1="8.128" y1="17.653" x2="8.128" y2="24.003" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
@@ -2261,8 +2248,10 @@ design rules under a new name.</description>
 <wire x1="12.954" y1="41.91" x2="14.986" y2="39.878" width="0.254" layer="1"/>
 <wire x1="14.986" y1="39.878" x2="17.272" y2="39.878" width="0.254" layer="1"/>
 <wire x1="17.272" y1="39.878" x2="17.907" y2="39.243" width="0.254" layer="1"/>
-<contactref element="R16" pad="1"/>
-<wire x1="1.9505" y1="24.638" x2="3.937" y2="24.638" width="0" layer="19" extent="1-16"/>
+<contactref element="R11" pad="2"/>
+<contactref element="D4" pad="-"/>
+<wire x1="21.2217625" y1="26.543" x2="32.4665" y2="5.588" width="0" layer="19" extent="1-1"/>
+<wire x1="0.508" y1="-22.86" x2="32.4665" y2="5.588" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PIN_D12">
 <contactref element="J4" pad="5"/>
@@ -2899,30 +2888,15 @@ design rules under a new name.</description>
 <wire x1="-4.826" y1="-21.7985" x2="-5.969" y2="-27.432" width="0" layer="19" extent="1-1"/>
 <wire x1="-1.016" y1="-18.542" x2="-4.826" y2="-21.7985" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$11">
-<contactref element="R16" pad="2"/>
-<contactref element="D4" pad="+"/>
-<wire x1="-1.016" y1="-22.86" x2="2.8755" y2="24.638" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="PB0_SS_RX">
+<signal name="PB0_SS">
 <contactref element="U4" pad="8"/>
-<contactref element="R18" pad="1"/>
 <contactref element="R26" pad="1"/>
-<wire x1="1.9505" y1="27.178" x2="38.312" y2="36.398" width="0" layer="19" extent="1-1"/>
-<wire x1="-21.082" y1="-25.9535" x2="1.9505" y2="27.178" width="0" layer="19" extent="1-1"/>
+<wire x1="-21.082" y1="-25.9535" x2="38.312" y2="36.398" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="PD5_TX_LED">
+<signal name="ACT_LED">
 <contactref element="U4" pad="22"/>
 <contactref element="R22" pad="1"/>
 <wire x1="-4.826" y1="-20.8735" x2="28.512" y2="40.598" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="ESP_PROG">
-<contactref element="R11" pad="2"/>
-</signal>
-<signal name="N$15">
-<contactref element="R18" pad="2"/>
-<contactref element="D5" pad="+"/>
-<wire x1="1.524" y1="28.448" x2="2.8755" y2="27.178" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="U3" pad="6"/>
@@ -2954,6 +2928,11 @@ design rules under a new name.</description>
 <contactref element="R7" pad="2"/>
 <wire x1="25.3545" y1="5.588" x2="-21.082" y2="-26.8785" width="0" layer="19" extent="1-1"/>
 <wire x1="25.897" y1="7.24" x2="25.3545" y2="5.588" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$4">
+<contactref element="R16" pad="2"/>
+<contactref element="D4" pad="+"/>
+<wire x1="-1.016" y1="-22.86" x2="2.8755" y2="24.638" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
