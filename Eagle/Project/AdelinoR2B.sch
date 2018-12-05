@@ -1351,6 +1351,26 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="SMD-RES-0R-5%-1/16W(0402)" prefix="R" uservalue="yes">
+<description>301010000</description>
+<gates>
+<gate name="G$1" symbol="RES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="RC0402JR-070RL" constant="no"/>
+<attribute name="VALUE" value="0R"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="Seeed-Capacitor">
@@ -2132,6 +2152,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="R24" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" value="1K"/>
 <part name="R25" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" value="1K"/>
 <part name="R26" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" value="1K"/>
+<part name="R12" library="Seeed-Resistor" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" value="0R"/>
 </parts>
 <sheets>
 <sheet>
@@ -2512,6 +2533,10 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="R26" gate="G$1" x="87.63" y="-104.14" smashed="yes">
 <attribute name="NAME" x="82.804" y="-103.886" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="89.154" y="-103.886" size="1.27" layer="96" ratio="10"/>
+</instance>
+<instance part="R12" gate="G$1" x="87.63" y="-106.68" smashed="yes">
+<attribute name="NAME" x="82.804" y="-106.426" size="1.27" layer="95" ratio="10"/>
+<attribute name="VALUE" x="89.154" y="-106.426" size="1.27" layer="96" ratio="10"/>
 </instance>
 </instances>
 <busses>
@@ -3073,9 +3098,9 @@ DIN A4, landscape with location and doc. field</description>
 <label x="233.68" y="134.62" size="1.4224" layer="95"/>
 </segment>
 <segment>
-<pinref part="U3" gate="G$1" pin="GPIO16"/>
-<wire x1="93.98" y1="-106.68" x2="68.58" y2="-106.68" width="0.1524" layer="91"/>
 <label x="68.58" y="-106.68" size="1.4224" layer="95"/>
+<wire x1="83.82" y1="-106.68" x2="68.58" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="PIN_AREF" class="0">
@@ -3635,6 +3660,13 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="R16" gate="G$1" pin="2"/>
 <pinref part="D4" gate="G$1" pin="+"/>
 <wire x1="210.82" y1="55.88" x2="213.36" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="GPIO16"/>
+<wire x1="93.98" y1="-106.68" x2="91.44" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
