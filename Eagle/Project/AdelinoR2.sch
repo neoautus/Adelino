@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2636,6 +2636,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="-99.06" y="-85.09" size="2.54" layer="97">Grove I2C</text>
 <text x="-66.04" y="-85.09" size="2.54" layer="97">Grove Serial</text>
 <text x="13.97" y="-125.73" size="6.4516" layer="97">Security</text>
+<text x="-79.248" y="-130.556" size="2.54" layer="97">ICSP</text>
 </plain>
 <instances>
 <instance part="U4" gate="G$1" x="105.41" y="93.98" smashed="yes">
@@ -2878,10 +2879,10 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="68.072" y="-53.086" size="1.27" layer="95" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="71.628" y="-54.356" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="D8" gate="G$1" x="191.77" y="-101.6" smashed="yes">
-<attribute name="NAME" x="189.992" y="-99.822" size="1.27" layer="95" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="193.548" y="-103.124" size="1.016" layer="96" ratio="10"/>
-<attribute name="LABEL" x="193.548" y="-101.092" size="1.4224" layer="96"/>
+<instance part="D8" gate="G$1" x="201.93" y="-101.6" smashed="yes">
+<attribute name="NAME" x="200.152" y="-99.822" size="1.27" layer="95" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="203.708" y="-103.124" size="1.016" layer="96" ratio="10"/>
+<attribute name="LABEL" x="203.708" y="-101.092" size="1.4224" layer="96"/>
 </instance>
 <instance part="+3V34" gate="G$1" x="182.88" y="-93.726" smashed="yes">
 <attribute name="VALUE" x="185.42" y="-91.186" size="1.778" layer="96" rot="R180"/>
@@ -3031,9 +3032,9 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="68.072" y="-91.186" size="1.27" layer="95" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="71.628" y="-92.456" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="R28" gate="G$1" x="201.93" y="-101.6" smashed="yes">
-<attribute name="NAME" x="203.708" y="-101.092" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="203.708" y="-103.378" size="1.27" layer="96" ratio="10"/>
+<instance part="R28" gate="G$1" x="191.77" y="-101.6" smashed="yes">
+<attribute name="NAME" x="193.548" y="-101.092" size="1.27" layer="95" ratio="10"/>
+<attribute name="VALUE" x="193.548" y="-103.378" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="R29" gate="G$1" x="191.77" y="-109.22" smashed="yes">
 <attribute name="NAME" x="189.992" y="-107.696" size="1.27" layer="95" ratio="10" rot="R180"/>
@@ -3680,7 +3681,7 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="R29" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="-109.22" x2="182.88" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="-109.22" x2="182.88" y2="-101.6" width="0.1524" layer="91"/>
-<pinref part="D8" gate="G$1" pin="+"/>
+<pinref part="R28" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="-101.6" x2="182.88" y2="-96.266" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="-101.6" x2="182.88" y2="-101.6" width="0.1524" layer="91"/>
 <junction x="182.88" y="-101.6"/>
@@ -4502,7 +4503,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="212.09" y1="-109.22" x2="226.06" y2="-109.22" width="0.1524" layer="91"/>
 <junction x="212.09" y="-109.22"/>
 <label x="226.06" y="-109.22" size="1.4224" layer="95" rot="R180"/>
-<pinref part="R28" gate="G$1" pin="2"/>
+<pinref part="D8" gate="G$1" pin="-"/>
 <wire x1="205.74" y1="-101.6" x2="212.09" y2="-101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -4515,8 +4516,8 @@ DIN A4, landscape with location and doc. field</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="R28" gate="G$1" pin="1"/>
-<pinref part="D8" gate="G$1" pin="-"/>
+<pinref part="D8" gate="G$1" pin="+"/>
+<pinref part="R28" gate="G$1" pin="2"/>
 <wire x1="198.12" y1="-101.6" x2="195.58" y2="-101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
