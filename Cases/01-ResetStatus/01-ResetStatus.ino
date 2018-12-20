@@ -1,61 +1,72 @@
 
-// Reset switch status can be read on PE2. For test
-// purposes on prototype 0 it can be read on D7.
+// Reset switch status can be read on PD5.
 // 
 // To test, press Adelino reset switch. The sketch should
-// blink 3 times before setting the reset switch status on
-// the D13 led. If the reset switch is kept pressed, the
-// reset switch status will be high.
+// blink 3 times before reading the reset switch status.
+// The D13 led will blink 2 times every 2s if the switch 
+// was kept pressed after the 3 blinks, of just 1 time if
+// the reset switch was released anytime before.
 
-const int the_led = 10;
+// D13 led is active low on X1, will be active HIGH on Adelino X2
+#define LED_ON   digitalWrite (LED_BUILTIN, LOW)
+#define LED_OFF  digitalWrite (LED_BUILTIN, HIGH)
 
-void setup() {
-  pinMode (7, INPUT_PULLUP);
-  pinMode(the_led, OUTPUT);
-  pinMode (3, OUTPUT);
-  digitalWrite (3, LOW);
+volatile int reset_pressed;
 
-  digitalWrite (PIN_SPI_SCK, HIGH); 
-  pinMode (PIN_SPI_SCK, OUTPUT);
-
-  for (int i = 0; i < 3; i++)
-  {
-    digitalWrite(the_led, HIGH);
-    delay(500);
-    digitalWrite(the_led, LOW);
-    delay(500);
-  }
-
-  int status = !digitalRead (7);
-  digitalWrite (the_led, status);
-
-  delay (5000);
-
-  pinMode (7, OUTPUT);
-
-  digitalWrite (the_led, !status);
-  delay (100);
-  digitalWrite (the_led, status);
-
-  digitalWrite (3, status);
-
-//  if (status)
-//  {
-    // Reset ESP
-    digitalWrite (PIN_SPI_SCK, LOW);
-    delay (10);
-    digitalWrite (PIN_SPI_SCK, HIGH);
-    delay (50);
-//  }
-  
-  digitalWrite (3, status);
+int rstat ()
+{
+  // Read the reset switch preserving the port configuration afterwards
+  unsigned char save_DDRD = DDRD;
+  unsigned char save_PORTD = PORTD;
+  cli ();
+  DDRD &= ~_BV(5); // PD5 -> input
+  PORTD |= _BV(5); // Pull up
+  int stat = !(PIND & _BV(5));
+  PORTD = save_PORTD;
+  DDRD = save_DDRD;
+  sei ();
+  return (stat);
 }
 
-void loop() 
+void setup()
 {
-  // put your main code here, to run repeatedly:
-  digitalWrite (7, HIGH);
-  //delay (50);
-  digitalWrite (7, LOW);
-  //delay (50);
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  // Blink 3 times to inform the reset button state will be read
+  for (int i = 0; i < 3; i++)
+  {
+    LED_ON;
+    delay (500);
+    LED_OFF;
+    delay (500);
+  }
+
+  // The reset button was kept pressed?
+  reset_pressed = rstat ();
+
+  // Ok, wait a little to create some suspense :)
+  delay (500);
+}
+
+// the loop function runs over and over again forever
+void loop () 
+{
+  // One short blink
+  LED_ON;
+  delay (100);
+  LED_OFF;
+
+  // If reset button was pressed, blink 2 times
+  if (reset_pressed)
+  {
+    // One more short blink
+    delay (100);
+    LED_ON;
+    delay (100);
+    LED_OFF;
+  }
+
+  // wait 1 second between blinks
+  delay (2000);
 }
