@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.2.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2279,20 +2279,6 @@ DIN A4, landscape with location and doc. field</description>
 </library>
 <library name="Seeed-OPL-2017-01-Diode-james">
 <packages>
-<package name="SOD-523">
-<smd name="P$1" x="-0.66" y="0" dx="0.48" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$2" x="0.66" y="0" dx="0.48" dy="0.4" layer="1" rot="R180"/>
-<wire x1="-0.645053125" y1="0.486128125" x2="-0.64816875" y2="0.486128125" width="0.127" layer="21"/>
-<wire x1="-0.64816875" y1="0.486128125" x2="-0.64816875" y2="0.470546875" width="0.127" layer="21"/>
-<wire x1="-0.64816875" y1="0.470546875" x2="-0.64816875" y2="-0.4425" width="0.127" layer="21"/>
-<wire x1="-0.64816875" y1="-0.4425" x2="0.65751875" y2="-0.4425" width="0.127" layer="21"/>
-<wire x1="0.65751875" y1="-0.4425" x2="0.65751875" y2="-0.43315" width="0.127" layer="21"/>
-<wire x1="0.65751875" y1="-0.43315" x2="0.691796875" y2="-0.43315" width="0.127" layer="21"/>
-<wire x1="0.691796875" y1="-0.43315" x2="0.691796875" y2="0.470546875" width="0.127" layer="21"/>
-<wire x1="0.691796875" y1="0.470546875" x2="-0.64816875" y2="0.470546875" width="0.127" layer="21"/>
-<wire x1="0.31024375" y1="0.445975" x2="0.329634375" y2="0.445975" width="0.127" layer="21"/>
-<wire x1="0.329634375" y1="0.445975" x2="0.329634375" y2="-0.43305" width="0.127" layer="21"/>
-</package>
 <package name="SOT-143B">
 <smd name="4" x="-0.95" y="0.9" dx="0.6" dy="0.5" layer="1" rot="R270"/>
 <smd name="3" x="0.95" y="0.9" dx="0.6" dy="0.5" layer="1" rot="R270"/>
@@ -2309,16 +2295,6 @@ DIN A4, landscape with location and doc. field</description>
 </package>
 </packages>
 <symbols>
-<symbol name="DIODE*-1">
-<wire x1="-1.27" y1="-2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="-2.54" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="2.54" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
-<text x="-3.81" y="2.54" size="1.27" layer="95" ratio="10">&gt;NAME</text>
-<text x="-3.81" y="-3.81" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
-<pin name="+" x="-3.81" y="0" visible="off" length="short" direction="pas"/>
-<pin name="-" x="3.81" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
 <symbol name="SMD-DIODE-TVS-5.5V">
 <wire x1="-6.35" y1="-5.08" x2="-6.35" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-6.35" y1="-2.54" x2="-6.35" y2="2.54" width="0.254" layer="94"/>
@@ -2341,26 +2317,6 @@ DIN A4, landscape with location and doc. field</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="SMD-DIODE-TVS-7VWM-22.7VC-SOD-523" prefix="TVS" uservalue="yes">
-<description>SMD Diode TVS 7VWM-22.7VC;SOD-523</description>
-<gates>
-<gate name="G$1" symbol="DIODE*-1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOD-523">
-<connects>
-<connect gate="G$1" pin="+" pad="P$1"/>
-<connect gate="G$1" pin="-" pad="P$2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MPN" value="ON;ESD5Z7.0T1G" constant="no"/>
-<attribute name="SKU" value="304050296" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="SMD-DIODE-TVS-5.5V" prefix="ESD" uservalue="yes">
 <description>SMD Diode TVS;5.5V</description>
 <gates>
@@ -2413,6 +2369,48 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="2.3" y1="2" x2="2.5" y2="2" width="0.127" layer="21"/>
 <wire x1="2.3" y1="-2" x2="2.5" y2="-2" width="0.127" layer="21"/>
 </package>
+<package name="DO-214AA">
+<wire x1="2.16" y1="-1.78" x2="-2.14" y2="-1.78" width="0.2032" layer="21"/>
+<wire x1="-2.14" y1="-1.78" x2="-2.16" y2="-1.78" width="0.2032" layer="21"/>
+<wire x1="-2.16" y1="-1.78" x2="-2.16" y2="1.78" width="0.2032" layer="51"/>
+<wire x1="-2.16" y1="1.78" x2="-2.14" y2="1.78" width="0.2032" layer="21"/>
+<wire x1="-2.14" y1="1.78" x2="2.16" y2="1.78" width="0.2032" layer="21"/>
+<wire x1="2.16" y1="1.78" x2="2.16" y2="-1.78" width="0.2032" layer="51"/>
+<wire x1="0.508" y1="0" x2="0.381" y2="-0.127" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-0.127" x2="0.254" y2="-0.254" width="0.127" layer="21"/>
+<wire x1="0.254" y1="-0.254" x2="0.127" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="-0.889" x2="-0.508" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-0.508" y1="-1.016" x2="-0.508" y2="1.016" width="0.127" layer="21"/>
+<wire x1="-0.508" y1="1.016" x2="-0.381" y2="0.889" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="0.889" x2="-0.254" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="0.889" x2="-0.381" y2="-0.889" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="-0.889" x2="-0.254" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-0.254" y1="-0.762" x2="-0.127" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-0.254" y1="-0.762" x2="-0.254" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-0.254" y1="0.762" x2="-0.127" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-0.127" y1="0.635" x2="0" y2="0.508" width="0.127" layer="21"/>
+<wire x1="-0.127" y1="0.635" x2="-0.127" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-0.127" y1="-0.635" x2="0" y2="-0.508" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.508" x2="0.127" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.508" x2="0" y2="0.508" width="0.127" layer="21"/>
+<wire x1="0" y1="0.508" x2="0.127" y2="0.381" width="0.127" layer="21"/>
+<wire x1="0.127" y1="0.381" x2="0.254" y2="0.254" width="0.127" layer="21"/>
+<wire x1="0.127" y1="0.381" x2="0.127" y2="-0.381" width="0.127" layer="21"/>
+<wire x1="0.254" y1="-0.254" x2="0.254" y2="0.254" width="0.127" layer="21"/>
+<wire x1="0.254" y1="0.254" x2="0.381" y2="0.127" width="0.127" layer="21"/>
+<wire x1="0.381" y1="0.127" x2="0.508" y2="0" width="0.127" layer="21"/>
+<wire x1="0.381" y1="0.127" x2="0.381" y2="-0.127" width="0.127" layer="21"/>
+<rectangle x1="-3.429" y1="-1.905" x2="3.429" y2="1.905" layer="39" rot="R180"/>
+<smd name="+" x="-2.21" y="0" dx="2.743" dy="2.159" layer="1" rot="R270"/>
+<smd name="-" x="2.21" y="0" dx="2.743" dy="2.159" layer="1" rot="R270"/>
+<text x="-2.159" y="2.032" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-1.651" y="-2.794" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
+<text x="1.27" y="0" size="0.5" layer="33" ratio="10" rot="R180">&gt;NAME</text>
+<wire x1="2.16" y1="-1.78" x2="2.16" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="2.16" y1="1.52" x2="2.16" y2="1.78" width="0.2032" layer="21"/>
+<wire x1="-2.14" y1="1.52" x2="-2.14" y2="1.78" width="0.2032" layer="21"/>
+<wire x1="-2.14" y1="-1.78" x2="-2.14" y2="-1.5" width="0.2032" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SECURITY-ECCX08">
@@ -2447,6 +2445,22 @@ DIN A4, landscape with location and doc. field</description>
 <text x="-6.604" y="-2.032" size="1.524" layer="95">NC</text>
 <text x="6.5278" y="2.032" size="1.524" layer="95" rot="R180">NC</text>
 </symbol>
+<symbol name="DIODE*-1">
+<wire x1="1.524" y1="-1.524" x2="-1.524" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.524" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-1.524" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<text x="0.762" y="2.286" size="1.27" layer="95" ratio="10">&gt;NAME</text>
+<text x="0.762" y="-3.302" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
+<pin name="+" x="0" y="-4.064" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="-" x="0" y="4.064" visible="off" length="short" direction="pas" rot="R270"/>
+<wire x1="0" y1="0" x2="1.524" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="-2.032" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="1.524" y1="0" x2="2.032" y2="0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.524" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.524" x2="1.524" y2="1.524" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.524" x2="0" y2="0" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ATECC608(SOIC8)" prefix="U" uservalue="yes">
@@ -2470,6 +2484,26 @@ DIN A4, landscape with location and doc. field</description>
 <technology name="">
 <attribute name="MPN" value="ATECC608"/>
 <attribute name="VALUE" value="ATECC608-SOIC8" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMBJ15CA-13-F" prefix="D">
+<description>SMD TVS DIODE 15VWM 24.4VC SMA;DO-214AA(SMB)</description>
+<gates>
+<gate name="G$1" symbol="DIODE*-1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DO-214AA">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="SMBJ15CA-13-F" constant="no"/>
+<attribute name="SKU" value="SHENZHEN-OPL;TVS DIODE 15VWM 24.4VC SMB" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2585,7 +2619,6 @@ DIN A4, landscape with location and doc. field</description>
 </part>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="TVS1" library="Seeed-OPL-2017-01-Diode-james" deviceset="SMD-DIODE-TVS-7VWM-22.7VC-SOD-523" device=""/>
 <part name="R26" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" value="1K"/>
 <part name="R24" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/16W(0402)" device="" value="1K"/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -2617,6 +2650,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="C21" library="Seeed-Capacitor" deviceset="CERAMIC-100NF-25V-10%-X7R(0402)" device="" value="100nf"/>
+<part name="D1" library="Adelino-Misc" deviceset="SMBJ15CA-13-F" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2961,10 +2995,6 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="P+6" gate="1" x="163.83" y="138.43" smashed="yes">
 <attribute name="VALUE" x="166.37" y="140.97" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="TVS1" gate="G$1" x="-199.39" y="133.35" smashed="yes" rot="R90">
-<attribute name="NAME" x="-204.47" y="135.89" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="-195.58" y="129.54" size="1.27" layer="96" ratio="10" rot="R90"/>
-</instance>
 <instance part="R26" gate="G$1" x="191.77" y="-73.66" smashed="yes">
 <attribute name="NAME" x="189.992" y="-71.882" size="1.27" layer="95" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="189.992" y="-74.168" size="1.27" layer="96" ratio="10" rot="R180"/>
@@ -3062,6 +3092,10 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="C21" gate="G$1" x="96.52" y="-154.94" smashed="yes" rot="R180">
 <attribute name="NAME" x="95.25" y="-155.702" size="1.27" layer="95" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="97.79" y="-156.972" size="1.27" layer="96" ratio="10"/>
+</instance>
+<instance part="D1" gate="G$1" x="-199.39" y="132.08" smashed="yes">
+<attribute name="NAME" x="-200.152" y="135.636" size="1.27" layer="95" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-200.152" y="129.794" size="1.27" layer="96" ratio="10" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -3211,8 +3245,8 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="J1" gate="G$1" pin="-"/>
 <wire x1="-210.82" y1="138.43" x2="-207.01" y2="138.43" width="0.1524" layer="91"/>
 <wire x1="-207.01" y1="138.43" x2="-207.01" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="-207.01" y1="121.92" x2="-199.39" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="CDN"/>
+<wire x1="-207.01" y1="121.92" x2="-199.39" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-199.39" y1="121.92" x2="-191.77" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-146.05" y1="121.92" x2="-163.83" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="-163.83" y1="121.92" x2="-170.18" y2="121.92" width="0.1524" layer="91"/>
@@ -3253,9 +3287,9 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="-163.83" y1="124.46" x2="-163.83" y2="121.92" width="0.1524" layer="91"/>
 <junction x="-163.83" y="121.92"/>
-<wire x1="-199.39" y1="129.54" x2="-199.39" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="+"/>
+<wire x1="-199.39" y1="128.016" x2="-199.39" y2="121.92" width="0.1524" layer="91"/>
 <junction x="-199.39" y="121.92"/>
-<pinref part="TVS1" gate="G$1" pin="+"/>
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="GND@1"/>
@@ -3440,12 +3474,12 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-210.82" y1="143.51" x2="-207.01" y2="143.51" width="0.1524" layer="91"/>
 <label x="-210.82" y="151.13" size="1.4224" layer="95"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
-<wire x1="-196.85" y1="143.51" x2="-199.39" y2="143.51" width="0.1524" layer="91"/>
 <junction x="-207.01" y="143.51"/>
+<wire x1="-196.85" y1="143.51" x2="-199.39" y2="143.51" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="-"/>
 <wire x1="-199.39" y1="143.51" x2="-207.01" y2="143.51" width="0.1524" layer="91"/>
-<wire x1="-199.39" y1="137.16" x2="-199.39" y2="143.51" width="0.1524" layer="91"/>
+<wire x1="-199.39" y1="136.144" x2="-199.39" y2="143.51" width="0.1524" layer="91"/>
 <junction x="-199.39" y="143.51"/>
-<pinref part="TVS1" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="8"/>
