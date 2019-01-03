@@ -63,15 +63,17 @@
 		#define BOOTLOADER_HWVERSION_MINOR   0x00
 
 		/** Eight character bootloader firmware identifier reported to the host when requested */
-		#define SOFTWARE_IDENTIFIER          "CORALINE"
+		#define SOFTWARE_IDENTIFIER          "ADELINO"
 
 		#define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
-		#define LED_SETUP()		DDRC |= (1<<7); DDRB |= (1<<0); /*DDRD |= (1<<5);*/
-		#define L_LED_OFF()		PORTC &= ~(1<<7)
-		#define L_LED_ON()		PORTC |= (1<<7)
+
+                /** Setup D13 (PC7) and ACT (PB0) */
+		#define LED_SETUP()	DDRC |= (1<<7); DDRB |= (1<<0);
+		#define L_LED_OFF()	PORTC &= ~(1<<7)
+		#define L_LED_ON()	PORTC |= (1<<7)
 		#define L_LED_TOGGLE()	PORTC ^= (1<<7)
 
-		/** We use just 1 led for comm signaling */
+		/** We use just 1 led (ACT) for comm I/O signaling */
 		#define ACT_LED_OFF()	PORTB |= (1<<0)
 		#define ACT_LED_ON()	PORTB &= ~(1<<0)
 
@@ -88,7 +90,7 @@
 
 		void EVENT_USB_Device_ConfigurationChanged(void);
 
-		#if defined(INCLUDE_FROM_CATERINA_C) || defined(__DOXYGEN__)
+		#if defined(INCLUDE_FROM_ADELINO_C) || defined(__DOXYGEN__)
 			#if !defined(NO_BLOCK_SUPPORT)
 			static void    ReadWriteMemoryBlock(const uint8_t Command);
 			#endif

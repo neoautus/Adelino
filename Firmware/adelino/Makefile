@@ -118,7 +118,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = Coraline
+TARGET = Adelino
 
 
 # Object files directory
