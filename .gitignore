@@ -2,3 +2,14 @@
 # Eagle backup files
 *.?#?
 
+# C/C++ intermediate files/dirs
+.dep
+*.lst
+*.o
+*.eep
+*.elf
+*.hex
+*.lss
+*.map
+*.sym
+
