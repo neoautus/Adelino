@@ -13,7 +13,7 @@ image::Adelino_X1.jpg[Adelino X1]
 
 == Adelino X2
 
-Adelino X2 features https://www.microchip.com/wwwproducts/en/ATECC608A[ATECC608] security chip onboard, adds a SPI bridge between ESP-8266 and ATmegs32U4 and a more efficient switching power supply. It also changes the GPIO Grove port to Serial and improves the compatibility with standard Arduino Leonardo libraries.
+Adelino X2 features https://www.microchip.com/wwwproducts/en/ATECC608A[ATECC608] cryptographic co-processor chip onboard (with secure hardware-based key storage), adds a full high speed SPI bridge between ESP-8266 and ATmega32U4 and a more efficient switching power supply. It also changes the GPIO Grove port to Serial and improves the compatibility with standard Arduino Leonardo libraries.
 
 image::Eagle/AdelinoR2_sch.png[link="https://raw.githubusercontent.com/neoautus/Adelino/master/Eagle/AdelinoR2_sch.png"]
 
