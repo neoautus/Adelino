@@ -1,6 +1,6 @@
 cat << EOF
 =======================================================================
-This script downloads and extracts the LUFA library needed by Coraline.
+This script downloads and extracts the LUFA library needed by Adelino.
 
 LUFA is the Lightweight USB Framework for AVRs, written by Dean Camera.
 You can find it in: https://github.com/abcminiuser/lufa
