@@ -61,7 +61,8 @@ static bool RunBootloader = true;
 uint16_t ActLEDPulse = 0; // time remaining for Tx+Rx LED pulse
 
 /* Bootloader timeout timer */
-#define TIMEOUT_PERIOD	8000
+#define TIMEOUT_PERIOD     3000
+#define RESET_HELD_PERIOD  2000
 uint16_t Timeout = 0;
 
 #ifndef BAUD_RATE
@@ -96,10 +97,23 @@ void StartSketch(void)
 uint16_t LLEDPulse;
 void LEDPulse(void)
 {
-	if (LLEDPulse & 0x100) /* Flashing every 256ms */
-		L_LED_OFF();
-	else
-		L_LED_ON();
+    LLEDPulse++;
+    uint8_t p = LLEDPulse >> 8;
+    if (p > 127)
+    {
+        p = 254-p;
+    }
+    p += p;
+    if (((uint8_t)LLEDPulse) > p)
+    {
+        L_LED_OFF();
+        ACT_LED_ON();
+    }
+    else
+    {
+        L_LED_ON();
+        ACT_LED_OFF();
+    }
 }
 
 void putch(char ch)
@@ -123,6 +137,21 @@ uint8_t getch(void)
 //  LED_PIN |= _BV(LED);
 
   return ch;
+}
+
+uint8_t rstat ()
+{
+  // Read the reset switch preserving the port configuration afterwards
+  uint8_t save_DDRD = DDRD;
+  uint8_t save_PORTD = PORTD;
+  cli ();
+  DDRD &= ~_BV(5); // PD5 -> input
+  PORTD |= _BV(5); // Pull up
+  uint8_t stat = !(PIND & _BV(5));
+  PORTD = save_PORTD;
+  DDRD = save_DDRD;
+  sei ();
+  return (stat);
 }
 
 /** Main program entry point. This routine configures the hardware required by the bootloader, then continuously
@@ -157,16 +186,28 @@ int main(void)
 
 	/* Enable global interrupts so that the USB stack can function */
 	sei();
-	
+
 	Timeout = 0;
 	
 	while (RunBootloader)
 	{
 		CDC_Task();
 		USB_USBTask();
-		/* Time out and start the sketch if one is present */
-		if (Timeout > TIMEOUT_PERIOD)
+
+        // Check if reset button is held after ~3 seconds
+        if (Timeout > RESET_HELD_PERIOD && rstat ())
+        {
+            // Timeout set to infinite
+            Timeout = 0xFFFF;
+        }
+
+		// Time out and start the sketch if one is present.
+        // If reset was held pressed, NEVER RUN SKETCH and
+        // keep waiting for sketch upload.
+		if (Timeout != 0xFFFF && Timeout > TIMEOUT_PERIOD)
+        {
 			RunBootloader = false;
+        }
 
 		LEDPulse();
 	}
@@ -230,9 +271,8 @@ ISR(TIMER1_COMPA_vect, ISR_BLOCK)
 
 	if (ActLEDPulse && !(--ActLEDPulse))
 		ACT_LED_OFF();
-    LLEDPulse++;
 	
-	if (pgm_read_word(0) != 0xFFFF)
+	if (pgm_read_word(0) != 0xFFFF && Timeout != 0xFFFF)
 		Timeout++;
 }
 
