@@ -2526,7 +2526,7 @@ DIN A4, landscape with location and doc. field</description>
 </classes>
 <parts>
 <part name="U5" library="Seeed-IC" deviceset="MCU-ATMEGA32U4-MUR(VQFN44)" device="" value="ATMEGA32U4-MUR-QFN44">
-<attribute name="DESC" value="SOCKET A - QFN44"/>
+<attribute name="DESC" value="Primary socket - QFN44"/>
 </part>
 <part name="U3" library="Seeed-OPL-2017-01-Sensor-camilo" deviceset="ESP-12F" device="" value="ESP-12F / OPL: 317060163 / SMD WIFI Module"/>
 <part name="USB1" library="Seeed-Connector" deviceset="MICRO-USB-SMD-B-WITHOUT-POST-W/P(ST-USB-001G)" device="" value="ST-USB-001G"/>
@@ -2615,7 +2615,7 @@ DIN A4, landscape with location and doc. field</description>
 </part>
 <part name="R5" library="Seeed-Resistor" deviceset="SMD-RES-3.3K-5%-1/16W(0402)" device="" value="3.3K"/>
 <part name="U6" library="Seeed-IC" deviceset="MCU-ATMEGA32U4-AU(TQFP44)" device="" value="DNP">
-<attribute name="DESC" value="SOCKET B - TQFP44"/>
+<attribute name="DESC" value="Alternative socket - TQFP44"/>
 </part>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -2647,7 +2647,9 @@ DIN A4, landscape with location and doc. field</description>
 <part name="R19" library="Seeed-Resistor" deviceset="SMD-RES-0R-5%-1/16W(0402)" device="" value="0R"/>
 <part name="ESD1" library="Seeed-OPL-2017-01-Diode-james" deviceset="SMD-DIODE-TVS-5.5V" device="" value="PRTR5V0U2X"/>
 <part name="U4" library="Adelino-Misc" deviceset="ATECC608(SOIC8)" device="" value="DNP">
-<attribute name="DESC" value="ATECC608-SOIC8"/>
+<attribute name="DESC" value="ATECC608A-SSHDA-B (SOIC-8)"/>
+<attribute name="MOUSER_REF" value="https://www.mouser.com/ProductDetail/556-ATECC608ASSHDAB"/>
+<attribute name="MPN" value="ATECC608A-SSHDA-B"/>
 </part>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -2678,8 +2680,8 @@ DIN A4, landscape with location and doc. field</description>
 <instances>
 <instance part="U5" gate="G$1" x="105.41" y="93.98" smashed="yes">
 <attribute name="NAME" x="74.93" y="133.35" size="1.778" layer="95"/>
-<attribute name="VALUE" x="101.6" y="135.89" size="1.778" layer="96"/>
-<attribute name="DESC" x="101.6" y="133.35" size="1.778" layer="96"/>
+<attribute name="VALUE" x="133.35" y="137.922" size="1.778" layer="96" rot="R180"/>
+<attribute name="DESC" x="133.35" y="135.128" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="U3" gate="G$1" x="96.52" y="-72.39" smashed="yes">
 <attribute name="NAME" x="83.82" y="-51.308" size="1.27" layer="95" ratio="11"/>
@@ -2989,7 +2991,7 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="U6" gate="G$1" x="200.66" y="93.98" smashed="yes">
 <attribute name="NAME" x="170.18" y="133.35" size="1.778" layer="95"/>
 <attribute name="VALUE" x="170.18" y="135.89" size="1.778" layer="96"/>
-<attribute name="DESC" x="201.93" y="133.35" size="1.778" layer="96"/>
+<attribute name="DESC" x="228.6" y="135.128" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND13" gate="1" x="163.83" y="50.8" smashed="yes">
 <attribute name="VALUE" x="161.29" y="48.26" size="1.778" layer="96"/>
@@ -3085,6 +3087,7 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="88.9" y="-141.478" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="88.9" y="-139.7" size="1.27" layer="96" ratio="10"/>
 <attribute name="DESC" x="88.9" y="-154.178" size="1.27" layer="96"/>
+<attribute name="MOUSER_REF" x="96.52" y="-147.32" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND12" gate="1" x="81.28" y="-162.56" smashed="yes">
 <attribute name="VALUE" x="78.74" y="-165.1" size="1.778" layer="96"/>
