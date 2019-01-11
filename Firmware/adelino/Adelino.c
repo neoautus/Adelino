@@ -36,6 +36,21 @@
 #define  INCLUDE_FROM_ADELINO_C
 #include "Adelino.h"
 
+#define MINIMAL_AVR109
+
+// The very minimal needed for Avrdude to work
+#ifdef MINIMAL_AVR109
+  #ifndef NO_LOCK_BYTE_WRITE_SUPPORT
+    #define NO_LOCK_BYTE_WRITE_SUPPORT
+  #endif
+  #ifndef NO_EEPROM_BYTE_SUPPORT
+    #define NO_EEPROM_BYTE_SUPPORT
+  #endif
+  #ifndef NO_FLASH_BYTE_SUPPORT
+    #define NO_FLASH_BYTE_SUPPORT
+  #endif
+#endif
+
 /** Contains the current baud rate and other settings of the first virtual serial port. This must be retained as some
  *  operating systems will not open the port unless the settings can be set successfully.
  */
@@ -61,7 +76,7 @@ static bool RunBootloader = true;
 uint16_t ActLEDPulse = 0; // time remaining for Tx+Rx LED pulse
 
 /* Bootloader timeout timer */
-#define TIMEOUT_PERIOD     3000
+#define TIMEOUT_PERIOD     8000
 #define RESET_HELD_PERIOD  2000
 uint16_t Timeout = 0;
 
@@ -216,7 +231,7 @@ int main(void)
 	USB_Detach();
 
 	/* Jump to beginning of application space to run the sketch - do not reset */	
-    putch ('R');
+    putch ('!');
 	StartSketch();
 }
 
@@ -342,6 +357,97 @@ void EVENT_USB_Device_ControlRequest(void)
  *
  *  \param[in] Command  Single character AVR910 protocol command indicating what memory operation to perform
  */
+#ifdef MINIMAL_AVR109
+// Minimal version: Supports only Flash
+static void ReadWriteMemoryBlock(const uint8_t Command)
+{
+    uint16_t BlockSize;
+    char     MemoryType;
+
+    bool     HighByte = false;
+    uint8_t  LowByte  = 0;
+
+    BlockSize  = (FetchNextCommandByte() << 8);
+    BlockSize |=  FetchNextCommandByte();
+
+    MemoryType =  FetchNextCommandByte();
+
+    if (MemoryType != 'F')
+    {
+        /* Send error byte back to the host */
+        WriteNextResponseByte('?');
+        return;
+    }
+
+    /* Disable timer 1 interrupt - can't afford to process nonessential interrupts
+        * while doing SPM tasks */
+    TIMSK1 = 0;
+
+    /* Check if command is to read memory */
+    if (Command == 'g')
+    {               
+        /* Re-enable RWW section */
+        boot_rww_enable();
+
+        while (BlockSize--)
+        {
+            /* Read the next FLASH byte from the current FLASH page */
+#if (FLASHEND > 0xFFFF)
+            WriteNextResponseByte(pgm_read_byte_far(CurrAddress | HighByte));
+#else
+            WriteNextResponseByte(pgm_read_byte(CurrAddress | HighByte));
+#endif
+
+            /* If both bytes in current word have been read, increment the address counter */
+            if (HighByte)
+            {
+                CurrAddress += 2;
+            }
+
+            HighByte = !HighByte;
+        }
+    }
+    else // Write memory
+    {
+        uint32_t PageStartAddress = CurrAddress;
+
+        boot_page_erase(PageStartAddress);
+        boot_spm_busy_wait();
+
+        while (BlockSize--)
+        {
+            /* If both bytes in current word have been written, increment the address counter */
+            if (HighByte)
+            {
+                /* Write the next FLASH word to the current FLASH page */
+                boot_page_fill(CurrAddress, ((FetchNextCommandByte() << 8) | LowByte));
+
+                /* Increment the address counter after use */
+                CurrAddress += 2;
+            }
+            else
+            {
+                LowByte = FetchNextCommandByte();
+            }
+            
+            HighByte = !HighByte;
+        }
+
+        /* Commit the flash page to memory */
+        boot_page_write(PageStartAddress);
+
+        /* Wait until write operation has completed */
+        boot_spm_busy_wait();
+
+        /* Send response byte back to the host */
+        WriteNextResponseByte('\r');
+    }
+
+    /* Re-enable timer 1 interrupt disabled earlier in this routine */      
+    TIMSK1 = (1 << OCIE1A);
+}
+#else // MINIMAL_AVR109
+// Full version: Supports Flash and EEPROM
 static void ReadWriteMemoryBlock(const uint8_t Command)
 {
 	uint16_t BlockSize;
@@ -369,7 +475,7 @@ static void ReadWriteMemoryBlock(const uint8_t Command)
 
 	/* Check if command is to read memory */
 	if (Command == 'g')
-	{		
+	{
 		/* Re-enable RWW section */
 		boot_rww_enable();
 
@@ -427,7 +533,7 @@ static void ReadWriteMemoryBlock(const uint8_t Command)
 				{
 					LowByte = FetchNextCommandByte();
 				}
-				
+
 				HighByte = !HighByte;
 			}
 			else
@@ -454,9 +560,10 @@ static void ReadWriteMemoryBlock(const uint8_t Command)
 		WriteNextResponseByte('\r');
 	}
 
-	/* Re-enable timer 1 interrupt disabled earlier in this routine */	
+	/* Re-enable timer 1 interrupt disabled earlier in this routine */
 	TIMSK1 = (1 << OCIE1A);
 }
+#endif // MINIMAL_AVR109
 #endif
 
 /** Retrieves the next byte from the host in the CDC data OUT endpoint, and clears the endpoint bank if needed
@@ -617,6 +724,7 @@ void CDC_Task(void)
 		WriteNextResponseByte(AVR_SIGNATURE_2);
 		WriteNextResponseByte(AVR_SIGNATURE_1);
 	}
+        #if !defined(MINIMAL_AVR109)
 	else if (Command == 'e')
 	{
 		// Clear the application section of flash 
@@ -631,6 +739,7 @@ void CDC_Task(void)
 		// Send confirmation byte back to the host 
 		WriteNextResponseByte('\r');
 	}
+        #endif // MINIMAL_AVR109
 	#if !defined(NO_LOCK_BYTE_WRITE_SUPPORT)
 	else if (Command == 'l')
 	{
@@ -641,6 +750,7 @@ void CDC_Task(void)
 		WriteNextResponseByte('\r');
 	}
 	#endif
+	#if !defined(MINIMAL_AVR109)
 	else if (Command == 'r')
 	{
 		WriteNextResponseByte(boot_lock_fuse_bits_get(GET_LOCK_BITS));
@@ -657,6 +767,7 @@ void CDC_Task(void)
 	{
 		WriteNextResponseByte(boot_lock_fuse_bits_get(GET_EXTENDED_FUSE_BITS));
 	}
+        #endif // MINIMAL_AVR109
 	#if !defined(NO_BLOCK_SUPPORT)
 	else if (Command == 'b')
 	{
@@ -675,7 +786,7 @@ void CDC_Task(void)
 	}
 	#endif
 	#if !defined(NO_FLASH_BYTE_SUPPORT)
-	else if (Command == 'C')
+        else if (Command == 'C')
 	{
 		// Write the high byte to the current flash page
 		boot_page_fill(CurrAddress, FetchNextCommandByte());
@@ -744,7 +855,6 @@ void CDC_Task(void)
 		WriteNextResponseByte('?');
 	}
 	
-
 	/* Select the IN endpoint */
 	Endpoint_SelectEndpoint(CDC_TX_EPNUM);
 
@@ -779,4 +889,3 @@ void CDC_Task(void)
 	/* Acknowledge the command from the host */
 	Endpoint_ClearOUT();
 }
-
