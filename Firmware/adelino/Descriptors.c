@@ -58,8 +58,8 @@ static USB_Descriptor_Device_t DeviceDescriptor =
     .ProductID              = DEVICE_PID,
     .ReleaseNumber          = VERSION_BCD(00.01),
 
-    .ManufacturerStrIndex   = 0x02,
-    .ProductStrIndex        = 0x01,
+    .ManufacturerStrIndex   = 0x01,
+    .ProductStrIndex        = 0x02,
     .SerialNumStrIndex      = NO_DESCRIPTOR,
 
     .NumberOfConfigurations = FIXED_NUM_CONFIGURATIONS
@@ -82,7 +82,7 @@ static const USB_Descriptor_Configuration_t ConfigurationDescriptor =
         .ConfigurationNumber    = 1,
         .ConfigurationStrIndex  = NO_DESCRIPTOR,
 
-        .ConfigAttributes       = USB_CONFIG_ATTR_BUSPOWERED,
+        .ConfigAttributes       = USB_CONFIG_ATTR_BUSPOWERED | USB_CONFIG_ATTR_SELFPOWERED,
 
         .MaxPowerConsumption    = USB_CONFIG_POWER_MA(100)
     },

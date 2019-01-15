@@ -69,10 +69,16 @@ static uint32_t CurrAddress;
 #define ACT_LED_PULSE_PERIOD 100
 uint16_t ActLEDPulse = 0; // time remaining for Tx+Rx LED pulse
 
-/* Bootloader timeout timer */
-#define TIMEOUT_PERIOD     8000
-#define RESET_HELD_PERIOD  2000
-uint16_t Timeout = 0;
+// Calc how many 40ms ticks for the given millisecond interval
+#define TICKS_MS(ms)       ((ms) / 40)
+
+// Bootloader timeout timer
+#define NO_TIMEOUT         ((uint8_t)0xff)
+#define TIMEOUT_PERIOD     TICKS_MS(8000)
+#define RESET_HELD_PERIOD  TICKS_MS(2000)
+
+// uint16_t -> 3556, uint8_t -> 3504
+uint8_t Timeout = 0;
 
 #ifndef BAUD_RATE
 #define BAUD_RATE   115200L
@@ -217,15 +223,14 @@ static void setup_hardware (void)
 
     putch ('B');
 
-    // Initialize TIMER1 to handle bootloader timeout and LED tasks.  
-    // With 16 MHz clock and 1/64 prescaler, timer 1 is clocked at 250 kHz
-    // Our chosen compare match generates an interrupt every 1 ms.
+    // Initialize TIMER1 to handle bootloader timeout and LED tasks.
+    // The timer is set to 25Hz or once every 40ms, so we can use a single byte
+    // for timeout counting (0..254 -> 254 x 40ms = 10160ms or 10.160s).
     // This interrupt is disabled selectively when doing memory reading, erasing,
     // or writing since SPM has tight timing requirements.
-    OCR1AH = 0;
-    OCR1AL = 250;
-    TIMSK1 = (1 << OCIE1A);                     // enable timer 1 output compare A match interrupt
-    TCCR1B = ((1 << CS11) | (1 << CS10));       // 1/64 prescaler on timer 1 input
+    OCR1A = 9999;
+    TIMSK1 = _BV(OCIE1A);		                    // enable timer 1 output compare A match interrupt
+    TCCR1B = _BV(CS11) | _BV(CS10) | _BV(WGM12);    // 1/64 prescaler on timer 1 input
 
     // Initialize USB Subsystem
     USB_Init ();
@@ -279,13 +284,13 @@ int main (void)
         if (Timeout > RESET_HELD_PERIOD && rstat ())
         {
             // Timeout set to infinite
-            Timeout = 0xFFFF;
+            Timeout = NO_TIMEOUT;
         }
 
         // Time out and start the sketch if one is present.
         // If reset was held pressed, NEVER RUN SKETCH and
         // keep waiting for sketch upload.
-        if (Timeout != 0xFFFF && Timeout > TIMEOUT_PERIOD)
+        if (Timeout != NO_TIMEOUT && Timeout > TIMEOUT_PERIOD)
         {
             break;
         }
@@ -312,7 +317,7 @@ ISR(TIMER1_COMPA_vect, ISR_BLOCK)
         ACT_LED_OFF();
     }
 
-    if (pgm_read_word(0) != 0xFFFF && Timeout != 0xFFFF)
+    if (pgm_read_word(0) != 0xFFFF && Timeout != NO_TIMEOUT)
     {
         Timeout++;
     }
@@ -691,7 +696,7 @@ void CDC_Task (void)
         // leaving just a few hundred milliseconds so the 
         // bootloder has time to respond and service any 
         // subsequent requests
-        Timeout = TIMEOUT_PERIOD - 500;
+        Timeout = TIMEOUT_PERIOD - TICKS_MS(500);
 
         // Re-enable RWW section - must be done here in case 
         // user has disabled verification on upload.
@@ -725,7 +730,7 @@ void CDC_Task (void)
     }
     else if (Command == 'A')
     {
-        // Set the current address to that given by the host 
+        // Set the current address to that given by the host
         CurrAddress   = (FetchNextCommandByte () << 9);
         CurrAddress  |= (FetchNextCommandByte () << 1);
 
