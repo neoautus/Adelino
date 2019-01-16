@@ -2401,8 +2401,8 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="0.381" y1="0.127" x2="0.508" y2="0" width="0.127" layer="21"/>
 <wire x1="0.381" y1="0.127" x2="0.381" y2="-0.127" width="0.127" layer="21"/>
 <rectangle x1="-3.429" y1="-1.905" x2="3.429" y2="1.905" layer="39" rot="R180"/>
-<smd name="+" x="-2.21" y="0" dx="2.743" dy="2.159" layer="1" rot="R270"/>
-<smd name="-" x="2.21" y="0" dx="2.743" dy="2.159" layer="1" rot="R270"/>
+<smd name="+" x="-2.15" y="0" dx="2.5" dy="2.3" layer="1"/>
+<smd name="-" x="2.15" y="0" dx="2.5" dy="2.3" layer="1"/>
 <text x="-2.159" y="2.032" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-1.651" y="-2.794" size="0.635" layer="27" ratio="10">&gt;VALUE</text>
 <text x="1.27" y="0" size="0.5" layer="33" ratio="10" rot="R180">&gt;NAME</text>
@@ -2489,8 +2489,8 @@ DIN A4, landscape with location and doc. field</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SMBJ15CA-13-F" prefix="D">
-<description>SMD TVS DIODE 15VWM 24.4VC SMA;DO-214AA(SMB)</description>
+<deviceset name="TVS-DIODE-SZOPL-SMBJ15CA-13-F" prefix="D">
+<description>SMD Diode TVS 24VWM/38.9VC-600W;DO-214AA(SMB)</description>
 <gates>
 <gate name="G$1" symbol="DIODE*-1" x="0" y="0"/>
 </gates>
@@ -2517,7 +2517,7 @@ DIN A4, landscape with location and doc. field</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.254" drill="0.6096">
+<class number="0" name="default" width="0.2032" drill="0.2032">
 <clearance class="0" value="0.254"/>
 </class>
 <class number="1" name="usb" width="0.2032" drill="0">
@@ -2654,7 +2654,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="C21" library="Seeed-Capacitor" deviceset="CERAMIC-100NF-25V-10%-X7R(0402)" device="" value="100nf"/>
-<part name="D1" library="Adelino-Misc" deviceset="SMBJ15CA-13-F" device=""/>
+<part name="D1" library="Adelino-Misc" deviceset="TVS-DIODE-SZOPL-SMBJ15CA-13-F" device=""/>
 </parts>
 <sheets>
 <sheet>
