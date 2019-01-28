@@ -80,6 +80,9 @@ uint16_t ActLEDPulse = 0; // time remaining for Tx+Rx LED pulse
 // uint16_t -> 3556, uint8_t -> 3504
 uint8_t Timeout = 0;
 
+// Serial baud divisor
+#define SERIAL_2X_UBBRVAL(Baud) ((((F_CPU / 8) + (Baud / 2)) / (Baud)) - 1)
+
 #ifndef BAUD_RATE
 #define BAUD_RATE   115200L
 #endif
@@ -168,17 +171,30 @@ static void putch (char ch)
     UDR1 = ch;
 }
 
-static uint8_t getch (void)
+#define BUFSIZE  128
+
+static uint8_t buffer [BUFSIZE];
+static uint16_t buffer_in;
+static uint16_t buffer_out;
+
+ISR(USART1_RX_vect, ISR_BLOCK)
 {
-    uint8_t ch;
-
-    while (!(UCSR1A & _BV(RXC1)));
+    if (USB_DeviceState == DEVICE_STATE_Configured)
     {
-        // Wait for the byte
-    }
-    ch = UDR1;
+        uint16_t next = buffer_in + 1;
 
-    return ch;
+        if (next == BUFSIZE)
+        {
+            next = 0;
+        }
+
+        // A very simple circular buffer
+        if (next != buffer_out)
+        {
+            buffer [buffer_in] = UDR1;
+            buffer_in = next;
+        }
+    }
 }
 
 static uint8_t rstat (void)
@@ -194,6 +210,48 @@ static uint8_t rstat (void)
     DDRD = save_DDRD;
     sei ();
     return (stat);
+}
+
+static void reset_esp (uint8_t program_mode)
+{
+    // GPIO15 is also HSPI_CS, which is connected to SS on
+    // AVR SPI; so we MUST ensure GPIO15 LOW for proper boot.
+    PORTB &= ~_BV(0); // GPIO15 => LOW
+    DDRB |= _BV(0); // PB0 (SS) => OUTPUT
+
+    // D13 is also used to drive GPIO0, which is the main
+    // boot mode selector. GPIO0 HIGH for normal boot, GPIO0
+    // LOW to enter ROM bootloader.
+    if (program_mode)
+    {
+        // Enter ROM bootloader
+        PORTC &= ~_BV(7);
+    }
+    else
+    {
+        // Normal boot
+        PORTC |= _BV(7);
+    }
+    DDRC |= _BV(7);
+
+    // We set pin direction only after setting value
+    // because if it's not configured yet (hi-z) it
+    // will be pulled up. If we are setting it HIGH
+    // and configure direction first, we may get a
+    // unintended short LOW pulse. Therefore,
+    // direction is set only after the intended level
+    // is set.
+
+    // Set CHIP_EN low
+    PORTE &= ~_BV(2); // PE2 => LOW
+    DDRE |= _BV(2); // PE2 => OUTPUT
+
+    _delay_ms (10);
+
+    // Set CHIP_EN high
+    PORTE |= _BV(2); // PE2 => HIGH
+
+    // ...and leave GPIO0 set as intended
 }
 
 /** Configures all hardware required for the bootloader. */
@@ -216,10 +274,10 @@ static void setup_hardware (void)
     ACT_LED_OFF();
 
     // Init USART1
-    UCSR1A = _BV(U2X1);                     // Double speed mode
-    UCSR1B = _BV(RXEN1) | _BV(TXEN1);       // Enable tx and rx
-    UCSR1C = _BV(UCSZ10) | _BV(UCSZ11);     // Async 8 N 1
-    UBRR1L = (uint8_t)( (F_CPU + BAUD_RATE * 4L) / (BAUD_RATE * 8L) - 1 );
+    UBRR1  = SERIAL_2X_UBBRVAL(BAUD_RATE);
+    UCSR1A = _BV(U2X1);                                 // Double speed mode
+    UCSR1C = _BV(UCSZ10) | _BV(UCSZ11);                 // Async 8 N 1
+    UCSR1B = _BV(RXEN1) | _BV(TXEN1) | _BV(RXCIE1);     // Enable tx and rx
 
     putch ('B');
 
@@ -379,6 +437,20 @@ void EVENT_USB_Device_ControlRequest(void)
                 // Read the line coding data in from the host into the global struct
                 Endpoint_Read_Control_Stream_LE (&LineEncoding, sizeof(CDC_LineEncoding_t));
                 Endpoint_ClearIN ();
+            }
+            break;
+        }
+        case CDC_REQ_SetControlLineState:
+        {
+            if (USB_ControlRequest.bmRequestType == (REQDIR_HOSTTODEVICE | REQTYPE_CLASS | REQREC_INTERFACE))
+            {
+                Endpoint_ClearSETUP ();
+                Endpoint_ClearStatusStage ();
+
+                /* NOTE: Here you can read in the line state mask from the host, to get the current state of the output handshake
+                         lines. The mask is read in from the wValue parameter in USB_ControlRequest, and can be masked against the
+                         CONTROL_LINE_OUT_* masks to determine the RTS and DTR line states using the following code:
+                */
             }
             break;
         }
@@ -601,6 +673,22 @@ static void ReadWriteMemoryBlock (const uint8_t Command)
 #endif // MINIMAL_AVR109
 #endif // NO_BLOCK_SUPPORT
 
+static uint8_t ByteAvailable (void)
+{
+    /* Select the OUT endpoint so that the next data byte can be read */
+    Endpoint_SelectEndpoint (CDC_RX_EPNUM);
+
+    if (Endpoint_IsOUTReceived ())
+    {
+        if (Endpoint_BytesInEndpoint ())
+        {
+            return (true);
+        }
+        Endpoint_ClearOUT ();
+    }
+    return (false);
+}
+
 /** Retrieves the next byte from the host in the CDC data OUT endpoint, and clears the endpoint bank if needed
  *  to allow reception of the next data packet from the host.
  *
@@ -608,20 +696,11 @@ static void ReadWriteMemoryBlock (const uint8_t Command)
  */
 static uint8_t FetchNextCommandByte (void)
 {
-    /* Select the OUT endpoint so that the next data byte can be read */
-    Endpoint_SelectEndpoint (CDC_RX_EPNUM);
-
-    /* If OUT endpoint empty, clear it and wait for the next packet from the host */
-    while (!Endpoint_IsReadWriteAllowed ())
+    while (!ByteAvailable ())
     {
-        Endpoint_ClearOUT ();
-
-        while (!Endpoint_IsOUTReceived ())
+        if (USB_DeviceState == DEVICE_STATE_Unattached)
         {
-            if (USB_DeviceState == DEVICE_STATE_Unattached)
-            {
-                return (0);
-            }
+            return (0);
         }
     }
 
