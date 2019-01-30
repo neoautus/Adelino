@@ -65,20 +65,28 @@ static CDC_LineEncoding_t LineEncoding = { .BaudRateBPS = 0,
  */
 static uint32_t CurrAddress;
 
-/* Pulse generation counters to keep track of the time remaining for each pulse type */
-#define ACT_LED_PULSE_PERIOD 100
-uint16_t ActLEDPulse = 0; // time remaining for Tx+Rx LED pulse
-
 // Calc how many 40ms ticks for the given millisecond interval
-#define TICKS_MS(ms)       ((ms) / 40)
+#define TICKS_MS(ms)              ((ms) / 40)
 
 // Bootloader timeout timer
-#define NO_TIMEOUT         ((uint8_t)0xff)
-#define TIMEOUT_PERIOD     TICKS_MS(8000)
-#define RESET_HELD_PERIOD  TICKS_MS(2000)
+#define AVR109_TIMEOUT            TICKS_MS(3000)
 
 // uint16_t -> 3556, uint8_t -> 3504
-uint8_t Timeout = 0;
+static uint8_t Timeout;
+
+// Bootloader actions
+#define ACT_STAY_INTO_BOOTLOADER  TICKS_MS(1000)
+#define ACT_BOOTLOADER_TIMEOUT    TICKS_MS(8000)
+#define ACT_RESET_ESP8266         TICKS_MS(3000)
+#define ACT_RECONFIGURE_ESP8266   TICKS_MS(5000)
+#define ACT_FACTORY_DEFAULTS      TICKS_MS(5000)
+
+// Bootloader status
+static uint8_t boot_mode;
+#define BM_NORMAL_BOOT            '0'
+#define BM_ESP_RESET              '1'
+#define BM_ESP_RECONFIGURE        'E'
+#define BM_ESP_FACTORY            'F'
 
 // Serial baud divisor
 #define SERIAL_2X_UBBRVAL(Baud) ((((F_CPU / 8) + (Baud / 2)) / (Baud)) - 1)
@@ -111,56 +119,43 @@ static void start_sketch (void)
     __asm__ volatile("jmp 0x0000");
 }
 
-// Breathing animation on L LED indicates bootloader is running
-static uint16_t LLEDPulse;
-static void pulse_led (void)
-{
-    LLEDPulse++;
-    uint8_t p = LLEDPulse >> 8;
-    if (p > 127)
-    {
-        p = 254-p;
-    }
-    p += p;
-    if (((uint8_t)LLEDPulse) > p)
-    {
-        L_LED_OFF();
-        ACT_LED_ON();
-    }
-    else
-    {
-        L_LED_ON();
-        ACT_LED_OFF();
-    }
-}
+static uint16_t led_counter;
+static uint8_t led_control;
 
 static void run_tasks (void)
 {
     CDC_Task ();
     USB_USBTask ();
-}
 
-static void blink_led (int times)       // 64 bytes
-{
-    for (int i = times; i >= 0; i--)
+    if (led_control) // led_control == 0 means no led changes
     {
-        // Space
-        L_LED_ON (); // X1 is active low
-        ACT_LED_ON ();
-        for (ActLEDPulse = 100; ActLEDPulse; ) // delay 100ms
+        if (led_control == 0xff)
         {
-            run_tasks ();
-        }
-
-        if (i)
-        {
-            // Mark
-            L_LED_OFF ();
-            ACT_LED_OFF ();
-            for (ActLEDPulse = 50; ActLEDPulse; ); // delay 50ms
+            // Breathing animation on ACT/D13 LED indicates bootloader is running
+            led_counter++;
+            uint8_t p = led_counter >> 8;
+            if (p > 127)
             {
-                run_tasks ();
+                p = 254-p;
             }
+            p += p;
+            if (((uint8_t)led_counter) > p)
+            {
+                L_LED_OFF();
+                ACT_LED_ON();
+            }
+            else
+            {
+                L_LED_ON();
+                ACT_LED_OFF();
+            }
+        }
+        else if (led_counter > led_control)
+        {
+            // Blinking animation on ACT/D13 indicates ESP8266 actions
+            led_counter = 0;
+            L_LED_TOGGLE();
+            ACT_LED_TOGGLE();
         }
     }
 }
@@ -214,6 +209,9 @@ static uint8_t rstat (void)
 
 static void reset_esp (uint8_t program_mode)
 {
+    // We need TIMER1 disabled
+    TIMSK1 = 0;
+
     // GPIO15 is also HSPI_CS, which is connected to SS on
     // AVR SPI; so we MUST ensure GPIO15 LOW for proper boot.
     PORTB &= ~_BV(0); // GPIO15 => LOW
@@ -246,12 +244,14 @@ static void reset_esp (uint8_t program_mode)
     PORTE &= ~_BV(2); // PE2 => LOW
     DDRE |= _BV(2); // PE2 => OUTPUT
 
-    _delay_ms (10);
+    // Keep it low at least 100us
+    _delay_us(100);
 
     // Set CHIP_EN high
     PORTE |= _BV(2); // PE2 => HIGH
 
-    // ...and leave GPIO0 set as intended
+    // Enable TIMER1 again and leave GPIO0 set as intended
+    TIMSK1 = _BV(OCIE1A);
 }
 
 /** Configures all hardware required for the bootloader. */
@@ -332,29 +332,74 @@ int main (void)
     // Enable global interrupts so that the USB stack can function
     sei ();
 
-    Timeout = 0;
+    // Normal boot, no blinking for now
+    boot_mode = BM_NORMAL_BOOT;
+    led_control = 0;
 
-    for (;;)
+    for (Timeout = ACT_STAY_INTO_BOOTLOADER; Timeout; run_tasks ())
     {
-        run_tasks ();
-
-        // Check if reset button is held after ~3 seconds
-        if (Timeout > RESET_HELD_PERIOD && rstat ())
-        {
-            // Timeout set to infinite
-            Timeout = NO_TIMEOUT;
-        }
-
-        // Time out and start the sketch if one is present.
-        // If reset was held pressed, NEVER RUN SKETCH and
-        // keep waiting for sketch upload.
-        if (Timeout != NO_TIMEOUT && Timeout > TIMEOUT_PERIOD)
+        // If reset button isn't pressed, get out
+        if (!rstat ())
         {
             break;
         }
-
-        pulse_led ();
     }
+
+    // Should we stay inside the bootloader?
+    if (rstat () || pgm_read_word (0) == 0xffff)
+    {
+        // Breathing led
+        led_control = 0xff;
+
+        // Check for ESP8266 reset
+        for (Timeout = ACT_RESET_ESP8266; Timeout; run_tasks ());
+
+        if (rstat ())
+        {
+            // Reset ESP8266
+            boot_mode = BM_ESP_RESET;
+            led_control = 0;
+            ACT_LED_ON();
+            L_LED_ON();
+            reset_esp (false);
+            for (Timeout = TICKS_MS(250); Timeout; run_tasks ());
+            led_control = 0xff;
+
+            // Check for ESP8266 reconfiguration (slow blinking)
+            for (Timeout = ACT_RECONFIGURE_ESP8266; Timeout; run_tasks ());
+
+            if (rstat ())
+            {
+                // Reconfiguration is being requested
+                boot_mode = BM_ESP_RECONFIGURE;
+                led_control = TICKS_MS(200);
+
+                // Check for ESP8266 factory defaults reset
+                for (Timeout = ACT_FACTORY_DEFAULTS; Timeout; run_tasks ());
+
+                if (rstat ())
+                {
+                    // Factory reset is being requested
+                    boot_mode = BM_ESP_FACTORY;
+
+                    // Very fast blinking
+                    led_control = 1;
+                }
+            }
+        }
+
+        putch (boot_mode);
+
+        // The timeout will be set anyway as soon as some
+        // sketch is uploaded, then we can just fall through
+        while (!Timeout)
+        {
+            run_tasks ();
+        }
+    }
+
+    // Handle AVR109 bootloader timeouts as usual
+    for (Timeout = ACT_BOOTLOADER_TIMEOUT; Timeout; run_tasks ());
 
     // Disconnect from the host - USB interface will be reset later along with the AVR
     USB_Detach();
@@ -370,14 +415,14 @@ ISR(TIMER1_COMPA_vect, ISR_BLOCK)
     TCNT1H = 0;
     TCNT1L = 0;
 
-    if (ActLEDPulse && !(--ActLEDPulse))
+    if (led_control)
     {
-        ACT_LED_OFF();
+        led_counter++;
     }
 
-    if (pgm_read_word(0) != 0xFFFF && Timeout != NO_TIMEOUT)
+    if (Timeout)
     {
-        Timeout++;
+        Timeout--;
     }
 }
 
@@ -736,7 +781,7 @@ static void WriteNextResponseByte (const uint8_t Response)
     Endpoint_Write_8 (Response);
 
     ACT_LED_ON();
-    ActLEDPulse = ACT_LED_PULSE_PERIOD;
+    led_counter = 0;
 }
 
 /** Task to read in AVR910 commands from the CDC data OUT endpoint, process them, perform the required actions
@@ -754,7 +799,7 @@ void CDC_Task (void)
     }
 
     ACT_LED_ON();
-    ActLEDPulse = ACT_LED_PULSE_PERIOD;
+    led_counter = 0;
 
     // Read in the bootloader command (first byte sent from host)
     uint8_t Command = FetchNextCommandByte ();
@@ -769,13 +814,18 @@ void CDC_Task (void)
         putch (Command);
     }
 
-    if (Command == 'E')
+    if (Command == '?')
+    {
+        // Read boot mode
+        WriteNextResponseByte (boot_mode);
+    }
+    else if (Command == 'E')
     {
         //  We nearly run out the bootloader timeout clock, 
         // leaving just a few hundred milliseconds so the 
         // bootloder has time to respond and service any 
         // subsequent requests
-        Timeout = TIMEOUT_PERIOD - TICKS_MS(500);
+        Timeout = TICKS_MS(500);
 
         // Re-enable RWW section - must be done here in case 
         // user has disabled verification on upload.
@@ -896,7 +946,7 @@ void CDC_Task (void)
     else if ((Command == 'B') || (Command == 'g'))
     {
         // Keep resetting the timeout counter if we're receiving self-programming instructions
-        Timeout = 0;
+        Timeout = AVR109_TIMEOUT;
 
         // Delegate the block write/read to a separate function for clarity 
         ReadWriteMemoryBlock (Command);

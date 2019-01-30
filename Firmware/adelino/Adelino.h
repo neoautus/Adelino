@@ -74,8 +74,9 @@
 		#define L_LED_TOGGLE()  PORTC ^= (1<<7)
 
 		/** We use just 1 led (ACT) for comm I/O signaling */
-		#define ACT_LED_OFF()   PORTD &= ~(1<<5)
-		#define ACT_LED_ON()    PORTD |= (1<<5)
+		#define ACT_LED_OFF()     PORTD &= ~(1<<5)
+		#define ACT_LED_ON()      PORTD |= (1<<5)
+		#define ACT_LED_TOGGLE()  PORTD ^= (1<<5)
 
 	/* Type Defines: */
 		/** Type define for a non-returning pointer to the start of the loaded application in flash memory. */
