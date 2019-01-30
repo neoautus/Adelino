@@ -17,6 +17,10 @@ Adelino X2 features https://www.microchip.com/wwwproducts/en/ATECC608A[ATECC608]
 
 image::Eagle/AdelinoR2_sch.png[link="https://raw.githubusercontent.com/neoautus/Adelino/master/Eagle/AdelinoR2_sch.png"]
 
+These are Adelino X2 PCBs front and back sides, compared with Adelino X1. They just arrived from Seeed Studio. Soon we'll get Adelino X2 assembled boards. Notice the nested ATmega32U4 footprints, for QFN44 (smaller and cheaper) and TQFP44 (bigger and $2 more expensive).
+
+image::Adelino_X2_PCB.jpg[Adelino X2 PCBs]
+
 == Copyright
 
 image:https://i.creativecommons.org/l/by-nd/4.0/88x31.png[]
