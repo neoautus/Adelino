@@ -70,9 +70,10 @@ static uint32_t CurrAddress;
 
 // Bootloader timeout timer
 #define AVR109_TIMEOUT            TICKS_MS(3000)
+#define ESP_PROGRAMMER_TIMEOUT    TICKS_MS(3000)
 
 // uint16_t -> 3556, uint8_t -> 3504
-static uint8_t Timeout;
+static volatile uint8_t Timeout;
 
 // Bootloader actions
 #define ACT_STAY_INTO_BOOTLOADER  TICKS_MS(1000)
@@ -84,7 +85,8 @@ static uint8_t Timeout;
 // Bootloader status
 static uint8_t boot_mode;
 #define BM_NORMAL_BOOT            '0'
-#define BM_ESP_RESET              '1'
+#define BM_KEEP_BOOTLOADER        '1'
+#define BM_ESP_RESET              'R'
 #define BM_ESP_RECONFIGURE        'E'
 #define BM_ESP_FACTORY            'F'
 
@@ -92,6 +94,7 @@ static uint8_t boot_mode;
 #define SERIAL_2X_UBBRVAL(Baud) ((((F_CPU / 8) + (Baud / 2)) / (Baud)) - 1)
 
 #ifndef BAUD_RATE
+//#define BAUD_RATE   74880L        // ESP8266 Boot post
 #define BAUD_RATE   115200L
 #endif
 
@@ -169,14 +172,14 @@ static void putch (char ch)
 #define BUFSIZE  128
 
 static uint8_t buffer [BUFSIZE];
-static uint16_t buffer_in;
-static uint16_t buffer_out;
+static uint8_t buffer_in;
+static uint8_t buffer_out;
 
 ISR(USART1_RX_vect, ISR_BLOCK)
 {
     if (USB_DeviceState == DEVICE_STATE_Configured)
     {
-        uint16_t next = buffer_in + 1;
+        uint8_t next = buffer_in + 1;
 
         if (next == BUFSIZE)
         {
@@ -294,6 +297,13 @@ static void setup_hardware (void)
     USB_Init ();
 }
 
+/** Check whether reset button is pressed during 'ticks' interval */
+static uint8_t check_reset (uint8_t ticks)
+{
+    for (Timeout = ticks; Timeout && rstat (); run_tasks ());
+    return (rstat ());
+}
+
 /** Main program entry point. This routine configures the hardware required by the bootloader, then continuously
  *  runs the bootloader processing routine until it times out or is instructed to exit.
  */
@@ -336,25 +346,15 @@ int main (void)
     boot_mode = BM_NORMAL_BOOT;
     led_control = 0;
 
-    for (Timeout = ACT_STAY_INTO_BOOTLOADER; Timeout; run_tasks ())
-    {
-        // If reset button isn't pressed, get out
-        if (!rstat ())
-        {
-            break;
-        }
-    }
-
     // Should we stay inside the bootloader?
-    if (rstat () || pgm_read_word (0) == 0xffff)
+    if (check_reset (ACT_STAY_INTO_BOOTLOADER) || pgm_read_word (0) == 0xffff)
     {
         // Breathing led
+        boot_mode = BM_KEEP_BOOTLOADER;
         led_control = 0xff;
 
         // Check for ESP8266 reset
-        for (Timeout = ACT_RESET_ESP8266; Timeout; run_tasks ());
-
-        if (rstat ())
+        if (check_reset (ACT_RESET_ESP8266))
         {
             // Reset ESP8266
             boot_mode = BM_ESP_RESET;
@@ -366,18 +366,14 @@ int main (void)
             led_control = 0xff;
 
             // Check for ESP8266 reconfiguration (slow blinking)
-            for (Timeout = ACT_RECONFIGURE_ESP8266; Timeout; run_tasks ());
-
-            if (rstat ())
+            if (check_reset (ACT_RECONFIGURE_ESP8266))
             {
                 // Reconfiguration is being requested
                 boot_mode = BM_ESP_RECONFIGURE;
                 led_control = TICKS_MS(200);
 
                 // Check for ESP8266 factory defaults reset
-                for (Timeout = ACT_FACTORY_DEFAULTS; Timeout; run_tasks ());
-
-                if (rstat ())
+                if (check_reset (ACT_FACTORY_DEFAULTS))
                 {
                     // Factory reset is being requested
                     boot_mode = BM_ESP_FACTORY;
@@ -389,17 +385,24 @@ int main (void)
         }
 
         putch (boot_mode);
-
-        // The timeout will be set anyway as soon as some
-        // sketch is uploaded, then we can just fall through
-        while (!Timeout)
-        {
-            run_tasks ();
-        }
     }
 
-    // Handle AVR109 bootloader timeouts as usual
-    for (Timeout = ACT_BOOTLOADER_TIMEOUT; Timeout; run_tasks ());
+    // The normal boot must have a normal bootloader timeout
+    if (boot_mode == BM_NORMAL_BOOT)
+    {
+        Timeout = ACT_BOOTLOADER_TIMEOUT;
+    }
+
+    // Keep the bootloader running if:
+    //
+    // a) The boot mode is any other than normal;
+    //    or
+    // b) The boot mode is normal, but timeout is still running.
+    //
+    while (boot_mode != BM_NORMAL_BOOT || Timeout)
+    {
+        run_tasks ();
+    }
 
     // Disconnect from the host - USB interface will be reset later along with the AVR
     USB_Detach();
@@ -492,10 +495,17 @@ void EVENT_USB_Device_ControlRequest(void)
                 Endpoint_ClearSETUP ();
                 Endpoint_ClearStatusStage ();
 
-                /* NOTE: Here you can read in the line state mask from the host, to get the current state of the output handshake
-                         lines. The mask is read in from the wValue parameter in USB_ControlRequest, and can be masked against the
-                         CONTROL_LINE_OUT_* masks to determine the RTS and DTR line states using the following code:
-                */
+                // TODO: MAYBE WE NEED SOME DTR+RTS MAGIC LIKE NODEMCU
+                static uint8_t PreviousDTRState = CDC_CONTROL_LINE_OUT_DTR;
+                uint8_t CurrentDTRState = USB_ControlRequest.wValue & CDC_CONTROL_LINE_OUT_DTR;
+
+                // Check if the DTR line has been asserted - if so, start the target AVR's reset pulse
+                if (PreviousDTRState & CurrentDTRState)
+                {
+                    // Reset ESP8266 enabling programming mode
+                    reset_esp (true);
+                }
+                PreviousDTRState = ~CurrentDTRState;
             }
             break;
         }
@@ -770,7 +780,10 @@ static void WriteNextResponseByte (const uint8_t Response)
 
         while (!Endpoint_IsINReady ())
         {
-            if (USB_DeviceState == DEVICE_STATE_Unattached)
+            // The timeout is needed because after uploading, esptool closes
+            // the USB device, however, the device does NOT become unattached
+            // and we end up dangling over here.
+            if (!Timeout || USB_DeviceState == DEVICE_STATE_Unattached)
             {
                 return;
             }
@@ -782,6 +795,96 @@ static void WriteNextResponseByte (const uint8_t Response)
 
     ACT_LED_ON();
     led_counter = 0;
+}
+
+static void FlushEndpoint (void)
+{
+
+    // Select the IN endpoint
+    Endpoint_SelectEndpoint (CDC_TX_EPNUM);
+
+    // Remember if the endpoint is completely full before clearing it
+    bool IsEndpointFull = !Endpoint_IsReadWriteAllowed ();
+
+    // Send the endpoint data to the host
+    Endpoint_ClearIN ();
+
+    // If a full endpoint's worth of data was sent, we need to send an
+    // empty packet afterwards to signal end of transfer
+    if (IsEndpointFull)
+    {
+        while (!Endpoint_IsINReady ())
+        {
+            if (USB_DeviceState == DEVICE_STATE_Unattached)
+            {
+                return;
+            }
+        }
+        Endpoint_ClearIN ();
+    }
+
+    // Wait until the data has been sent to the host
+    while (!Endpoint_IsINReady ())
+    {
+        if (USB_DeviceState == DEVICE_STATE_Unattached)
+        {
+            return;
+        }
+    }
+
+//    // Select the OUT endpoint
+//    Endpoint_SelectEndpoint (CDC_RX_EPNUM);
+//
+//    // Acknowledge the command from the host
+//    Endpoint_ClearOUT ();
+}
+
+static void EspProgrammer (void)
+{
+    // Start setting programmer timeout
+    Timeout = ESP_PROGRAMMER_TIMEOUT;
+
+    while (Timeout)
+    {
+        uint8_t ch = 0;
+
+        // ESP8266 ----> USB (via AVR)
+        if (buffer_in != buffer_out)
+        {
+            uint8_t next = buffer_out + 1;
+
+            if (next == BUFSIZE)
+            {
+                next = 0;
+            }
+
+            ch = buffer [buffer_out];
+            buffer_out = next;
+            WriteNextResponseByte (ch);
+        }
+
+        // Flush USB every SLIP start/end
+        // not the smartest way, but it works(TM)
+        if (ch == 0xc0)
+        {
+            ACT_LED_OFF();
+            Timeout = ESP_PROGRAMMER_TIMEOUT;
+            FlushEndpoint ();
+        }
+
+        if (Timeout == ESP_PROGRAMMER_TIMEOUT - 1)
+        {
+            ACT_LED_ON();
+        }
+
+        // USB (via AVR) -----> ESP8266
+        if ((UCSR1A & _BV(UDRE1)) && ByteAvailable ())
+        {
+            UDR1 = Endpoint_Read_8 ();
+        }
+
+        USB_USBTask ();
+    }
 }
 
 /** Task to read in AVR910 commands from the CDC data OUT endpoint, process them, perform the required actions
@@ -818,6 +921,13 @@ void CDC_Task (void)
     {
         // Read boot mode
         WriteNextResponseByte (boot_mode);
+    }
+    else if (Command == 0xc0)
+    {
+        // This probably is the SLIP header for ESP8266 programming
+        EspProgrammer ();
+        led_control = 0xff;
+        return;
     }
     else if (Command == 'E')
     {
@@ -947,6 +1057,7 @@ void CDC_Task (void)
     {
         // Keep resetting the timeout counter if we're receiving self-programming instructions
         Timeout = AVR109_TIMEOUT;
+        boot_mode = BM_NORMAL_BOOT;
 
         // Delegate the block write/read to a separate function for clarity 
         ReadWriteMemoryBlock (Command);
@@ -1027,37 +1138,7 @@ void CDC_Task (void)
         WriteNextResponseByte ('?');
     }
 
-    // Select the IN endpoint
-    Endpoint_SelectEndpoint (CDC_TX_EPNUM);
-
-    // Remember if the endpoint is completely full before clearing it
-    bool IsEndpointFull = !Endpoint_IsReadWriteAllowed ();
-
-    // Send the endpoint data to the host
-    Endpoint_ClearIN ();
-
-    // If a full endpoint's worth of data was sent, we need to send an 
-    // empty packet afterwards to signal end of transfer
-    if (IsEndpointFull)
-    {
-        while (!Endpoint_IsINReady ())
-        {
-            if (USB_DeviceState == DEVICE_STATE_Unattached)
-            {
-                return;
-            }
-        }
-        Endpoint_ClearIN ();
-    }
-
-    // Wait until the data has been sent to the host
-    while (!Endpoint_IsINReady ())
-    {
-        if (USB_DeviceState == DEVICE_STATE_Unattached)
-        {
-            return;
-        }
-    }
+    FlushEndpoint ();
 
     // Select the OUT endpoint
     Endpoint_SelectEndpoint (CDC_RX_EPNUM);
