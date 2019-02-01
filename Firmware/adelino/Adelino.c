@@ -124,13 +124,14 @@ static void start_sketch (void)
 
 static uint16_t led_counter;
 static uint8_t led_control;
+static uint8_t leds_enabled;
 
 static void run_tasks (void)
 {
     CDC_Task ();
     USB_USBTask ();
 
-    if (led_control) // led_control == 0 means no led changes
+    if (leds_enabled)
     {
         if (led_control == 0xff)
         {
@@ -169,7 +170,7 @@ static void putch (char ch)
     UDR1 = ch;
 }
 
-#define BUFSIZE  128
+#define BUFSIZE  192
 
 static uint8_t buffer [BUFSIZE];
 static uint8_t buffer_in;
@@ -255,6 +256,16 @@ static void reset_esp (uint8_t program_mode)
 
     // Enable TIMER1 again and leave GPIO0 set as intended
     TIMSK1 = _BV(OCIE1A);
+}
+
+static void reset_esp_and_wait (uint8_t program_mode)
+{
+    leds_enabled = 0;
+    ACT_LED_ON();
+    L_LED_ON();
+    reset_esp (program_mode);
+    for (Timeout = TICKS_MS(350); Timeout; run_tasks ());
+    leds_enabled = 1;
 }
 
 /** Configures all hardware required for the bootloader. */
@@ -344,26 +355,20 @@ int main (void)
 
     // Normal boot, no blinking for now
     boot_mode = BM_NORMAL_BOOT;
-    led_control = 0;
 
     // Should we stay inside the bootloader?
     if (check_reset (ACT_STAY_INTO_BOOTLOADER) || pgm_read_word (0) == 0xffff)
     {
         // Breathing led
         boot_mode = BM_KEEP_BOOTLOADER;
-        led_control = 0xff;
+        leds_enabled = led_control = 0xff;
 
         // Check for ESP8266 reset
         if (check_reset (ACT_RESET_ESP8266))
         {
             // Reset ESP8266
             boot_mode = BM_ESP_RESET;
-            led_control = 0;
-            ACT_LED_ON();
-            L_LED_ON();
-            reset_esp (false);
-            for (Timeout = TICKS_MS(250); Timeout; run_tasks ());
-            led_control = 0xff;
+            reset_esp_and_wait (false);
 
             // Check for ESP8266 reconfiguration (slow blinking)
             if (check_reset (ACT_RECONFIGURE_ESP8266))
@@ -418,7 +423,7 @@ ISR(TIMER1_COMPA_vect, ISR_BLOCK)
     TCNT1H = 0;
     TCNT1L = 0;
 
-    if (led_control)
+    if (leds_enabled)
     {
         led_counter++;
     }
@@ -503,7 +508,7 @@ void EVENT_USB_Device_ControlRequest(void)
                 if (PreviousDTRState & CurrentDTRState)
                 {
                     // Reset ESP8266 enabling programming mode
-                    reset_esp (true);
+                    reset_esp_and_wait (true);
                 }
                 PreviousDTRState = ~CurrentDTRState;
             }
