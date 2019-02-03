@@ -28,6 +28,33 @@
   this software.
 */
 
+/*
+  Copyright 2019  Marcond Marchi (marcond [at] gmail [dot] com)
+
+  Permission to use, copy, modify, distribute, and sell this
+  software and its documentation for any purpose is hereby granted
+  without fee, provided that all copyright notices appear in
+  all copies and that both that the copyright notices and this
+  permission notice and warranty disclaimer appear in supporting
+  documentation, and that the names of the authors not be used in
+  advertising or publicity pertaining to distribution of the
+  software without specific, written prior permission.
+
+  The authors disclaim all warranties with regard to this
+  software, including all implied warranties of merchantability
+  and fitness.  In no event shall the authors be liable for any
+  special, indirect or consequential damages or any damages
+  whatsoever resulting from loss of use, data or profits, whether
+  in an action of contract, negligence or other tortious action,
+  arising out of or in connection with the use or performance of
+  this software.
+*/
+
+/*
+ * This file was heavily changed from Catalina.c available at:
+ * https://github.com/arduino/ArduinoCore-avr/tree/master/bootloaders/caterina
+ */
+
 /** \file
  *
  *  Main source file for the CDC class bootloader. This file contains the complete bootloader logic.
@@ -66,7 +93,7 @@ static CDC_LineEncoding_t LineEncoding = { .BaudRateBPS = 0,
 static uint32_t CurrAddress;
 
 // Calc how many 40ms ticks for the given millisecond interval
-#define TICKS_MS(ms)              ((ms) / 40)
+#define TICKS_MS(ms)              ((ms) / 50)
 
 // Bootloader timeout timer
 #define AVR109_TIMEOUT            TICKS_MS(3000)
@@ -101,9 +128,15 @@ static uint8_t boot_mode;
 uint16_t bootKey = 0x7777;
 volatile uint16_t *const bootKeyPtr = (volatile uint16_t *)0x0800;
 
+__attribute__((noreturn))
+__attribute__((noinline))
+__attribute__((naked))
 static void start_sketch (void)
 {
     cli ();
+
+    // Disable USART1
+    UCSR1B = 0;
 
     // Undo TIMER1 setup and clear the count before running the sketch
     TIMSK1 = 0;
@@ -123,7 +156,7 @@ static void start_sketch (void)
 }
 
 static uint16_t led_counter;
-static uint8_t led_control;
+static uint8_t led_control = 0xff;
 static uint8_t leds_enabled;
 
 static void run_tasks (void)
@@ -170,32 +203,24 @@ static void putch (char ch)
     UDR1 = ch;
 }
 
-#define BUFSIZE  192
-
-static uint8_t buffer [BUFSIZE];
-static uint8_t buffer_in;
-static uint8_t buffer_out;
+static uint8_t buffer [256];    // !!! This buffer MUST BE 256 bytes long !!!
+static uint8_t buffer_in;       // It is so because we use single bytes as
+static uint8_t buffer_out;      // indexes, with the natural range 0..255
 
 ISR(USART1_RX_vect, ISR_BLOCK)
 {
-    if (USB_DeviceState == DEVICE_STATE_Configured)
+    uint8_t ch = UDR1;
+    uint8_t next = buffer_in + 1;
+
+    // A very simple circular buffer
+    if (next != buffer_out)
     {
-        uint8_t next = buffer_in + 1;
-
-        if (next == BUFSIZE)
-        {
-            next = 0;
-        }
-
-        // A very simple circular buffer
-        if (next != buffer_out)
-        {
-            buffer [buffer_in] = UDR1;
-            buffer_in = next;
-        }
+        buffer [buffer_in] = ch;
+        buffer_in = next;
     }
 }
 
+__attribute__((noinline))
 static uint8_t rstat (void)
 {
     // Read the reset switch preserving the port configuration afterwards
@@ -213,9 +238,6 @@ static uint8_t rstat (void)
 
 static void reset_esp (uint8_t program_mode)
 {
-    // We need TIMER1 disabled
-    TIMSK1 = 0;
-
     // GPIO15 is also HSPI_CS, which is connected to SS on
     // AVR SPI; so we MUST ensure GPIO15 LOW for proper boot.
     PORTB &= ~_BV(0); // GPIO15 => LOW
@@ -248,16 +270,14 @@ static void reset_esp (uint8_t program_mode)
     PORTE &= ~_BV(2); // PE2 => LOW
     DDRE |= _BV(2); // PE2 => OUTPUT
 
-    // Keep it low at least 100us
-    _delay_us(100);
+    // Keep it low at least 1ms for a clean ESP8266 reset
+    _delay_ms (1);
 
     // Set CHIP_EN high
     PORTE |= _BV(2); // PE2 => HIGH
-
-    // Enable TIMER1 again and leave GPIO0 set as intended
-    TIMSK1 = _BV(OCIE1A);
 }
 
+__attribute__((noinline))
 static void reset_esp_and_wait (uint8_t program_mode)
 {
     leds_enabled = 0;
@@ -266,6 +286,9 @@ static void reset_esp_and_wait (uint8_t program_mode)
     reset_esp (program_mode);
     for (Timeout = TICKS_MS(350); Timeout; run_tasks ());
     leds_enabled = 1;
+
+    // Ring buffer is now empty again
+    buffer_in = buffer_out = 0;
 }
 
 /** Configures all hardware required for the bootloader. */
@@ -273,17 +296,20 @@ static void setup_hardware (void)
 {
     // Disable watchdog if enabled by bootloader/fuses
     MCUSR &= ~(1 << WDRF);
-    wdt_disable();
 
-    // Disable clock division
-    clock_prescale_set(clock_div_1);
+    // Low-carbs wdt_disable()
+    WDTCSR = _BV(WDE) | _BV(WDCE);
+    WDTCSR = 0;
+
+    // Low-carbs disable clock division
+    CLKPR = _BV(CLKPCE);
+    CLKPR = clock_div_1;
 
     // Relocate the interrupt vector table to the bootloader section
     MCUCR = (1 << IVCE);
     MCUCR = (1 << IVSEL);
 
     LED_SETUP();
-    CPU_PRESCALE(0); 
     L_LED_OFF();
     ACT_LED_OFF();
 
@@ -296,16 +322,19 @@ static void setup_hardware (void)
     putch ('B');
 
     // Initialize TIMER1 to handle bootloader timeout and LED tasks.
-    // The timer is set to 25Hz or once every 40ms, so we can use a single byte
-    // for timeout counting (0..254 -> 254 x 40ms = 10160ms or 10.160s).
+    // The timer is set to 20Hz or once every 50ms, so we can use a single byte
+    // for timeout counting (0..254 -> 254 x 50ms = 12700ms or 12.7s).
     // This interrupt is disabled selectively when doing memory reading, erasing,
     // or writing since SPM has tight timing requirements.
-    OCR1A = 9999;
+    OCR1A = 12499;
     TIMSK1 = _BV(OCIE1A);		                    // enable timer 1 output compare A match interrupt
     TCCR1B = _BV(CS11) | _BV(CS10) | _BV(WGM12);    // 1/64 prescaler on timer 1 input
 
     // Initialize USB Subsystem
     USB_Init ();
+
+    // Enable global interrupts so that the USB stack can function
+    sei ();
 }
 
 /** Check whether reset button is pressed during 'ticks' interval */
@@ -331,17 +360,19 @@ int main (void)
     // Watchdog may be configured with a 15 ms period so must disable it before going any further
     wdt_disable ();
 
-    if (mcusr_state & (1<<EXTRF)) 
+    uint8_t sketch_available = pgm_read_word(0) != 0xFFFF;
+
+    if (mcusr_state & (1<<EXTRF))
     {
         // External reset -  we should continue to self-programming mode.
     }
-    else if ((mcusr_state & (1<<PORF)) && (pgm_read_word(0) != 0xFFFF))
+    else if ((mcusr_state & (1<<PORF)) && sketch_available)
     {
         // After a power-on reset skip the bootloader and jump straight to sketch 
         // if one exists.
         start_sketch ();
     } 
-    else if ((mcusr_state & (1<<WDRF)) && (bootKeyPtrVal != bootKey) && (pgm_read_word(0) != 0xFFFF))
+    else if ((mcusr_state & (1<<WDRF)) && (bootKeyPtrVal != bootKey) && sketch_available)
     {
         // If it looks like an "accidental" watchdog reset then start the sketch.
         start_sketch ();
@@ -350,18 +381,11 @@ int main (void)
     // Setup hardware required for the bootloader
     setup_hardware ();
 
-    // Enable global interrupts so that the USB stack can function
-    sei ();
-
-    // Normal boot, no blinking for now
-    boot_mode = BM_NORMAL_BOOT;
-
     // Should we stay inside the bootloader?
-    if (check_reset (ACT_STAY_INTO_BOOTLOADER) || pgm_read_word (0) == 0xffff)
+    if (check_reset (ACT_STAY_INTO_BOOTLOADER) || !sketch_available)
     {
         // Breathing led
-        boot_mode = BM_KEEP_BOOTLOADER;
-        leds_enabled = led_control = 0xff;
+        boot_mode = leds_enabled = BM_KEEP_BOOTLOADER;
 
         // Check for ESP8266 reset
         if (check_reset (ACT_RESET_ESP8266))
@@ -391,10 +415,10 @@ int main (void)
 
         putch (boot_mode);
     }
-
-    // The normal boot must have a normal bootloader timeout
-    if (boot_mode == BM_NORMAL_BOOT)
+    else
     {
+        // The normal boot must have a normal bootloader timeout
+        boot_mode = leds_enabled = BM_NORMAL_BOOT;
         Timeout = ACT_BOOTLOADER_TIMEOUT;
     }
 
@@ -419,10 +443,6 @@ int main (void)
 
 ISR(TIMER1_COMPA_vect, ISR_BLOCK)
 {
-    // Reset counter
-    TCNT1H = 0;
-    TCNT1L = 0;
-
     if (leds_enabled)
     {
         led_counter++;
@@ -856,15 +876,8 @@ static void EspProgrammer (void)
         // ESP8266 ----> USB (via AVR)
         if (buffer_in != buffer_out)
         {
-            uint8_t next = buffer_out + 1;
-
-            if (next == BUFSIZE)
-            {
-                next = 0;
-            }
-
             ch = buffer [buffer_out];
-            buffer_out = next;
+            buffer_out = buffer_out + 1;
             WriteNextResponseByte (ch);
         }
 

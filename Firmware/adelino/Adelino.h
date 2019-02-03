@@ -65,8 +65,6 @@
 		/** Eight character bootloader firmware identifier reported to the host when requested */
 		#define SOFTWARE_IDENTIFIER          "ADELINO"
 
-		#define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
-
         /** Setup D13 (PC7) and ACT (PD5) */
 		#define LED_SETUP()     DDRC |= (1<<7); DDRD |= (1<<5);
 		#define L_LED_OFF()     PORTC &= ~(1<<7)
