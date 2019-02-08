@@ -1,0 +1,14 @@
+Your NodeMCU custom build finished successfully. You may now download the firmware:
+- float: https://nodemcu-build.com/builds/nodemcu-master-12-modules-2019-02-07-21-13-40-float.bin
+- integer: https://nodemcu-build.com/builds/nodemcu-master-12-modules-2019-02-07-21-13-40-integer.bin
+
+This was built against the master branch and includes the following modules: enduser_setup, file, gpio, http, i2c, mdns, net, node, spi, tmr, uart, wifi.
+The files are guaranteed to be available for download for 24h.
+
+*** NEW FLASHING TOOL *** NEW FLASHING TOOL *** NEW FLASHING TOOL ***
+I invite you to try the new GUI tool https://github.com/marcelstoer/nodemcu-pyflasher
+
+Learn how to flash the firmware: https://nodemcu.readthedocs.io/en/master/en/flash/. If you're upgrading from a previous version you should carefully study the "Upgrading Firmware" instructions on that page.
+
+Please help keep this service alive: http://nodemcu-build.com/faq.php#support
+
