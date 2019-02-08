@@ -51,13 +51,14 @@
 */
 
 /*
- * This file was heavily changed from Catalina.c available at:
+ * This file was heavily changed from Caterina.c available at:
  * https://github.com/arduino/ArduinoCore-avr/tree/master/bootloaders/caterina
  */
 
 /** \file
  *
- *  Main source file for the CDC class bootloader. This file contains the complete bootloader logic.
+ *  Main source file for the CDC class bootloader. This file contains the
+ *  complete bootloader logic.
  */
 
 #include <avr/io.h>
@@ -88,8 +89,9 @@
   #endif
 #endif
 
-/** Contains the current baud rate and other settings of the first virtual serial port. This must be retained as some
- *  operating systems will not open the port unless the settings can be set successfully.
+/** Contains the current baud rate and other settings of the first virtual
+ *  serial port. This must be retained as some operating systems will not open
+ *  the port unless the settings can be set successfully.
  */
 static CDC_LineEncoding_t LineEncoding =
 {
@@ -99,9 +101,9 @@ static CDC_LineEncoding_t LineEncoding =
     .DataBits    = 8
 };
 
-/** Current address counter. This stores the current address of the FLASH or EEPROM as set by the host,
- *  and is used when reading or writing to the AVRs memory (either FLASH or EEPROM depending on the issued
- *  command.)
+/** Current address counter. This stores the current address of the FLASH or
+ *  EEPROM as set by the host, and is used when reading or writing to the AVRs
+ *  memory (either FLASH or EEPROM depending on the issued command).
  */
 static uint32_t CurrAddress;
 
@@ -329,7 +331,6 @@ static void setup_hardware (void)
     LED_SETUP();
     L_LED_OFF();
     ACT_LED_OFF();
-    DEBUG_SETUP ();
 
     // Init USART1
     UBRR1  = SERIAL_2X_UBBRVAL(BAUD_RATE);
@@ -360,14 +361,17 @@ static uint8_t check_reset (uint8_t ticks)
     return (rstat ());
 }
 
-/** Main program entry point. This routine configures the hardware required by the bootloader, then continuously
- *  runs the bootloader processing routine until it times out or is instructed to exit.
+/** Main program entry point. This routine configures the hardware required by
+ *  the bootloader, then continuously runs the bootloader processing routine
+ *  until it times out or is instructed to exit.
  */
 int main (void)
 {
     // Save the value of the boot key memory before it is overwritten
     uint16_t bootKeyPtrVal = *bootKeyPtr;
     *bootKeyPtr = 0;
+
+    // TODO: PUT THESE INITS ASIDE
 
     // Check the reason for the reset so we can act accordingly
     uint8_t  mcusr_state = MCUSR;       // store the initial state of the Status register
@@ -490,8 +494,9 @@ void EVENT_USB_Device_ConfigurationChanged (void)
                                ENDPOINT_BANK_SINGLE);
 }
 
-/** Event handler for the USB_ControlRequest event. This is used to catch and process control requests sent to
- *  the device from the USB host before passing along unhandled control requests to the library for processing
+/** Event handler for the USB_ControlRequest event. This is used to catch and
+ *  process control requests sent to the device from the USB host before
+ *  passing along unhandled control requests to the library for processing
  *  internally.
  */
 void EVENT_USB_Device_ControlRequest (void)
@@ -570,8 +575,9 @@ static uint8_t endpoint_detached (void)
     return (!Timeout || USB_DeviceState == DEVICE_STATE_Unattached);
 }
 
-/** Retrieves the next byte from the host in the CDC data OUT endpoint, and clears the endpoint bank if needed
- *  to allow reception of the next data packet from the host.
+/** Retrieves the next byte from the host in the CDC data OUT endpoint, and
+ *  clears the endpoint bank if needed to allow reception of the next data
+ *  packet from the host.
  *
  *  \return Next received byte from the host in the CDC data OUT endpoint
  */
@@ -628,8 +634,9 @@ static void usb_flush (void)
     _usb_flush_endpoint ();
 }
 
-/** Writes the next response byte to the CDC data IN endpoint, and sends the endpoint back if needed to free up the
- *  bank when full ready for the next byte in the packet to the host.
+/** Writes the next response byte to the CDC data IN endpoint, and sends the
+ *  endpoint back if needed to free up the bank when full ready for the next
+ *  byte in the packet to the host.
  *
  *  \param[in] Response  Next response byte to send to the host
  */
@@ -640,7 +647,8 @@ static void usb_write_byte (const uint8_t Response)
     // Select the IN endpoint so that the next data byte can be written
     Endpoint_SelectEndpoint (CDC_TX_EPNUM);
 
-    // If IN endpoint full, clear it and wait until ready for the next packet to the host
+    // If IN endpoint full, clear it and wait until ready
+    // for the next packet to the host
     if (!Endpoint_IsReadWriteAllowed ())
     {
         _usb_flush_endpoint ();
@@ -900,8 +908,6 @@ static void AVR109_programmer (void)
         // Read in the bootloader command (first byte sent from host)
         uint8_t Command = usb_read_byte ();
 
-        putch (Command);
-
         if (Command == 'E')
         {
             //  We nearly run out the bootloader timeout clock,
@@ -1031,7 +1037,8 @@ static void AVR109_programmer (void)
         }
         else if ((Command == 'B') || (Command == 'g'))
         {
-            // Keep resetting the timeout counter if we're receiving self-programming instructions
+            // Keep resetting the timeout counter if we're receiving
+            // self-programming instructions
             Timeout = AVR_PROGRAMMER_TIMEOUT;
             boot_mode = BM_NORMAL_BOOT;
 
@@ -1189,7 +1196,6 @@ static void ESP8266_programmer (void)
  */
 static void CDC_Task (void)
 {
-    Timeout = USB_COMM_TIMEOUT;
     uint8_t ch = 0;
     
     // ESP8266 ----> USB (via AVR)
