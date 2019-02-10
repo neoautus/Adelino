@@ -1,0 +1,33 @@
+
+##############################################################
+adelinom1.name=Adelino M1 AVR/ESP
+adelinom1.vid.0=0x04d8
+adelinom1.pid.0=0xeddf
+
+adelinom1.upload.tool=avrdude
+adelinom1.upload.protocol=avr109
+adelinom1.upload.maximum_size=28672
+adelinom1.upload.maximum_data_size=2560
+adelinom1.upload.speed=57600
+adelinom1.upload.disable_flushing=true
+adelinom1.upload.use_1200bps_touch=true
+adelinom1.upload.wait_for_upload_port=true
+
+adelinom1.bootloader.tool=avrdude
+adelinom1.bootloader.low_fuses=0xff
+adelinom1.bootloader.high_fuses=0xd8
+adelinom1.bootloader.extended_fuses=0xcb
+adelinom1.bootloader.file=caterina/Caterina-Leonardo.hex
+adelinom1.bootloader.unlock_bits=0x3F
+adelinom1.bootloader.lock_bits=0x2F
+
+adelinom1.build.mcu=atmega32u4
+adelinom1.build.f_cpu=16000000L
+adelinom1.build.vid=0x04d8
+adelinom1.build.pid=0xeddf
+adelinom1.build.usb_product="Adelino M1"
+adelinom1.build.usb_manufacturer="http://adelino.cc"
+adelinom1.build.board=AVR_ADELINO
+adelinom1.build.core=arduino
+adelinom1.build.variant=adelino
+adelinom1.build.extra_flags={build.usb_flags}
