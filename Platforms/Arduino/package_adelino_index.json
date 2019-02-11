@@ -12,15 +12,15 @@
         {
           "name": "Adelino AVR Boards",
           "architecture": "avr",
-          "version": "1.6.23",
+          "version": "@AVR_VERSION@",
           "category": "Adelino",
           "help": {
             "online": "https://github.com/neoautus/Adelino/wiki/"
           },
-          "url": "http://downloads.arduino.cc/cores/avr-1.6.23.tar.bz2",
-          "archiveFileName": "avr-1.6.23.tar.bz2",
-          "checksum": "SHA-256:18618d7f256f26cd77c35f4c888d5d1b2334f07925094fdc99ac3188722284aa",
-          "size": "5001988",
+          "url": "http://download.adelino.cc/Adelino/Platforms/Arduino/@AVR_FILENAME@",
+          "archiveFileName": "@AVR_FILENAME@",
+          "checksum": "SHA-256:@AVR_SHA256@",
+          "size": "@AVR_FILESIZE@",
           "boards": [
             {"name": "Adelino M1 AVR/ESP"}
           ],
