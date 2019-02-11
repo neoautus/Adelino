@@ -1,4 +1,9 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
 
+menu.cpu=Processor
+
+##############################################################
+# ADELINO M1
 ##############################################################
 adelinom1.name=Adelino M1 AVR/ESP
 adelinom1.vid.0=0x04d8
@@ -12,12 +17,13 @@ adelinom1.upload.speed=57600
 adelinom1.upload.disable_flushing=true
 adelinom1.upload.use_1200bps_touch=true
 adelinom1.upload.wait_for_upload_port=true
+#adelinom1.upload.via_ssh=true
 
 adelinom1.bootloader.tool=avrdude
 adelinom1.bootloader.low_fuses=0xff
 adelinom1.bootloader.high_fuses=0xd8
 adelinom1.bootloader.extended_fuses=0xcb
-adelinom1.bootloader.file=caterina/Caterina-Leonardo.hex
+adelinom1.bootloader.file=adelino/Adelino.hex
 adelinom1.bootloader.unlock_bits=0x3F
 adelinom1.bootloader.lock_bits=0x2F
 
@@ -31,3 +37,17 @@ adelinom1.build.board=AVR_ADELINO
 adelinom1.build.core=arduino
 adelinom1.build.variant=adelino
 adelinom1.build.extra_flags={build.usb_flags}
+
+# Test later for wireless upload
+#unowifi.upload.tool=avrdude
+#unowifi.upload.protocol=arduino
+#unowifi.upload.maximum_size=32256
+#unowifi.upload.maximum_data_size=2048
+#unowifi.upload.speed=115200
+#unowifi.upload.network.endpoint_upload=/pgm/upload
+#unowifi.upload.network.endpoint_sync=/pgm/sync
+#unowifi.upload.network.sync_return=204:SYNC
+#unowifi.upload.network.endpoint_reset=/log/reset
+#unowifi.upload.network.port=80
+
+### EOF ###
