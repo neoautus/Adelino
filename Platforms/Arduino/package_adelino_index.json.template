@@ -47,13 +47,13 @@
           "help": {
             "online": "https://github.com/neoautus/Adelino/wiki/"
           },
-          "url": "https://github.com/esp8266/Arduino/releases/download/2.5.0-beta2/esp8266-2.5.0-beta2.zip",
-          "checksum": "SHA-256:0c353a9ed03ae1f6ca760b6ad0668d5f8cae47d2904baf6134e787e52f34c5b8",
+          "url": "http://download.adelino.cc/Adelino/Platforms/Arduino/@ESP_FILENAME@",
+          "checksum": "SHA-256:@ESP_SHA256@",
           "name": "Adelino ESP Boards",
-          "version": "2.5.0-beta2",
+          "version": "@ESP_VERSION@",
           "architecture": "esp8266",
-          "archiveFileName": "esp8266-2.5.0-beta2.zip",
-          "size": "20241607",
+          "archiveFileName": "@ESP_FILENAME@",
+          "size": "@ESP_FILESIZE@",
           "toolsDependencies": [
             {
               "packager": "esp8266",
