@@ -1,0 +1,394 @@
+{
+  "packages": [
+    {
+      "name": "adelino",
+      "maintainer": "NEOautus Ltd.",
+      "websiteURL": "http://adelino.cc/",
+      "email": "packages@adelino.cc",
+      "help": {
+        "online": "https://github.com/neoautus/Adelino/wiki/"
+      },
+      "platforms": [
+        {
+          "name": "Adelino AVR Boards",
+          "architecture": "avr",
+          "version": "1.6.23",
+          "category": "Adelino",
+          "help": {
+            "online": "https://github.com/neoautus/Adelino/wiki/"
+          },
+          "url": "https://github.com/neoautus/Adelino/releases/download/1.0.0/adelino-avr-1.6.23.tar.bz2",
+          "archiveFileName": "adelino-avr-1.6.23.tar.bz2",
+          "checksum": "SHA-256:c73c2b507957d97e2631608ff0dc2532fb81b3844d5badaf58a7b90c1327f3aa",
+          "size": "4692345",
+          "boards": [
+            {"name": "Adelino M1 AVR/ESP"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "5.4.0-atmel3.6.1-arduino2"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.3.0-arduino14"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.2.1"
+            }
+          ]
+        },
+        {
+          "category": "Adelino",
+          "help": {
+            "online": "https://github.com/neoautus/Adelino/wiki/"
+          },
+          "url": "https://github.com/neoautus/Adelino/releases/download/1.0.0/adelino-esp8266-2.5.0-beta2.tar.bz2",
+          "checksum": "SHA-256:724cfe60e26cab54a6b3d27dbbed1789fe13071c0d8a5f765b2e73a0885bd612",
+          "name": "Adelino ESP Boards",
+          "version": "2.5.0-beta2",
+          "architecture": "esp8266",
+          "archiveFileName": "adelino-esp8266-2.5.0-beta2.tar.bz2",
+          "size": "16822361",
+          "toolsDependencies": [
+            {
+              "packager": "esp8266",
+              "version": "2.5.0-3-20ed2b9",
+              "name": "esptool"
+            },
+            {
+              "packager": "esp8266",
+              "version": "2.5.0-3-20ed2b9",
+              "name": "xtensa-lx106-elf-gcc"
+            },
+            {
+              "packager": "esp8266",
+              "version": "2.5.0-3-20ed2b9",
+              "name": "mkspiffs"
+            }
+          ],
+          "boards": [
+            {
+              "name": "Adelino M1 (ESP8266 Native)"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "avr-gcc",
+          "version": "5.4.0-atmel3.6.1-arduino2",
+          "systems": [
+            {
+              "size": "31449123",
+              "checksum": "SHA-256:6741f95cc3182a8729cf9670eb13d8dc5a19e881639ca61e53a2d78346a4e99f",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "avr-gcc-5.4.0-atmel3.6.1-arduino2-armhf-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-5.4.0-atmel3.6.1-arduino2-armhf-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "33141295",
+              "checksum": "SHA-256:0fa9e4f2d6d09782dbc84dd91a302849cde2f192163cb9f29484c5f32785269a",
+              "host": "aarch64-linux-gnu",
+              "archiveFileName": "avr-gcc-5.4.0-atmel3.6.1-arduino2-aarch64-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-5.4.0-atmel3.6.1-arduino2-aarch64-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "31894498",
+              "checksum": "SHA-256:abc50137543ba73e227b4d1b8510fff50a474bacd24f2c794f852904963849f8",
+              "host": "i386-apple-darwin11",
+              "archiveFileName": "avr-gcc-5.4.0-atmel3.6.1-arduino2-i386-apple-darwin11.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-5.4.0-atmel3.6.1-arduino2-i386-apple-darwin11.tar.bz2"
+            },
+            {
+              "size": "45923772",
+              "checksum": "SHA-256:7eb5691a379b547798fae535b05d68bc02d3969f12d051b8a5a5f2f350ab0a7f",
+              "host": "i686-mingw32",
+              "archiveFileName": "avr-gcc-5.4.0-atmel3.6.1-arduino2-i686-w64-mingw32.zip",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-5.4.0-atmel3.6.1-arduino2-i686-w64-mingw32.zip"
+            },
+            {
+              "size": "33022916",
+              "checksum": "SHA-256:51f87e04f3cdaa73565c751051ac118e02904ad8478f1475b300e1bffcd5538f",
+              "host": "i686-linux-gnu",
+              "archiveFileName": "avr-gcc-5.4.0-atmel3.6.1-arduino2-i686-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-5.4.0-atmel3.6.1-arduino2-i686-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "33522375",
+              "checksum": "SHA-256:05422b0d73b10357c12ea938f02cf50529422b89a4722756e70024aed3e69185",
+              "host": "x86_64-linux-gnu",
+              "archiveFileName": "avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-pc-linux-gnu.tar.bz2"
+            }
+          ]
+        },
+        {
+          "name": "avrdude",
+          "version": "6.3.0-arduino14",
+          "systems": [
+            {
+              "size": "219616",
+              "checksum": "SHA-256:d1a06275490d59a431c419788bbc53ffd5a79510dac1a35e63cf488621ba5589",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "avrdude-6.3.0-arduino14-armhf-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avrdude-6.3.0-arduino14-armhf-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "229688",
+              "checksum": "SHA-256:439f5de150695e3732dd598bb182dae6ec1e3a5cdb580f855d9b58e485e84e66",
+              "host": "aarch64-linux-gnu",
+              "archiveFileName": "avrdude-6.3.0-arduino14-aarch64-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avrdude-6.3.0-arduino14-aarch64-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "256917",
+              "checksum": "SHA-256:47d03991522722ce92120c60c4118685b7861909d895f34575001137961e4a63",
+              "host": "i386-apple-darwin11",
+              "archiveFileName": "avrdude-6.3.0-arduino14-i386-apple-darwin12.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avrdude-6.3.0-arduino14-i386-apple-darwin11.tar.bz2"
+            },
+            {
+              "size": "253366",
+              "checksum": "SHA-256:7986e8f3059353dc08f9234f7dbc98d9b2fa2242f046f02a8243a060f7358bfc",
+              "host": "x86_64-linux-gnu",
+              "archiveFileName": "avrdude-6.3.0-arduino14-x86_64-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avrdude-6.3.0-arduino14-x86_64-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "244293",
+              "checksum": "SHA-256:4f100e3843c635064997df91d2a079ab15cd30d1d7fa227280abe6a7c3bc74ca",
+              "host": "i686-linux-gnu",
+              "archiveFileName": "avrdude-6.3.0-arduino14-i686-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avrdude-6.3.0-arduino14-i686-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "328363",
+              "checksum": "SHA-256:69293e0de2eff8de89f553477795c25005f674a320bbba4b0222beb0194aa297",
+              "host": "i686-mingw32",
+              "archiveFileName": "avrdude-6.3.0-arduino14-i686-w64-mingw32.zip",
+              "url": "http://downloads.arduino.cc/tools/avrdude-6.3.0-arduino14-i686-w64-mingw32.zip"
+            }
+          ]
+        },
+        {
+          "name": "arduinoOTA",
+          "version": "1.2.1",
+          "systems": [
+            {
+              "size": "2133779",
+              "checksum": "SHA-256:2ffdf64b78486c1d0bf28dc23d0ca36ab75ca92e84b9487246da01888abea6d4",
+              "host": "i686-linux-gnu",
+              "archiveFileName": "arduinoOTA-1.2.1-linux_386.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-linux_386.tar.bz2"
+            },
+            {
+              "size": "2257689",
+              "checksum": "SHA-256:5b82310d53688480f34a916aac31cd8f2dd2be65dd8fa6c2445262262e1948f9",
+              "host": "x86_64-linux-gnu",
+              "archiveFileName": "arduinoOTA-1.2.1-linux_amd64.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-linux_amd64.tar.bz2"
+            },
+            {
+              "size": "2093132",
+              "checksum": "SHA-256:ad54b3dcd586212941fd992bab573b53d13207a419a3f2981c970a085ae0e9e0",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "arduinoOTA-1.2.1-linux_arm.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-linux_arm.tar.bz2"
+            },
+            {
+              "size": "2093132",
+              "checksum": "SHA-256:ad54b3dcd586212941fd992bab573b53d13207a419a3f2981c970a085ae0e9e0",
+              "host": "aarch64-linux-gnu",
+              "archiveFileName": "arduinoOTA-1.2.1-linux_arm.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-linux_arm.tar.bz2"
+            },
+            {
+              "size": "2244088",
+              "checksum": "SHA-256:93a6d9f9c0c765d237be1665bf7a0a8e2b0b6d2a8531eae92db807f5515088a7",
+              "host": "i386-apple-darwin11",
+              "archiveFileName": "arduinoOTA-1.2.1-darwin_amd64.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-darwin_amd64.tar.bz2"
+            },
+            {
+              "size": "2237511",
+              "checksum": "SHA-256:e1ebf21f2c073fce25c09548c656da90d4ef6c078401ec6f323e0c58335115e5",
+              "host": "i686-mingw32",
+              "archiveFileName": "arduinoOTA-1.2.1-windows_386.zip",
+              "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-windows_386.zip"
+            }
+          ]
+        },
+        {
+          "version": "2.5.0-3-20ed2b9",
+          "name": "esptool",
+          "systems": [
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/aarch64-linux-gnu.esptool-f80ae31.tar.gz",
+              "checksum": "SHA-256:888425ff1e33a97ea155b6f128de6b578c34468895ba9b4acd1e4f28608d917a",
+              "host": "aarch64-linux-gnu",
+              "archiveFileName": "aarch64-linux-gnu.esptool-f80ae31.tar.gz",
+              "size": "14681"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/arm-linux-gnueabihf.esptool-f80ae31.tar.gz",
+              "checksum": "SHA-256:71c878ac6a21ee69dcd615cd28f2dccd29a87079e0b3069eba625089d89e5058",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "arm-linux-gnueabihf.esptool-f80ae31.tar.gz",
+              "size": "13873"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/i686-w64-mingw32.esptool-f80ae31.zip",
+              "checksum": "SHA-256:e30f25a19a78635000401b083b479e111d591bac20cfd89b1bfdf36a60e9ee20",
+              "host": "i686-mingw32",
+              "archiveFileName": "i686-w64-mingw32.esptool-f80ae31.zip",
+              "size": "16466"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/i686-linux-gnu.esptool-f80ae31.tar.gz",
+              "checksum": "SHA-256:fe632f4602d02b6a9425c5bf95074095cb6d3c57912168a0f6b796fddd8ce991",
+              "host": "i686-pc-linux-gnu",
+              "archiveFileName": "i686-linux-gnu.esptool-f80ae31.tar.gz",
+              "size": "16543"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-apple-darwin14.esptool-f80ae31.tar.gz",
+              "checksum": "SHA-256:0f51e487706a476b0b87299a769282ad65623774770655168a79d1748d2506e7",
+              "host": "x86_64-apple-darwin",
+              "archiveFileName": "x86_64-apple-darwin14.esptool-f80ae31.tar.gz",
+              "size": "15003"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-linux-gnu.esptool-f80ae31.tar.gz",
+              "checksum": "SHA-256:bded1dca953377838b6086a9bcd40a1dc5286ba5f69f2372c22a1d1819baad24",
+              "host": "x86_64-pc-linux-gnu",
+              "archiveFileName": "x86_64-linux-gnu.esptool-f80ae31.tar.gz",
+              "size": "16526"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-w64-mingw32.esptool-f80ae31.zip",
+              "checksum": "SHA-256:d6d5976fde82d07e93d5a01f38bbb4f84a7796187ff0541ee62650041791d0e8",
+              "host": "x86_64-mingw32",
+              "archiveFileName": "x86_64-w64-mingw32.esptool-f80ae31.zip",
+              "size": "19724"
+            }
+          ]
+        },
+        {
+          "version": "2.5.0-3-20ed2b9",
+          "name": "xtensa-lx106-elf-gcc",
+          "systems": [
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/aarch64-linux-gnu.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "checksum": "SHA-256:2192512ff6e33d4126722b2bfea02c1d8293b0a90094f84a9ac494d5fcaa0f45",
+              "host": "aarch64-linux-gnu",
+              "archiveFileName": "aarch64-linux-gnu.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "size": "40974297"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/arm-linux-gnueabihf.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "checksum": "SHA-256:861c4ab7f6f04344f7ee656d90288e6904d7efac83ffe4835b66df3eba35b0a0",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "arm-linux-gnueabihf.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "size": "37013753"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/i686-w64-mingw32.xtensa-lx106-elf-20ed2b9c.zip",
+              "checksum": "SHA-256:38b9ccc3b286546b026fb8a29fb2bd8fdab32c4711816a1a3cb0f11250b5c541",
+              "host": "i686-mingw32",
+              "archiveFileName": "i686-w64-mingw32.xtensa-lx106-elf-20ed2b9c.zip",
+              "size": "44935132"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/i686-linux-gnu.xtensa-lx106-elf-1f24aeae.tar.gz",
+              "checksum": "SHA-256:96b106fbc814155e92d1805d3227d36096b88d3d54cfcd885804a0e9cf5631d7",
+              "host": "i686-pc-linux-gnu",
+              "archiveFileName": "i686-linux-gnu.xtensa-lx106-elf-1f24aeae.tar.gz",
+              "size": "42500158"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-apple-darwin14.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "checksum": "SHA-256:fd29ae844915fb2dd800d99ad7967be0e890601c18b80555efbc4eca2dd808c2",
+              "host": "x86_64-apple-darwin",
+              "archiveFileName": "x86_64-apple-darwin14.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "size": "44378513"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-linux-gnu.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "checksum": "SHA-256:039f87e2d881b6488a0be8c7fda86cacb1d38502a236cc6768a2dbc2a20ca9cd",
+              "host": "x86_64-pc-linux-gnu",
+              "archiveFileName": "x86_64-linux-gnu.xtensa-lx106-elf-20ed2b9c.tar.gz",
+              "size": "43778575"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-w64-mingw32.xtensa-lx106-elf-20ed2b9c.zip",
+              "checksum": "SHA-256:cc8c19a458129e49ec195d9438a53c6ce2c1287a04ea1ea22b81dcc65db511a8",
+              "host": "x86_64-mingw32",
+              "archiveFileName": "x86_64-w64-mingw32.xtensa-lx106-elf-20ed2b9c.zip",
+              "size": "48635537"
+            }
+          ]
+        },
+        {
+          "version": "2.5.0-3-20ed2b9",
+          "name": "mkspiffs",
+          "systems": [
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/aarch64-linux-gnu.mkspiffs-7fefeac.tar.gz",
+              "checksum": "SHA-256:5f1e6a1f0eff4522bed90c539f88efe48ecc9c9ee72b0e3cad35f8b09c334168",
+              "host": "aarch64-linux-gnu",
+              "archiveFileName": "aarch64-linux-gnu.mkspiffs-7fefeac.tar.gz",
+              "size": "51017"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/arm-linux-gnueabihf.mkspiffs-7fefeac.tar.gz",
+              "checksum": "SHA-256:edc5ea2080f90f33aed84e5a9b6986bf905431e09155cdca96b648eae9656d94",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "arm-linux-gnueabihf.mkspiffs-7fefeac.tar.gz",
+              "size": "44050"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/i686-w64-mingw32.mkspiffs-7fefeac.zip",
+              "checksum": "SHA-256:ec661fb02c2635ac722eaaedf0a0c35474c43c72008f0ceefffb19af2f739d15",
+              "host": "i686-mingw32",
+              "archiveFileName": "i686-w64-mingw32.mkspiffs-7fefeac.zip",
+              "size": "337874"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/i686-linux-gnu.mkspiffs-7fefeac.tar.gz",
+              "checksum": "SHA-256:d080b3b50ee00ac56b7204f8d08b95cd53872a2e09da590775ee631bcb279cad",
+              "host": "i686-pc-linux-gnu",
+              "archiveFileName": "i686-linux-gnu.mkspiffs-7fefeac.tar.gz",
+              "size": "54276"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-apple-darwin14.mkspiffs-7fefeac.tar.gz",
+              "checksum": "SHA-256:927cb67d045c598a9159ae16bc5fb63a20b3e23ad95eeb44702c938e6272f92f",
+              "host": "x86_64-apple-darwin",
+              "archiveFileName": "x86_64-apple-darwin14.mkspiffs-7fefeac.tar.gz",
+              "size": "368554"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-linux-gnu.mkspiffs-7fefeac.tar.gz",
+              "checksum": "SHA-256:4547bfe668090944d50af8dbf09abb5b51eb4a892b4784818f06a2274a630878",
+              "host": "x86_64-pc-linux-gnu",
+              "archiveFileName": "x86_64-linux-gnu.mkspiffs-7fefeac.tar.gz",
+              "size": "52429"
+            },
+            {
+              "url": "https://github.com/earlephilhower/esp-quick-toolchain/releases/download/2.5.0-3/x86_64-w64-mingw32.mkspiffs-7fefeac.zip",
+              "checksum": "SHA-256:0dedc3ee977af99ffd160bb304e8bfb68a8545f2d1f2e4a3b534f2ae1a49d2c9",
+              "host": "x86_64-mingw32",
+              "archiveFileName": "x86_64-w64-mingw32.mkspiffs-7fefeac.zip",
+              "size": "350035"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
