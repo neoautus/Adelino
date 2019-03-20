@@ -243,11 +243,12 @@ __attribute__((noinline))
 static uint8_t rstat (void)
 {
     // Read the reset switch preserving the port configuration afterwards
-    uint8_t save_DDRD = DDRD;
-    uint8_t save_PORTD = PORTD;
     cli ();
-    DDRD &= ~_BV(5); // PD5 -> input
+    uint8_t save_PORTD = PORTD;
     PORTD |= _BV(5); // Pull up
+    uint8_t save_DDRD = DDRD;
+    DDRD &= ~_BV(5); // PD5 -> input
+    __asm__ volatile ("rjmp .+0");      // Discard small diode capacitance
     uint8_t stat = !(PIND & _BV(5));
     PORTD = save_PORTD;
     DDRD = save_DDRD;
