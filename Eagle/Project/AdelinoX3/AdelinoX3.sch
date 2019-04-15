@@ -5986,13 +5986,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </sheet>
 </sheets>
 <errors>
-<approved hash="204,1,48.26,87.63,X1,GND1,,,,"/>
-<approved hash="204,1,48.26,82.55,X1,GND2,,,,"/>
-<approved hash="106,1,93.98,-101.6,HSPI_CLK,,,,,"/>
-<approved hash="106,1,93.98,-96.52,HSPI_MISO,,,,,"/>
-<approved hash="106,1,93.98,-99.06,HSPI_MOSI,,,,,"/>
-<approved hash="106,1,198.12,-88.9,STANDBY1,,,,,"/>
-<approved hash="106,1,198.12,-113.03,STANDBY2,,,,,"/>
+<approved hash="102,1,107.95,-143.51,VCC,+5V,,,,"/>
+<approved hash="104,1,39.37,85.09,X1,GND1,GND,,,"/>
+<approved hash="104,1,39.37,80.01,X1,GND2,GND,,,"/>
 </errors>
 </schematic>
 </drawing>
