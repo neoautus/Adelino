@@ -1,0 +1,3218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <in>Adelino.c</in>
+      <in>Descriptors.c</in>
+    </df>
+    <logicalFolder name="lufa-LUFA-111009"
+                   displayName="lufa-LUFA-111009"
+                   projectFiles="true"
+                   root="../lufa-LUFA-111009">
+      <logicalFolder name="Bootloaders" displayName="Bootloaders" projectFiles="true">
+        <logicalFolder name="CDC" displayName="CDC" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/BootloaderCDC.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/BootloaderCDC.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/BootloaderCDC.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/BootloaderCDC.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/LUFA CDC Bootloader.inf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/CDC/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="DFU" displayName="DFU" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/BootloaderDFU.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/BootloaderDFU.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/BootloaderDFU.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/BootloaderDFU.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/DFU/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="HID" displayName="HID" projectFiles="true">
+          <logicalFolder name="HostLoaderApp"
+                         displayName="HostLoaderApp"
+                         projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/Bootloaders/HID/HostLoaderApp/Makefile</itemPath>
+            <itemPath>../lufa-LUFA-111009/Bootloaders/HID/HostLoaderApp/Makefile.bsd</itemPath>
+            <itemPath>../lufa-LUFA-111009/Bootloaders/HID/HostLoaderApp/gpl3.txt</itemPath>
+            <itemPath>../lufa-LUFA-111009/Bootloaders/HID/HostLoaderApp/hid_bootloader_cli.c</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/BootloaderHID.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/BootloaderHID.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/BootloaderHID.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/BootloaderHID.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Bootloaders/HID/makefile</itemPath>
+        </logicalFolder>
+        <itemPath>../lufa-LUFA-111009/Bootloaders/makefile</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Demos" displayName="Demos" projectFiles="true">
+        <logicalFolder name="Device" displayName="Device" projectFiles="true">
+          <logicalFolder name="ClassDriver" displayName="ClassDriver" projectFiles="true">
+            <logicalFolder name="AudioInput" displayName="AudioInput" projectFiles="true">
+              <logicalFolder name=".dep" displayName=".dep" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/AudioInput.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/Descriptors.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/Device_AVR8.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/EndpointStream_AVR8.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/Endpoint_AVR8.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/Host_AVR8.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/PipeStream_AVR8.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/Pipe_AVR8.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/USBController_AVR8.o.d</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/.dep/USBInterrupt_AVR8.o.d</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/AudioInput.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/AudioInput.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/AudioInput.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/AudioInput.lst</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/AudioInput.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/Descriptors.lst</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="AudioOutput" displayName="AudioOutput" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/AudioOutput.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/AudioOutput.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/AudioOutput.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/AudioOutput.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="DualVirtualSerial"
+                           displayName="DualVirtualSerial"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/DualVirtualSerial.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/DualVirtualSerial.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/DualVirtualSerial.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/DualVirtualSerial.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/LUFA DualVirtualSerial.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="GenericHID" displayName="GenericHID" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/GenericHID.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/GenericHID.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/GenericHID.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/GenericHID.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="Joystick" displayName="Joystick" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Joystick.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Joystick.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Joystick.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Joystick.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="Keyboard" displayName="Keyboard" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Keyboard.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Keyboard.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Keyboard.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Keyboard.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="KeyboardMouse"
+                           displayName="KeyboardMouse"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/KeyboardMouse.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/KeyboardMouse.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/KeyboardMouse.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/KeyboardMouse.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="KeyboardMouseMultiReport"
+                           displayName="KeyboardMouseMultiReport"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/KeyboardMouseMultiReport.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/KeyboardMouseMultiReport.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/KeyboardMouseMultiReport.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/KeyboardMouseMultiReport.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MassStorage" displayName="MassStorage" projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Lib/DataflashManager.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Lib/DataflashManager.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Lib/SCSI.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Lib/SCSI.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/MassStorage.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/MassStorage.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/MassStorage.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/MassStorage.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MassStorageKeyboard"
+                           displayName="MassStorageKeyboard"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Lib/DataflashManager.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Lib/DataflashManager.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Lib/SCSI.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Lib/SCSI.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/MassStorageKeyboard.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/MassStorageKeyboard.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/MassStorageKeyboard.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/MassStorageKeyboard.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MIDI" displayName="MIDI" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/MIDI.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/MIDI.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/MIDI.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/MIDI.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="Mouse" displayName="Mouse" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Mouse.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Mouse.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Mouse.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Mouse.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="RNDISEthernet"
+                           displayName="RNDISEthernet"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ARP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ARP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/DHCP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/DHCP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/Ethernet.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/Ethernet.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/EthernetProtocols.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ICMP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ICMP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/IP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/IP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ProtocolDecoders.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ProtocolDecoders.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/TCP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/TCP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/UDP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/UDP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/Webserver.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/Webserver.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/LUFA RNDIS.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/RNDISEthernet.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/RNDISEthernet.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/RNDISEthernet.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/RNDISEthernet.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="VirtualSerial"
+                           displayName="VirtualSerial"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/LUFA VirtualSerial.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/VirtualSerial.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/VirtualSerial.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/VirtualSerial.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/VirtualSerial.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="VirtualSerialMassStorage"
+                           displayName="VirtualSerialMassStorage"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Lib/DataflashManager.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Lib/DataflashManager.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Lib/SCSI.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Lib/SCSI.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/LUFA VirtualSerialMassStorage.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/VirtualSerialMassStorage.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/VirtualSerialMassStorage.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/VirtualSerialMassStorage.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/VirtualSerialMassStorage.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="VirtualSerialMouse"
+                           displayName="VirtualSerialMouse"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/LUFA VirtualSerialMouse.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/VirtualSerialMouse.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/VirtualSerialMouse.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/VirtualSerialMouse.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/VirtualSerialMouse.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/makefile</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Demos/Device/ClassDriver/makefile</itemPath>
+          </logicalFolder>
+          <logicalFolder name="Incomplete" displayName="Incomplete" projectFiles="true">
+            <logicalFolder name="Sideshow" displayName="Sideshow" projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowApplications.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowApplications.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowCommands.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowCommands.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowCommon.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowCommon.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowContent.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowContent.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Sideshow.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Sideshow.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="TestAndMeasurement"
+                           displayName="TestAndMeasurement"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/TestAndMeasurement/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/TestAndMeasurement/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/TestAndMeasurement/TestAndMeasurement.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/TestAndMeasurement/TestAndMeasurement.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/Incomplete/TestAndMeasurement/makefile</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="LowLevel" displayName="LowLevel" projectFiles="true">
+            <logicalFolder name="AudioInput" displayName="AudioInput" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/AudioInput.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/AudioInput.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/AudioInput.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/AudioInput.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="AudioOutput" displayName="AudioOutput" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/AudioOutput.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/AudioOutput.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/AudioOutput.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/AudioOutput.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="DualVirtualSerial"
+                           displayName="DualVirtualSerial"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/DualVirtualSerial.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/DualVirtualSerial.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/DualVirtualSerial.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/DualVirtualSerial.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/LUFA DualVirtualSerial.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="GenericHID" displayName="GenericHID" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/GenericHID.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/GenericHID.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/GenericHID.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/GenericHID.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="Joystick" displayName="Joystick" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Joystick.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Joystick.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Joystick.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Joystick.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="Keyboard" displayName="Keyboard" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Keyboard.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Keyboard.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Keyboard.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Keyboard.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="KeyboardMouse"
+                           displayName="KeyboardMouse"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/KeyboardMouse.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/KeyboardMouse.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/KeyboardMouse.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/KeyboardMouse.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MassStorage" displayName="MassStorage" projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Lib/DataflashManager.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Lib/DataflashManager.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Lib/SCSI.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Lib/SCSI.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/MassStorage.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/MassStorage.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/MassStorage.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/MassStorage.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MIDI" displayName="MIDI" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/MIDI.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/MIDI.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/MIDI.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/MIDI.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="Mouse" displayName="Mouse" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Mouse.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Mouse.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Mouse.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Mouse.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="RNDISEthernet"
+                           displayName="RNDISEthernet"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ARP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ARP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/DHCP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/DHCP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/Ethernet.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/Ethernet.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/EthernetProtocols.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ICMP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ICMP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/IP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/IP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ProtocolDecoders.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ProtocolDecoders.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/RNDIS.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/RNDIS.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/TCP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/TCP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/UDP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/UDP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/Webserver.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/Webserver.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/LUFA RNDIS.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/RNDISEthernet.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/RNDISEthernet.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/RNDISEthernet.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/RNDISEthernet.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="VirtualSerial"
+                           displayName="VirtualSerial"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/LUFA VirtualSerial.inf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/VirtualSerial.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/VirtualSerial.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/VirtualSerial.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/VirtualSerial.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/makefile</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Demos/Device/LowLevel/makefile</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Demos/Device/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="DualRole" displayName="DualRole" projectFiles="true">
+          <logicalFolder name="ClassDriver" displayName="ClassDriver" projectFiles="true">
+            <logicalFolder name="MouseHostDevice"
+                           displayName="MouseHostDevice"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/Descriptors.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/Descriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/DeviceFunctions.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/DeviceFunctions.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/HostFunctions.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/HostFunctions.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/MouseHostDevice.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/MouseHostDevice.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/MouseHostDevice.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/MouseHostDevice.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/makefile</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Demos/DualRole/ClassDriver/makefile</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Demos/DualRole/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Host" displayName="Host" projectFiles="true">
+          <logicalFolder name="ClassDriver" displayName="ClassDriver" projectFiles="true">
+            <logicalFolder name="AudioInputHost"
+                           displayName="AudioInputHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioInputHost/AudioInputHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioInputHost/AudioInputHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioInputHost/AudioInputHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioInputHost/AudioInputHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioInputHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioInputHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="AudioOutputHost"
+                           displayName="AudioOutputHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioOutputHost/AudioOutputHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioOutputHost/AudioOutputHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioOutputHost/AudioOutputHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioOutputHost/AudioOutputHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioOutputHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioOutputHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="JoystickHostWithParser"
+                           displayName="JoystickHostWithParser"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/JoystickHostWithParser/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/JoystickHostWithParser/JoystickHostWithParser.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/JoystickHostWithParser/JoystickHostWithParser.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/JoystickHostWithParser/JoystickHostWithParser.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/JoystickHostWithParser/JoystickHostWithParser.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/JoystickHostWithParser/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="KeyboardHost"
+                           displayName="KeyboardHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHost/KeyboardHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHost/KeyboardHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHost/KeyboardHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHost/KeyboardHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="KeyboardHostWithParser"
+                           displayName="KeyboardHostWithParser"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHostWithParser/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHostWithParser/KeyboardHostWithParser.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHostWithParser/KeyboardHostWithParser.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHostWithParser/KeyboardHostWithParser.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHostWithParser/KeyboardHostWithParser.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHostWithParser/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MassStorageHost"
+                           displayName="MassStorageHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MassStorageHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MassStorageHost/MassStorageHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MassStorageHost/MassStorageHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MassStorageHost/MassStorageHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MassStorageHost/MassStorageHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MassStorageHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MIDIHost" displayName="MIDIHost" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MIDIHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MIDIHost/MIDIHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MIDIHost/MIDIHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MIDIHost/MIDIHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MIDIHost/MIDIHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MIDIHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MouseHost" displayName="MouseHost" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHost/MouseHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHost/MouseHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHost/MouseHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHost/MouseHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MouseHostWithParser"
+                           displayName="MouseHostWithParser"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHostWithParser/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHostWithParser/MouseHostWithParser.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHostWithParser/MouseHostWithParser.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHostWithParser/MouseHostWithParser.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHostWithParser/MouseHostWithParser.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHostWithParser/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="PrinterHost" displayName="PrinterHost" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/PrinterHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/PrinterHost/PrinterHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/PrinterHost/PrinterHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/PrinterHost/PrinterHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/PrinterHost/PrinterHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/PrinterHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="RNDISEthernetHost"
+                           displayName="RNDISEthernetHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/RNDISEthernetHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/RNDISEthernetHost/RNDISEthernetHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/RNDISEthernetHost/RNDISEthernetHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/RNDISEthernetHost/RNDISEthernetHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/RNDISEthernetHost/RNDISEthernetHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/RNDISEthernetHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="StillImageHost"
+                           displayName="StillImageHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/StillImageHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/StillImageHost/StillImageHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/StillImageHost/StillImageHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/StillImageHost/StillImageHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/StillImageHost/StillImageHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/StillImageHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="VirtualSerialHost"
+                           displayName="VirtualSerialHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/VirtualSerialHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/VirtualSerialHost/VirtualSerialHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/VirtualSerialHost/VirtualSerialHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/VirtualSerialHost/VirtualSerialHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/VirtualSerialHost/VirtualSerialHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/VirtualSerialHost/makefile</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Demos/Host/ClassDriver/makefile</itemPath>
+          </logicalFolder>
+          <logicalFolder name="Incomplete" displayName="Incomplete" projectFiles="true">
+            <logicalFolder name="AndroidAccessoryHost"
+                           displayName="AndroidAccessoryHost"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/Lib/AndroidAccessoryCommands.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/Lib/AndroidAccessoryCommands.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/AndroidAccessoryHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/AndroidAccessoryHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/DeviceDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/DeviceDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="BluetoothHost"
+                           displayName="BluetoothHost"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothACLPackets.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothACLPackets.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothClassCodes.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothHCICommands.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothHCICommands.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothStack.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothStack.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/RFCOMM.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/RFCOMM.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/RFCOMMControl.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/RFCOMMControl.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/SDP.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/SDP.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/SDPServices.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/SDPServices.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/BluetoothEvents.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/BluetoothEvents.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/BluetoothHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/BluetoothHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/DeviceDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/DeviceDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/makefile</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="LowLevel" displayName="LowLevel" projectFiles="true">
+            <logicalFolder name="AudioInputHost"
+                           displayName="AudioInputHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/AudioInputHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/AudioInputHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/AudioInputHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/AudioInputHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="AudioOutputHost"
+                           displayName="AudioOutputHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/AudioOutputHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/AudioOutputHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/AudioOutputHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/AudioOutputHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="GenericHIDHost"
+                           displayName="GenericHIDHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/GenericHIDHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/GenericHIDHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/GenericHIDHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/GenericHIDHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="JoystickHostWithParser"
+                           displayName="JoystickHostWithParser"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/HIDReport.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/HIDReport.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/JoystickHostWithParser.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/JoystickHostWithParser.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/JoystickHostWithParser.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/JoystickHostWithParser.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="KeyboardHost"
+                           displayName="KeyboardHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/KeyboardHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/KeyboardHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/KeyboardHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/KeyboardHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="KeyboardHostWithParser"
+                           displayName="KeyboardHostWithParser"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/HIDReport.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/HIDReport.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/KeyboardHostWithParser.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/KeyboardHostWithParser.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/KeyboardHostWithParser.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/KeyboardHostWithParser.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MassStorageHost"
+                           displayName="MassStorageHost"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/Lib/MassStoreCommands.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/Lib/MassStoreCommands.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/MassStorageHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/MassStorageHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/MassStorageHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/MassStorageHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MIDIHost" displayName="MIDIHost" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/MIDIHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/MIDIHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/MIDIHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/MIDIHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MouseHost" displayName="MouseHost" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/MouseHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/MouseHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/MouseHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/MouseHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MouseHostWithParser"
+                           displayName="MouseHostWithParser"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/HIDReport.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/HIDReport.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/MouseHostWithParser.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/MouseHostWithParser.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/MouseHostWithParser.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/MouseHostWithParser.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="PrinterHost" displayName="PrinterHost" projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/Lib/PrinterCommands.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/Lib/PrinterCommands.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/PrinterHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/PrinterHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/PrinterHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/PrinterHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="RNDISEthernetHost"
+                           displayName="RNDISEthernetHost"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/Lib/RNDISCommands.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/Lib/RNDISCommands.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/RNDISEthernetHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/RNDISEthernetHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/RNDISEthernetHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/RNDISHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="StillImageHost"
+                           displayName="StillImageHost"
+                           projectFiles="true">
+              <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/Lib/PIMACodes.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/Lib/StillImageCommands.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/Lib/StillImageCommands.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/StillImageHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/StillImageHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/StillImageHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/StillImageHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/makefile</itemPath>
+            </logicalFolder>
+            <logicalFolder name="VirtualSerialHost"
+                           displayName="VirtualSerialHost"
+                           projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/Doxygen.conf</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/VirtualSerialHost.aps</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/VirtualSerialHost.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/VirtualSerialHost.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/VirtualSerialHost.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/makefile</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Demos/Host/LowLevel/makefile</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Demos/Host/makefile</itemPath>
+        </logicalFolder>
+        <itemPath>../lufa-LUFA-111009/Demos/makefile</itemPath>
+      </logicalFolder>
+      <logicalFolder name="LUFA" displayName="LUFA" projectFiles="true">
+        <logicalFolder name="CodeTemplates"
+                       displayName="CodeTemplates"
+                       projectFiles="true">
+          <logicalFolder name="DriverStubs" displayName="DriverStubs" projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/DriverStubs/Buttons.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/DriverStubs/Dataflash.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/DriverStubs/Joystick.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/DriverStubs/LEDs.h</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/LUFAConfig.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/makefile_template.avr8</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/makefile_template.uc3</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/CodeTemplates/makefile_template.xmega</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Common" displayName="Common" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/LUFA/Common/ArchitectureSpecific.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/Common/Architectures.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/Common/Attributes.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/Common/BoardTypes.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/Common/Common.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/Common/CompilerSpecific.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/Common/Endianness.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Drivers" displayName="Drivers" projectFiles="true">
+          <logicalFolder name="Board" displayName="Board" projectFiles="true">
+            <logicalFolder name="AVR8" displayName="AVR8" projectFiles="true">
+              <logicalFolder name="ADAFRUITU4" displayName="ADAFRUITU4" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/ADAFRUITU4/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="ATAVRUSBRF01"
+                             displayName="ATAVRUSBRF01"
+                             projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/ATAVRUSBRF01/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/ATAVRUSBRF01/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="BENITO" displayName="BENITO" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/BENITO/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/BENITO/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="BLACKCAT" displayName="BLACKCAT" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/BLACKCAT/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="BUI" displayName="BUI" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/BUI/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="BUMBLEB" displayName="BUMBLEB" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/BUMBLEB/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/BUMBLEB/Joystick.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/BUMBLEB/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="CULV3" displayName="CULV3" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/CULV3/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/CULV3/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="EVK527" displayName="EVK527" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/EVK527/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/EVK527/Dataflash.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/EVK527/Joystick.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/EVK527/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="JMDBU2" displayName="JMDBU2" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/JMDBU2/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/JMDBU2/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="MAXIMUS" displayName="MAXIMUS" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/MAXIMUS/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="MICROSIN162" displayName="MICROSIN162" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/MICROSIN162/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/MICROSIN162/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="MINIMUS" displayName="MINIMUS" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/MINIMUS/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/MINIMUS/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="OLIMEX162" displayName="OLIMEX162" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/OLIMEX162/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/OLIMEX162/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="RZUSBSTICK" displayName="RZUSBSTICK" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/RZUSBSTICK/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="SPARKFUN8U2" displayName="SPARKFUN8U2" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/SPARKFUN8U2/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="STK525" displayName="STK525" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK525/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK525/Dataflash.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK525/Joystick.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK525/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="STK526" displayName="STK526" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK526/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK526/Dataflash.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK526/Joystick.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/STK526/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="TEENSY" displayName="TEENSY" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/TEENSY/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="TUL" displayName="TUL" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/TUL/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/TUL/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="UDIP" displayName="UDIP" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/UDIP/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/UDIP/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="UNO" displayName="UNO" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/UNO/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="USBFOO" displayName="USBFOO" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBFOO/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBFOO/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="USBKEY" displayName="USBKEY" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBKEY/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBKEY/Dataflash.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBKEY/Joystick.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBKEY/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="USBTINYMKII" displayName="USBTINYMKII" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBTINYMKII/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/USBTINYMKII/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="XPLAIN" displayName="XPLAIN" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/XPLAIN/Dataflash.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/AVR8/XPLAIN/LEDs.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="UC3" displayName="UC3" projectFiles="true">
+              <logicalFolder name="EVK1100" displayName="EVK1100" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1100/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1100/Joystick.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1100/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="EVK1101" displayName="EVK1101" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1101/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1101/Joystick.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1101/LEDs.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="EVK1104" displayName="EVK1104" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1104/Buttons.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/UC3/EVK1104/LEDs.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/Buttons.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/Dataflash.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/Joystick.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/LEDs.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/Temperature.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Board/Temperature.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="Misc" displayName="Misc" projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Misc/AT45DB321C.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Misc/AT45DB642D.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Misc/RingBuffer.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Misc/TerminalCodes.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="Peripheral" displayName="Peripheral" projectFiles="true">
+            <logicalFolder name="AVR8" displayName="AVR8" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/ADC_AVR8.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/SPI_AVR8.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/Serial_AVR8.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/Serial_AVR8.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/TWI_AVR8.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/TWI_AVR8.h</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/ADC.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/SPI.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/Serial.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/Peripheral/TWI.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="USB" displayName="USB" projectFiles="true">
+            <logicalFolder name="Class" displayName="Class" projectFiles="true">
+              <logicalFolder name="Common" displayName="Common" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/Audio.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/CDC.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/HID.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/HIDParser.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/HIDParser.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/HIDParser.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/HIDReportData.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/MIDI.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/MassStorage.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/Printer.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/RNDIS.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/StillImage.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="Device" displayName="Device" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/Audio.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/Audio.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/CDC.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/CDC.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/HID.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/HID.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/MIDI.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/MIDI.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/MassStorage.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/MassStorage.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/RNDIS.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/RNDIS.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="Host" displayName="Host" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/Audio.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/Audio.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/CDC.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/CDC.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/HID.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/HID.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/MIDI.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/MIDI.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/MassStorage.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/MassStorage.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/Printer.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/Printer.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/RNDIS.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/RNDIS.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/StillImage.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/StillImage.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Audio.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/CDC.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/HID.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/MIDI.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/MassStorage.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Printer.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/RNDIS.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Class/StillImage.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="Core" displayName="Core" projectFiles="true">
+              <logicalFolder name="AVR8" displayName="AVR8" projectFiles="true">
+                <logicalFolder name="Template" displayName="Template" projectFiles="true">
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Endpoint_Control_R.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Endpoint_Control_W.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Endpoint_RW.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Pipe_RW.c</itemPath>
+                </logicalFolder>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/OTG_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.lst</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.lst</itemPath>
+              </logicalFolder>
+              <logicalFolder name="UC3" displayName="UC3" projectFiles="true">
+                <logicalFolder name="Template" displayName="Template" projectFiles="true">
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Endpoint_Control_R.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Endpoint_Control_W.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Endpoint_RW.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Pipe_RW.c</itemPath>
+                </logicalFolder>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Device_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Device_UC3.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/EndpointStream_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/EndpointStream_UC3.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Endpoint_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Endpoint_UC3.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Host_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Host_UC3.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/PipeStream_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/PipeStream_UC3.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Pipe_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Pipe_UC3.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/USBController_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/USBController_UC3.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/USBInterrupt_UC3.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/USBInterrupt_UC3.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="XMEGA" displayName="XMEGA" projectFiles="true">
+                <logicalFolder name="Template" displayName="Template" projectFiles="true">
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Template/Template_Endpoint_Control_R.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Template/Template_Endpoint_Control_W.c</itemPath>
+                  <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Template/Template_Endpoint_RW.c</itemPath>
+                </logicalFolder>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Device_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Device_XMEGA.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/EndpointStream_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/EndpointStream_XMEGA.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Endpoint_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Endpoint_XMEGA.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Host_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/PipeStream_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Pipe_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/USBController_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/USBController_XMEGA.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/USBInterrupt_XMEGA.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/USBInterrupt_XMEGA.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/ConfigDescriptor.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/ConfigDescriptor.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/ConfigDescriptor.lst</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Device.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/DeviceStandardReq.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/DeviceStandardReq.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/DeviceStandardReq.lst</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Endpoint.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/EndpointStream.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Events.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Events.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Events.lst</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Host.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/HostStandardReq.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/HostStandardReq.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/HostStandardReq.lst</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/OTG.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Pipe.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/PipeStream.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/StdDescriptors.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/StdRequestType.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/USBController.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/USBInterrupt.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/USBMode.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/USBTask.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/USBTask.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/Core/USBTask.lst</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/LUFA/Drivers/USB/USB.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="ManPages" displayName="ManPages" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/AboutLUFA.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/AlternativeStacks.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/Author.jpg</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/BuildingLinkableLibraries.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/ChangeLog.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/CompileTimeTokens.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/CompilingApps.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/ConfiguringApps.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/DevelopingWithLUFA.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/DeviceSupport.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/DirectorySummaries.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/Donating.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/FutureChanges.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/GettingStarted.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/Groups.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/LUFA.png</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/LUFAPoweredProjects.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/LUFA_thumb.png</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/LUFAvsAtmelStack.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/LibraryApps.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/LibraryResources.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/LicenseInfo.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/MainPage.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/MigrationInformation.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/ProgrammingApps.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/SoftwareBootloaderJump.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/VIDAndPIDValues.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/WhyUseLUFA.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/WritingBoardDrivers.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/ManPages/footer.htm</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Platform" displayName="Platform" projectFiles="true">
+          <logicalFolder name="UC3" displayName="UC3" projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/LUFA/Platform/UC3/ClockManagement.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Platform/UC3/Exception.S</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Platform/UC3/InterruptManagement.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/LUFA/Platform/UC3/InterruptManagement.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="XMEGA" displayName="XMEGA" projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/LUFA/Platform/XMEGA/ClockManagement.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="Scheduler" displayName="Scheduler" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/LUFA/Scheduler/Scheduler.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/LUFA/Scheduler/Scheduler.h</itemPath>
+        </logicalFolder>
+        <itemPath>../lufa-LUFA-111009/LUFA/Doxygen.conf</itemPath>
+        <itemPath>../lufa-LUFA-111009/LUFA/License.txt</itemPath>
+        <itemPath>../lufa-LUFA-111009/LUFA/Version.h</itemPath>
+        <itemPath>../lufa-LUFA-111009/LUFA/makefile</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Projects" displayName="Projects" projectFiles="true">
+        <logicalFolder name="AVRISP-MKII" displayName="AVRISP-MKII" projectFiles="true">
+          <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+            <logicalFolder name="ISP" displayName="ISP" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/ISP/ISPProtocol.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/ISP/ISPProtocol.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/ISP/ISPTarget.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/ISP/ISPTarget.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="XPROG" displayName="XPROG" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/TINYNVM.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/TINYNVM.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XMEGANVM.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XMEGANVM.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XPROGProtocol.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XPROGProtocol.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XPROGTarget.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XPROGTarget.h</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/V2Protocol.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/V2Protocol.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/V2ProtocolConstants.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/V2ProtocolParams.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/V2ProtocolParams.h</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/AVRISP-MKII.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/AVRISP-MKII.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/AVRISP-MKII.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/AVRISP-MKII.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/AVRISP-MKII/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Benito" displayName="Benito" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Benito Programmer.inf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Benito.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Benito.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Benito.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Benito.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Benito/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="HIDReportViewer"
+                       displayName="HIDReportViewer"
+                       projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Projects/HIDReportViewer/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/HIDReportViewer/HIDReportViewer.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/HIDReportViewer/HIDReportViewer.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/HIDReportViewer/HIDReportViewer.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/HIDReportViewer/HIDReportViewer.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/HIDReportViewer/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Incomplete" displayName="Incomplete" projectFiles="true">
+          <logicalFolder name="StandaloneProgrammer"
+                         displayName="StandaloneProgrammer"
+                         projectFiles="true">
+            <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+              <logicalFolder name="PetiteFATFs" displayName="PetiteFATFs" projectFiles="true">
+                <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/00readme.txt</itemPath>
+                <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/diskio.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/diskio.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/integer.h</itemPath>
+                <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/pff.c</itemPath>
+                <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/pff.h</itemPath>
+              </logicalFolder>
+              <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/DataflashManager.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/DataflashManager.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/ProgrammerConfig.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/ProgrammerConfig.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/SCSI.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/SCSI.h</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Descriptors.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Descriptors.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/DiskDevice.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/DiskDevice.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/DiskHost.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/DiskHost.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Standalone Programmer.inf</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/StandaloneProgrammer.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/StandaloneProgrammer.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/makefile</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="LEDNotifier" displayName="LEDNotifier" projectFiles="true">
+          <logicalFolder name="CPUUsageApp" displayName="CPUUsageApp" projectFiles="true">
+            <logicalFolder name="Properties" displayName="Properties" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/Properties/AssemblyInfo.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/Properties/Resources.Designer.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/Properties/Resources.resx</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/Properties/Settings.Designer.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/Properties/Settings.settings</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/CPUMonitor.Designer.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/CPUMonitor.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/CPUMonitor.csproj</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/CPUMonitor.resx</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/CPUUsageApp/Program.cs</itemPath>
+          </logicalFolder>
+          <logicalFolder name="HotmailNotifierApp"
+                         displayName="HotmailNotifierApp"
+                         projectFiles="true">
+            <logicalFolder name="Properties" displayName="Properties" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/Properties/AssemblyInfo.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/Properties/Resources.Designer.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/Properties/Resources.resx</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/Properties/Settings.Designer.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/Properties/Settings.settings</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/MailNotifier.Designer.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/MailNotifier.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/MailNotifier.csproj</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/MailNotifier.resx</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/HotmailNotifierApp/Program.cs</itemPath>
+          </logicalFolder>
+          <logicalFolder name="LEDMixerApp" displayName="LEDMixerApp" projectFiles="true">
+            <logicalFolder name="Properties" displayName="Properties" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/Properties/AssemblyInfo.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/Properties/Resources.Designer.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/Properties/Resources.resx</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/Properties/Settings.Designer.cs</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/Properties/Settings.settings</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/LEDMixer.Designer.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/LEDMixer.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/LEDMixer.csproj</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/LEDMixer.resx</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDMixerApp/Program.cs</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDNotifier.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDNotifier.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDNotifier.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LEDNotifier.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/LUFA LED Notifier.inf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/LEDNotifier/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Magstripe" displayName="Magstripe" projectFiles="true">
+          <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Lib/CircularBitBuffer.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Lib/CircularBitBuffer.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Lib/MagstripeHW.h</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Magstripe.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Magstripe.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Magstripe.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/Magstripe.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Magstripe/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="MediaController"
+                       displayName="MediaController"
+                       projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/MediaController.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/MediaController.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/MediaController.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/MediaController.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MediaController/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="MIDIToneGenerator"
+                       displayName="MIDIToneGenerator"
+                       projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/MIDIToneGenerator.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/MIDIToneGenerator.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/MIDIToneGenerator.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/MIDIToneGenerator.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MIDIToneGenerator/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="MissileLauncher"
+                       displayName="MissileLauncher"
+                       projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/ConfigDescriptor.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/ConfigDescriptor.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/MissileLauncher.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/MissileLauncher.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/MissileLauncher.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/MissileLauncher.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/MissileLauncher/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="RelayBoard" displayName="RelayBoard" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/RelayBoard.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/RelayBoard.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/RelayBoard.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/RelayBoard.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/RelayBoard/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="TempDataLogger"
+                       displayName="TempDataLogger"
+                       projectFiles="true">
+          <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+            <logicalFolder name="FATFs" displayName="FATFs" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/00readme.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/diskio.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/diskio.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/ff.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/ff.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/ffconf.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/integer.h</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/DS1307.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/DS1307.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/DataflashManager.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/DataflashManager.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/SCSI.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Lib/SCSI.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="TempLogHostApp"
+                         displayName="TempLogHostApp"
+                         projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/COPYING.LESSER.txt</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/COPYING.txt</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/DataLoggerSettings.Designer.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/DataLoggerSettings.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/DataLoggerSettings.resx</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/Program.cs</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/README.txt</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempLogHostApp/TempLoggerHostApp.csproj</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempDataLogger.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempDataLogger.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TempDataLogger.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/TemperatureDataLogger.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/TempDataLogger/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="USBtoSerial" displayName="USBtoSerial" projectFiles="true">
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/LUFA USBtoSerial.inf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/USBtoSerial.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/USBtoSerial.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/USBtoSerial.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/USBtoSerial.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/USBtoSerial/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Webserver" displayName="Webserver" projectFiles="true">
+          <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+            <logicalFolder name="FATFs" displayName="FATFs" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/00readme.txt</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/diskio.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/diskio.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/ff.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/ff.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/ffconf.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/integer.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="uip" displayName="uip" projectFiles="true">
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/clock.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/clock.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/timer.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/timer.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip-split.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip-split.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip_arp.c</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip_arp.h</itemPath>
+              <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uipopt.h</itemPath>
+            </logicalFolder>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPClientApp.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPClientApp.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPCommon.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPCommon.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPServerApp.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPServerApp.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DataflashManager.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/DataflashManager.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/HTTPServerApp.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/HTTPServerApp.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/SCSI.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/SCSI.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/TELNETServerApp.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/TELNETServerApp.h</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uIPManagement.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/Webserver/Lib/uIPManagement.h</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/Descriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/Descriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/LUFA Webserver RNDIS.inf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/USBDeviceMode.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/USBDeviceMode.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/USBHostMode.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/USBHostMode.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/Webserver.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/Webserver.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/Webserver.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/Webserver.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/Webserver/makefile</itemPath>
+        </logicalFolder>
+        <logicalFolder name="XPLAINBridge"
+                       displayName="XPLAINBridge"
+                       projectFiles="true">
+          <logicalFolder name="Lib" displayName="Lib" projectFiles="true">
+            <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/Lib/SoftUART.c</itemPath>
+            <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/Lib/SoftUART.h</itemPath>
+          </logicalFolder>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/AVRISPDescriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/AVRISPDescriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/Doxygen.conf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/LUFA XPLAIN Bridge.inf</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/USARTDescriptors.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/USARTDescriptors.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/XPLAINBridge.aps</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/XPLAINBridge.c</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/XPLAINBridge.h</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/XPLAINBridge.txt</itemPath>
+          <itemPath>../lufa-LUFA-111009/Projects/XPLAINBridge/makefile</itemPath>
+        </logicalFolder>
+        <itemPath>../lufa-LUFA-111009/Projects/makefile</itemPath>
+      </logicalFolder>
+      <itemPath>../lufa-LUFA-111009/LUFA-111009.tar.gz</itemPath>
+      <itemPath>../lufa-LUFA-111009/LUFA.pnproj</itemPath>
+      <itemPath>../lufa-LUFA-111009/README.txt</itemPath>
+      <itemPath>../lufa-LUFA-111009/makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Arquivos Importantes"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+    <Elem>../lufa-LUFA-111009</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>AVR-GCC|GNU</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-Os -funsigned-char -std=c99"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <standard>3</standard>
+            <incDir>
+              <pElem>.</pElem>
+              <pElem>../lufa-LUFA-111009</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>ARCH=ARCH_AVR8</Elem>
+              <Elem>BOARD=BOARD_USER</Elem>
+              <Elem>BOOT_START_ADDR=0x7000UL</Elem>
+              <Elem>DEVICE_PID=0xEDDFUL</Elem>
+              <Elem>DEVICE_STATE_AS_GPIOR=0</Elem>
+              <Elem>DEVICE_VID=0x04D8UL</Elem>
+              <Elem>FIXED_CONTROL_ENDPOINT_SIZE=8</Elem>
+              <Elem>FIXED_NUM_CONFIGURATIONS=1</Elem>
+              <Elem>F_CPU=16000000UL</Elem>
+              <Elem>F_USB=16000000UL</Elem>
+              <Elem>NO_DEVICE_REMOTE_WAKEUP</Elem>
+              <Elem>NO_DEVICE_SELF_POWER</Elem>
+              <Elem>NO_INTERNAL_SERIAL</Elem>
+              <Elem>NO_LOCK_BYTE_WRITE_SUPPORT</Elem>
+              <Elem>NO_SOF_EVENTS</Elem>
+              <Elem>ORDERED_EP_CONFIG</Elem>
+              <Elem>USB_DEVICE_ONLY</Elem>
+              <Elem>USE_RAM_DESCRIPTORS</Elem>
+              <Elem>USE_STATIC_OPTIONS=(USB_DEVICE_OPT_FULLSPEED | USB_OPT_REG_ENABLED | USB_OPT_AUTO_PLL)</Elem>
+              <Elem>__AVR_ATmega32U4__</Elem>
+            </preprocessorList>
+          </cTool>
+          <ccTool>
+            <standard>11</standard>
+            <incDir>
+              <pElem>.</pElem>
+              <pElem>../lufa-LUFA-111009</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>ARCH=ARCH_AVR8</Elem>
+              <Elem>BOARD=BOARD_USER</Elem>
+              <Elem>BOOT_START_ADDR=0x7000UL</Elem>
+              <Elem>DEVICE_PID=0xEDDFUL</Elem>
+              <Elem>DEVICE_STATE_AS_GPIOR=0</Elem>
+              <Elem>DEVICE_VID=0x04D8UL</Elem>
+              <Elem>FIXED_CONTROL_ENDPOINT_SIZE=8</Elem>
+              <Elem>FIXED_NUM_CONFIGURATIONS=1</Elem>
+              <Elem>F_CPU=16000000UL</Elem>
+              <Elem>F_USB=16000000UL</Elem>
+              <Elem>NO_DEVICE_REMOTE_WAKEUP</Elem>
+              <Elem>NO_DEVICE_SELF_POWER</Elem>
+              <Elem>NO_INTERNAL_SERIAL</Elem>
+              <Elem>NO_LOCK_BYTE_WRITE_SUPPORT</Elem>
+              <Elem>NO_SOF_EVENTS</Elem>
+              <Elem>ORDERED_EP_CONFIG</Elem>
+              <Elem>USB_DEVICE_ONLY</Elem>
+              <Elem>USE_RAM_DESCRIPTORS</Elem>
+              <Elem>USE_STATIC_OPTIONS=(USB_DEVICE_OPT_FULLSPEED | USB_OPT_REG_ENABLED | USB_OPT_AUTO_PLL)</Elem>
+              <Elem>__AVR_ATmega32U4__</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="../lufa-LUFA-111009/Bootloaders/CDC/BootloaderCDC.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Bootloaders/CDC/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Bootloaders/DFU/BootloaderDFU.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Bootloaders/DFU/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Bootloaders/HID/BootloaderHID.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Bootloaders/HID/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Bootloaders/HID/HostLoaderApp/hid_bootloader_cli.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/AudioInput.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioInput/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/AudioOutput.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/AudioOutput/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/DualVirtualSerial/DualVirtualSerial.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/GenericHID/GenericHID.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/Joystick/Joystick.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/Keyboard/Keyboard.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouse/KeyboardMouse.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/KeyboardMouseMultiReport/KeyboardMouseMultiReport.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MIDI/MIDI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Lib/DataflashManager.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/Lib/SCSI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorage/MassStorage.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Lib/DataflashManager.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/Lib/SCSI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/MassStorageKeyboard/MassStorageKeyboard.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/Mouse/Mouse.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ARP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/DHCP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/Ethernet.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ICMP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/IP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/ProtocolDecoders.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/TCP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/UDP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/Lib/Webserver.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/RNDISEthernet/RNDISEthernet.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerial/VirtualSerial.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Lib/DataflashManager.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/Lib/SCSI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMassStorage/VirtualSerialMassStorage.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/ClassDriver/VirtualSerialMouse/VirtualSerialMouse.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowApplications.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowCommands.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowCommon.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Lib/SideshowContent.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/Sideshow/Sideshow.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/TestAndMeasurement/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/Incomplete/TestAndMeasurement/TestAndMeasurement.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/AudioInput.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/AudioInput/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/AudioOutput.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/AudioOutput/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/DualVirtualSerial/DualVirtualSerial.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/GenericHID/GenericHID.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/Joystick/Joystick.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/Keyboard/Keyboard.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/KeyboardMouse/KeyboardMouse.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/MIDI/MIDI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Lib/DataflashManager.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/Lib/SCSI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/MassStorage/MassStorage.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/Mouse/Mouse.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ARP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/DHCP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/Ethernet.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ICMP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/IP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/ProtocolDecoders.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/RNDIS.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/TCP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/UDP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/Lib/Webserver.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/RNDISEthernet/RNDISEthernet.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Device/LowLevel/VirtualSerial/VirtualSerial.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/DeviceFunctions.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/HostFunctions.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/DualRole/ClassDriver/MouseHostDevice/MouseHostDevice.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioInputHost/AudioInputHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/AudioOutputHost/AudioOutputHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/JoystickHostWithParser/JoystickHostWithParser.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHost/KeyboardHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/KeyboardHostWithParser/KeyboardHostWithParser.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/MIDIHost/MIDIHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/MassStorageHost/MassStorageHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHost/MouseHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/MouseHostWithParser/MouseHostWithParser.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/PrinterHost/PrinterHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/RNDISEthernetHost/RNDISEthernetHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/StillImageHost/StillImageHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/ClassDriver/VirtualSerialHost/VirtualSerialHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/AndroidAccessoryHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/DeviceDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/AndroidAccessoryHost/Lib/AndroidAccessoryCommands.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/BluetoothEvents.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/BluetoothHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/DeviceDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothACLPackets.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothHCICommands.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/BluetoothStack.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/RFCOMM.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/RFCOMMControl.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/SDP.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/Incomplete/BluetoothHost/Lib/SDPServices.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/AudioInputHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/AudioInputHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/AudioOutputHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/AudioOutputHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/GenericHIDHost/GenericHIDHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/HIDReport.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/JoystickHostWithParser/JoystickHostWithParser.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHost/KeyboardHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/HIDReport.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/KeyboardHostWithParser/KeyboardHostWithParser.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MIDIHost/MIDIHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/Lib/MassStoreCommands.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MassStorageHost/MassStorageHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHost/MouseHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/HIDReport.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/MouseHostWithParser/MouseHostWithParser.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/Lib/PrinterCommands.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/PrinterHost/PrinterHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/Lib/RNDISCommands.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/RNDISEthernetHost/RNDISEthernetHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/Lib/StillImageCommands.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/StillImageHost/StillImageHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Demos/Host/LowLevel/VirtualSerialHost/VirtualSerialHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/Board/Temperature.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/Serial_AVR8.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/Peripheral/AVR8/TWI_AVR8.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Common/HIDParser.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/Audio.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/CDC.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/HID.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/MIDI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/MassStorage.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Device/RNDIS.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/Audio.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/CDC.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/HID.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/MIDI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/MassStorage.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/Printer.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/RNDIS.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Class/Host/StillImage.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Endpoint_Control_R.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Endpoint_Control_W.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Endpoint_RW.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/Template/Template_Pipe_RW.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/ConfigDescriptor.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/DeviceStandardReq.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/Events.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/HostStandardReq.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Device_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/EndpointStream_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Endpoint_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Host_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/PipeStream_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Pipe_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Endpoint_Control_R.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Endpoint_Control_W.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Endpoint_RW.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/Template/Template_Pipe_RW.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/USBController_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/UC3/USBInterrupt_UC3.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/USBTask.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Device_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/EndpointStream_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Endpoint_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Host_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/PipeStream_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Pipe_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Template/Template_Endpoint_Control_R.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Template/Template_Endpoint_Control_W.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/Template/Template_Endpoint_RW.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/USBController_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/Core/XMEGA/USBInterrupt_XMEGA.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Drivers/USB/USB.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Platform/UC3/InterruptManagement.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/LUFA/Scheduler/Scheduler.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/AVRISP-MKII.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/ISP/ISPProtocol.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/ISP/ISPTarget.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/V2Protocol.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/V2ProtocolParams.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/TINYNVM.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XMEGANVM.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XPROGProtocol.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/AVRISP-MKII/Lib/XPROG/XPROGTarget.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Benito/Benito.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Benito/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/HIDReportViewer/HIDReportViewer.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/DiskDevice.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/DiskHost.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/DataflashManager.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/diskio.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/PetiteFATFs/pff.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/ProgrammerConfig.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/Lib/SCSI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Incomplete/StandaloneProgrammer/StandaloneProgrammer.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/LEDNotifier/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/LEDNotifier/LEDNotifier.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/MIDIToneGenerator/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/MIDIToneGenerator/MIDIToneGenerator.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Magstripe/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Magstripe/Lib/CircularBitBuffer.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Magstripe/Magstripe.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/MediaController/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/MediaController/MediaController.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/MissileLauncher/ConfigDescriptor.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/MissileLauncher/MissileLauncher.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/RelayBoard/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/RelayBoard/RelayBoard.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/TempDataLogger/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/TempDataLogger/Lib/DS1307.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/TempDataLogger/Lib/DataflashManager.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/diskio.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/TempDataLogger/Lib/FATFs/ff.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/TempDataLogger/Lib/SCSI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/TempDataLogger/TempDataLogger.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/USBtoSerial/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/USBtoSerial/USBtoSerial.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Descriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPClientApp.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPCommon.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/DHCPServerApp.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/DataflashManager.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/diskio.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/FATFs/ff.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/HTTPServerApp.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/SCSI.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/TELNETServerApp.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/uIPManagement.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/uip/clock.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/uip/timer.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip-split.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Lib/uip/uip_arp.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/USBDeviceMode.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/USBHostMode.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/Webserver/Webserver.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/XPLAINBridge/AVRISPDescriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/XPLAINBridge/Lib/SoftUART.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/XPLAINBridge/USARTDescriptors.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="../lufa-LUFA-111009/Projects/XPLAINBridge/XPLAINBridge.c"
+            ex="true"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="Adelino.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Descriptors.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <folder path="0">
+        <ccTool>
+          <incDir>
+            <pElem>../lufa-LUFA-111009</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="lufa-LUFA-111009">
+        <ccTool>
+          <incDir>
+            <pElem>../lufa-LUFA-111009</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>
