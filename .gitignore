@@ -13,3 +13,6 @@
 *.map
 *.sym
 
+# Netbeans
+**/nbproject/private/
+
