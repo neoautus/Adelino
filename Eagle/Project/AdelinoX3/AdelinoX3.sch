@@ -3708,7 +3708,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U5" library="Seeed-IC" deviceset="MCU-ATMEGA32U4-MUR(VQFN44)" device="" value="ATMEGA32U4-MUR-QFN44">
 <attribute name="DESC" value="Primary socket - QFN44"/>
 </part>
-<part name="U3" library="Adelino-Misc" deviceset="ESP-12F" device="" value="ESP-12F / OPL: 317060163 / SMD WIFI Module"/>
+<part name="U3" library="Adelino-Misc" deviceset="ESP-12F" device="" value="ESP-12F / OPL: 317060163"/>
 <part name="USB1" library="Seeed-Connector" deviceset="MICRO-USB-SMD-B-WITHOUT-POST-W/P(ST-USB-001G)" device="" value="ST-USB-001G"/>
 <part name="J3" library="Seeed-Connector" deviceset="DIP-YELLOW-FEMALE-HEADER-VERT(6P-2.54)" device="" value="YELLOW-6P-2.54"/>
 <part name="J2" library="Seeed-Connector" deviceset="DIP-YELLOW-FEMALE-HEADER(8P-2.54)" device="" value="YELLOW-8P-2.54"/>
@@ -3769,7 +3769,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="R14" library="Seeed-Resistor" deviceset="SMD-RES-10K-5%-1/10W(0603)" device="" value="10K"/>
-<part name="D4" library="Seeed-LED" deviceset="SMD-LED-CLEAR-BLUE(0603)" device="" value="BLU-0603">
+<part name="D4" library="Seeed-LED" deviceset="SMD-LED-CLEAR-BLUE(0603)" device="" value="BLUE-0603">
 <attribute name="LABEL" value="ESP"/>
 </part>
 <part name="+3V34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -3802,10 +3802,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R25" library="Seeed-Resistor" deviceset="SMD-RES-1K-5%-1/10W(0603)" device="" value="1K"/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="D5" library="Seeed-LED" deviceset="SMD-LED-CLEAR-GREEN(0603)" device="" value="GRE-0603">
+<part name="D5" library="Seeed-LED" deviceset="SMD-LED-CLEAR-GREEN(0603)" device="" value="GREEN-0603">
 <attribute name="LABEL" value="PWR"/>
 </part>
-<part name="D6" library="Seeed-LED" deviceset="SMD-LED-CLEAR-YELLOW(0603)" device="" value="YEL-0603">
+<part name="D6" library="Seeed-LED" deviceset="SMD-LED-CLEAR-YELLOW(0603)" device="" value="YELLOW-0603">
 <attribute name="LABEL" value="ACT"/>
 </part>
 <part name="D7" library="Seeed-LED" deviceset="SMD-LED-CLEAR-YELLOW(0603)" device="" value="YEL-0603">
@@ -4156,11 +4156,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="VALUE" x="-132.08" y="144.78" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="C7" gate="G$1" x="-119.38" y="147.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="-120.65" y="148.59" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="-116.84" y="148.59" size="1.27" layer="96" ratio="10" rot="R90"/>
+<attribute name="NAME" x="-121.666" y="148.844" size="1.27" layer="95" ratio="10"/>
+<attribute name="VALUE" x="-121.666" y="144.78" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="L3" gate="G$1" x="-106.68" y="143.51" smashed="yes">
-<attribute name="NAME" x="-110.49" y="144.78" size="1.27" layer="95" ratio="10"/>
+<attribute name="NAME" x="-109.22" y="141.732" size="1.27" layer="95" ratio="10"/>
+<attribute name="VALUE" x="-109.22" y="144.78" size="1.27" layer="96" ratio="10"/>
 </instance>
 <instance part="R1" gate="G$1" x="-171.45" y="140.97" smashed="yes" rot="R270">
 <attribute name="NAME" x="-170.942" y="143.002" size="1.27" layer="95" ratio="10"/>
@@ -5800,7 +5801,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-115.57" y1="147.32" x2="-113.03" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="-113.03" y1="147.32" x2="-113.03" y2="143.51" width="0.1524" layer="91"/>
 <junction x="-113.03" y="143.51"/>
-<label x="-121.92" y="143.51" size="0.8128" layer="95"/>
+<label x="-129.54" y="143.51" size="0.8128" layer="95"/>
 </segment>
 </net>
 <net name="N$23" class="0">
