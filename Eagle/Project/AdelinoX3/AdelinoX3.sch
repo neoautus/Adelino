@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -3857,6 +3857,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP15" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP16R" package3d_urn="urn:adsk.eagle:package:27969/1"/>
 <part name="TP16" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP16R" package3d_urn="urn:adsk.eagle:package:27969/1"/>
 <part name="TP17" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP16R" package3d_urn="urn:adsk.eagle:package:27969/1"/>
+<part name="TP18" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP16R" package3d_urn="urn:adsk.eagle:package:27969/1"/>
+<part name="TP19" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP16R" package3d_urn="urn:adsk.eagle:package:27969/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -3878,6 +3880,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="-60.96" y="-82.55" size="2.54" layer="97">Grove Serial</text>
 <text x="13.97" y="-125.73" size="6.4516" layer="97">Security</text>
 <text x="-79.248" y="-130.556" size="2.54" layer="97">ICSP</text>
+<text x="-97.79" y="110.49" size="1.778" layer="91">Board sensing</text>
 </plain>
 <instances>
 <instance part="U5" gate="G$1" x="109.22" y="95.25" smashed="yes">
@@ -4393,6 +4396,14 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="-214.63" y="108.712" size="1.4224" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="-210.82" y="106.68" size="1.778" layer="97"/>
 </instance>
+<instance part="TP18" gate="G$1" x="-92.71" y="115.57" smashed="yes" rot="R180">
+<attribute name="NAME" x="-90.424" y="115.062" size="1.4224" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="-93.98" y="116.84" size="1.778" layer="97" rot="R180"/>
+</instance>
+<instance part="TP19" gate="G$1" x="-86.36" y="115.57" smashed="yes" rot="R180">
+<attribute name="NAME" x="-84.074" y="115.062" size="1.4224" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="-87.63" y="116.84" size="1.778" layer="97" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4601,6 +4612,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="TP10" gate="G$1" pin="TP"/>
 <wire x1="-212.09" y1="119.38" x2="-212.09" y2="121.92" width="0.1524" layer="91"/>
 <junction x="-212.09" y="121.92"/>
+<pinref part="TP18" gate="G$1" pin="TP"/>
+<wire x1="-92.71" y1="118.11" x2="-92.71" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="TP19" gate="G$1" pin="TP"/>
+<wire x1="-86.36" y1="118.11" x2="-86.36" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U6" gate="G$1" pin="GND@1"/>
