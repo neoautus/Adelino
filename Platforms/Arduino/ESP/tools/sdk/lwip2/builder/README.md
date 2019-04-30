@@ -5,45 +5,27 @@ This repo offers a link layer for esp82xx-nonos-sdk-2.
 The original goal is to try and use a recent lwIP version for stability reasons.
 Currently lwIP-v2 is implemented, other IP stacks could be tried.
 
-current lwIP link: [STABLE_2.0.3](http://git.savannah.nongnu.org/cgit/lwip.git/tree/?h=STABLE-2_0_3_RELEASE)
+current lwIP link: [STABLE_2.1.2](http://git.savannah.nongnu.org/cgit/lwip.git/tree/?h=STABLE-2_1_2_RELEASE)
 
 # Status
 
 * UDP/TCP codes using lwIP-1.4 need some updates - two examples: [arduino](https://github.com/esp8266/Arduino/pull/3129) and [sming](https://github.com/SmingHub/Sming/pull/1147)
-* ipv6 not tried yet
+* IPv6 working in Arduino
+* SACK-out enabled in Arduino
 * tcp is more stable ([example1](https://github.com/esp8266/Arduino/issues/3075) and [example2](https://github.com/esp8266/Arduino/issues/2925))
-* needs users / testing
+* used by default in esp8266 arduino core
 * accepted pull request in [esp8266/arduino](https://github.com/esp8266/Arduino/pull/3783)
-* pull request in [sming](https://github.com/SmingHub/Sming/pull/1147)
-* pull request in [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk/pull/271)
-
-# Tested
-
-* arduino NTPClient
-* arduino WiFiAccessPoint
-* arduino OTA
-* Sming Telnet sample
+* (WIP) [sming](https://github.com/SmingHub/Sming/pull/1147)
+* (WIP) [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk/pull/271)
 
 # Build
 
-makefiles are working with linux/osx/windows
-
-get lwIP sources
-```
-git submodule update --init --recursive
-```
-
-optionnally tune lwIP configuration in `glue-lwip/lwipopts.h`
-
-build & install
-```
-make -f Makefile.<arch> install
-```
+[with Arduino](https://github.com/esp8266/Arduino/tree/master/tools/sdk/lwip2)
 
 # MSS
 
 Remember the MSS footprint: 4\*MSS bytes in RAM per tcp connection.
-The lowest recommanded value is 536 which is the default here.
+The lowest recommanded value is 536.
 
 # How it works
 

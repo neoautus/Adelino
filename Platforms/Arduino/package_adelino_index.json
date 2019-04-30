@@ -19,8 +19,8 @@
           },
           "url": "http://cdn.adelino.cc/downloads/adelino-avr-1.6.23.tar.bz2",
           "archiveFileName": "adelino-avr-1.6.23.tar.bz2",
-          "checksum": "SHA-256:c73c2b507957d97e2631608ff0dc2532fb81b3844d5badaf58a7b90c1327f3aa",
-          "size": "4692345",
+          "checksum": "SHA-256:2dda3cf272df8fc6f37ea70520d6b30d41104ba7ad4ff47982f041778791cb57",
+          "size": "2680548",
           "boards": [
             {"name": "Adelino M1 AVR/ESP"}
           ],
@@ -47,13 +47,13 @@
           "help": {
             "online": "http://docs.adelino.cc/"
           },
-          "url": "http://cdn.adelino.cc/downloads/adelino-esp8266-2.5.0-beta2.tar.bz2",
-          "checksum": "SHA-256:724cfe60e26cab54a6b3d27dbbed1789fe13071c0d8a5f765b2e73a0885bd612",
+          "url": "http://cdn.adelino.cc/downloads/adelino-esp8266-2.5.0.tar.bz2",
+          "checksum": "SHA-256:fe9c02c6c8e0d9abd3eb7db398d0a4ea525059133d6b45eee33c75fd99b02a9a",
           "name": "Adelino ESP Boards",
-          "version": "2.5.0-beta2",
+          "version": "2.5.0",
           "architecture": "esp8266",
-          "archiveFileName": "adelino-esp8266-2.5.0-beta2.tar.bz2",
-          "size": "16822361",
+          "archiveFileName": "adelino-esp8266-2.5.0.tar.bz2",
+          "size": "16813812",
           "toolsDependencies": [
             {
               "packager": "adelino",

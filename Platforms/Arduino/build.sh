@@ -14,7 +14,7 @@ echo "SHA-256: ${AVR_SHA256}"
 # ESP side
 #
 echo "*** ESP ***"
-ESP_VERSION=2.5.0-beta2
+ESP_VERSION=2.5.0
 ESP_FILENAME=adelino-esp8266-${ESP_VERSION}.tar.bz2
 echo "Filename: ${ESP_FILENAME}"
 tar cjf ${ESP_FILENAME} ESP/

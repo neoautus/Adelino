@@ -286,8 +286,16 @@ static void netif_sta_status_callback (struct netif* netif)
 		// this is our default route
 		netif_set_default(netif);
 			
-		if (ip_2_ip4(&netif->ip_addr)->addr)
-		{
+		// If we have a valid address of any type restart SNTP
+		bool valid_address = ip_2_ip4(&netif->ip_addr)->addr;
+
+#if LWIP_IPV6
+		int addrindex;
+		for (addrindex = 0; addrindex < LWIP_IPV6_NUM_ADDRESSES; addrindex++) {
+			valid_address |= ip6_addr_isvalid(netif_ip6_addr_state(netif, addrindex));
+		}
+#endif
+		if (valid_address)		{
 			// restart sntp
 			sntp_stop();
 			sntp_init();

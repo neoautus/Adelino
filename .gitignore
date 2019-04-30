@@ -5,10 +5,10 @@
 # C/C++ intermediate files/dirs
 .dep
 *.lst
-*.o
+Firmware/**/*.o
 *.eep
-*.elf
-*.hex
+Firmware/**/*.elf
+Firmware/**/*.hex
 *.lss
 *.map
 *.sym
