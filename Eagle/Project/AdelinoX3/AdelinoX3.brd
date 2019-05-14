@@ -258,9 +258,9 @@ Designed in Brazil</text>
 <text x="19.05" y="43.434" size="1.016" layer="137" font="vector" ratio="12" rot="MR0">TX</text>
 <text x="12.192" y="41.4147" size="1.016" layer="137" font="vector" ratio="12" rot="MR0">VCC</text>
 <text x="12.192" y="39.4335" size="1.016" layer="137" font="vector" ratio="12" rot="MR0">GND</text>
-<text x="14.4145" y="35.941" size="1.016" layer="137" font="vector" ratio="12" rot="MR0">Grove
+<text x="21.1455" y="35.941" size="1.016" layer="137" font="vector" ratio="12" rot="MR0">Grove
 UART</text>
-<text x="21.1455" y="35.8775" size="1.016" layer="137" font="vector" ratio="12" rot="MR0">Grove
+<text x="14.4145" y="35.941" size="1.016" layer="137" font="vector" ratio="12" rot="MR0">Grove
  I2C</text>
 <wire x1="13.335" y1="7.874" x2="13.335" y2="6.2865" width="0.2" layer="137"/>
 <wire x1="13.335" y1="7.874" x2="13.589" y2="7.493" width="0.2" layer="137"/>
