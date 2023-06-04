@@ -15,4 +15,5 @@ Firmware/**/*.hex
 
 # Netbeans
 **/nbproject/private/
+**/.DS_Store
 
