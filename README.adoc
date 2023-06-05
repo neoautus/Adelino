@@ -1,29 +1,14 @@
 = Adelino
 :page-layout: book
 
-Adelino is an ATmega32U4 development board with integrated ESP-12F module for WiFi capabilities.
+O Adelino é uma placa de desenvolvimento baseada no ATmega32U4 com um módulo ESP-12F integrado.
+Ela foi inicialmente inspirada no Arduino Leonardo e no Arduino Yún.
 
-It's inspired by Arduino Leonardo and Arduino Yún, with changes regarding integration, firmware and board size.
+Visite nosso https://github.com/neoautus/Adelino/wiki[Wiki] para conhecer melhor este produto!
 
-== Adelino X1
+'''
 
-Adelino X1 is the first version of the board, aimed to test integration, assembling process, firmware and the overall concept. This PCB was assembled by SeeedStudio.
+Adelino is an ATmega32U4 development board with integrated ESP-12F module.
+It was initially inspired by Arduino Leonardo and Arduino Yún.
 
-image::Adelino_X1.jpg[Adelino X1]
-
-== Adelino X2
-
-Adelino X2 features https://www.microchip.com/wwwproducts/en/ATECC608A[ATECC608] cryptographic co-processor chip onboard (with secure hardware-based key storage), adds a full high speed SPI bridge between ESP-8266 and ATmega32U4 and a more efficient switching power supply. It also changes the GPIO Grove port to Serial and improves the compatibility with standard Arduino Leonardo libraries.
-
-image::Eagle/AdelinoR2_sch.png[link="https://raw.githubusercontent.com/neoautus/Adelino/master/Eagle/AdelinoR2_sch.png"]
-
-These are Adelino X2 PCBs front and back sides, compared with Adelino X1. They just arrived from Seeed Studio. Soon we'll get Adelino X2 assembled boards. Notice the nested ATmega32U4 footprints, for QFN44 (smaller and cheaper) and TQFP44 (bigger and $2 more expensive).
-
-image::Adelino_X2_PCB.jpg[Adelino X2 PCBs]
-
-== Copyright
-
-image:https://i.creativecommons.org/l/by-nd/4.0/88x31.png[]
-
-This work is licensed under a http://creativecommons.org/licenses/by-nd/4.0/[Creative Commons Attribution-NoDerivatives 4.0 International License].
-
+Visit our https://github.com/neoautus/Adelino/wiki[Wiki] for more information!
